@@ -171,6 +171,14 @@ h2 .dim{color:var(--t3);font-weight:400}
 .app-links a:hover{background:var(--app-link-bg-h)}
 .app-badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--g2);font-weight:600}
 .app-badge svg{width:14px;height:14px;fill:var(--g2)}
+/* App screenshots gallery (phone frames) */
+.shots{display:flex;gap:14px;margin-top:16px;flex-wrap:wrap}
+.shot{width:124px;border-radius:20px;border:1px solid var(--border-h);overflow:hidden;background:var(--bg3);
+  box-shadow:0 10px 26px rgba(0,0,0,.22);transition:transform .25s,box-shadow .25s;display:block}
+.shot:hover{transform:translateY(-5px) scale(1.03);box-shadow:0 16px 34px rgba(108,60,225,.28)}
+.shot img{width:100%;display:block;aspect-ratio:1080/2257;object-fit:cover;background:#fff}
+.shots-cap{font-size:10px;color:var(--t3);margin-top:8px;width:100%;letter-spacing:.3px}
+@media(max-width:640px){.shots{justify-content:center}.shot{width:108px}}
 /* Challenge / Solution note */
 .cs{margin-top:14px;border-left:2px solid var(--featured-border);padding:2px 0 2px 14px;display:flex;flex-direction:column;gap:6px}
 .cs div{font-size:12px;color:var(--t2);line-height:1.65}
@@ -462,6 +470,12 @@ html[data-theme="light"] .hero-links svg{fill:currentColor}
           <div class="cs">
             <div><span class="cs-k">Challenge:</span> Benchtop potentiostats are bulky, expensive, and need wired power — unusable for portable point-of-care diagnostics.</div>
             <div><span class="cs-k green">Solution:</span> Designed the full stack end-to-end (analog AFE, embedded firmware over an ST25DV mailbox protocol, Android app, fine-tuned on-device AI), cutting cost &gt;90% vs. lab equipment with 98.5% measured accuracy.</div>
+          </div>
+          <div class="shots">
+            <a class="shot" href="https://efeatesh.github.io/NFCPotentiostatQuickGlance/Screenshot_20260620-180411_SensitifyGoNE.png" target="_blank" rel="noopener">
+              <img src="https://efeatesh.github.io/NFCPotentiostatQuickGlance/Screenshot_20260620-180411_SensitifyGoNE.png" alt="NanoBiosens Lab app – Cyclic Voltammetry plot" loading="lazy">
+            </a>
+            <div class="shots-cap">NanoBiosens Lab — real-time cyclic voltammetry in the companion app</div>
           </div>
           <div class="app-tags">
             <span class="tag">NFC Energy Harvesting</span>
