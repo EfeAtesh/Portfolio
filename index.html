@@ -151,14 +151,18 @@ section{position:relative;z-index:1;padding:72px 0}
 .nav a{font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--t2);text-decoration:none;padding:8px 18px;border-radius:0px;border:1px solid transparent;transition:all .2s ease}
 .nav a:hover,.nav a.active{color:#ffffff;background:var(--p);border-color:var(--p)}
 @media(max-width:640px){.nav{display:none}}
-.app-grid, .stat-row, .skill-grid, .contact-grid, .edu-grid {
-  perspective: 1200px;
+.app-grid, .stat-row, .skill-grid, .contact-grid, .edu-grid, .container {
+  perspective: 1000px !important;
+  transform-style: preserve-3d !important;
+}
+.app-card, .stat, .skill-card, .ccard, .edu-card {
+  transform-style: preserve-3d !important;
+  will-change: transform;
 }
 .glass{
   background:var(--card);border:2px solid var(--border);border-radius:0px;
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   transition:border-color .2s ease,box-shadow .2s ease;position:relative;
-  transform-style:preserve-3d;
 }
 .glass:hover{background:var(--card-h);border-color:var(--p);box-shadow:0 12px 30px rgba(0,0,0,0.5)}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
@@ -197,7 +201,7 @@ section{position:relative;z-index:1;padding:72px 0}
 h2{font-family:'Segoe UI','Inter',sans-serif;font-size:32px;font-weight:400;margin-bottom:24px;letter-spacing:-0.5px;text-transform:none}
 h2 .dim{color:var(--t3);font-weight:300}
 .stat-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}
-.stat{flex:1;min-width:140px;padding:24px 16px;text-align:center;background:var(--card);border:2px solid var(--border);border-radius:0px;position:relative;overflow:hidden;transition:border-color 0.2s ease,box-shadow 0.2s ease}
+.stat{flex:1;min-width:140px;padding:24px 16px;text-align:center;background:var(--card);border:2px solid var(--border);border-radius:0px;position:relative;transition:border-color 0.2s ease,box-shadow 0.2s ease}
 .stat::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:var(--p)}
 .stat:hover{border-color:var(--p);box-shadow:0 10px 25px rgba(0,120,215,0.3)}
 .stat .num{font-family:'Segoe UI','Inter',sans-serif;font-size:36px;font-weight:300;color:var(--p2)}
@@ -589,19 +593,19 @@ html[data-theme="light"] .hero-links svg{fill:currentColor}
           </div>
         </div>
       </div>
-      <!-- Calmi -->
+      <!-- Tranquile -->
       <div class="glass app-card reveal d2">
-        <img class="app-icon" src="https://play-lh.googleusercontent.com/QZhPelvhk5ExCfpxfHsrsJOekRRU8qoCDvlv_7umtyLaX0yoqt3jz68AqvLptCo53E7_yfL8DXVZnTr8rmGqCf4=w240-h480" alt="Calmi app icon" loading="lazy">
+        <img class="app-icon" src="https://play-lh.googleusercontent.com/QZhPelvhk5ExCfpxfHsrsJOekRRU8qoCDvlv_7umtyLaX0yoqt3jz68AqvLptCo53E7_yfL8DXVZnTr8rmGqCf4=w240-h480" alt="Tranquile app icon" loading="lazy">
         <div class="app-info">
-          <h3>Calmi – Meditations by Local AI</h3>
+          <h3>Tranquile – Meditations by Local AI</h3>
           <div class="app-dev">SensiStudio &middot; Health &amp; Fitness</div>
           <p>Generates personalized guided meditations entirely on-device with Gemma 3, 100% offline, no account, nothing leaves the phone. Describe what's on your mind and the AI writes a unique session in seconds, with 5 narrator voices (text-to-speech), real-time sentence highlighting, save &amp; replay, streak/goal tracking, and a community to share prompts.</p>
           <div class="shots">
-            <a class="shot" href="https://play-lh.googleusercontent.com/1GlkTXpq8V3OQ62DQv1LPY0R6LhFhw6J_5YgJqXh1uQ9nhpjrqdqkVyS3nqa8726Uuh1-CkLGUU3SkRg3CgA=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/1GlkTXpq8V3OQ62DQv1LPY0R6LhFhw6J_5YgJqXh1uQ9nhpjrqdqkVyS3nqa8726Uuh1-CkLGUU3SkRg3CgA=w300" alt="Calmi – generate your own meditation" loading="lazy"></a>
-            <a class="shot" href="https://play-lh.googleusercontent.com/cww7tlxSluKRp_7F6E_UcAOdJC6Nk3054ppjts-UgfOPPScxMu1h0I1tGC8tlkLOgM5dSbu0xEyds4LpDDmr8A=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/cww7tlxSluKRp_7F6E_UcAOdJC6Nk3054ppjts-UgfOPPScxMu1h0I1tGC8tlkLOgM5dSbu0xEyds4LpDDmr8A=w300" alt="Calmi – 100% offline, always private" loading="lazy"></a>
-            <a class="shot" href="https://play-lh.googleusercontent.com/a-Pl09BJ86P1rDKm9Qv2qYF3XR4Upw241l2MthFtI7jkpMB3gl_Ny5PL9_lfjSMqfqaJoeBW-tKwGMjlbnOQ=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/a-Pl09BJ86P1rDKm9Qv2qYF3XR4Upw241l2MthFtI7jkpMB3gl_Ny5PL9_lfjSMqfqaJoeBW-tKwGMjlbnOQ=w300" alt="Calmi – save & replay any session" loading="lazy"></a>
-            <a class="shot" href="https://play-lh.googleusercontent.com/83TI73t3F7-UDlhwMpciWkJBHU7Zxdx3QgYbongPrXAoGHhce4J1pK1SxHnzNCkMSToszvPwIbTL7LOm_UcEElo=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/83TI73t3F7-UDlhwMpciWkJBHU7Zxdx3QgYbongPrXAoGHhce4J1pK1SxHnzNCkMSToszvPwIbTL7LOm_UcEElo=w300" alt="Calmi – follow your journey" loading="lazy"></a>
-            <a class="shot" href="https://play-lh.googleusercontent.com/5NPYMVIlGjULZmB2ZglI-dsZOZOOLu8GX0yPNLN8XquYhF7sthM6fh0SZM5mGFuk7CUGGifa1DjfZB-j683qDw=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/5NPYMVIlGjULZmB2ZglI-dsZOZOOLu8GX0yPNLN8XquYhF7sthM6fh0SZM5mGFuk7CUGGifa1DjfZB-j683qDw=w300" alt="Calmi – join the community" loading="lazy"></a>
+            <a class="shot" href="https://play-lh.googleusercontent.com/1GlkTXpq8V3OQ62DQv1LPY0R6LhFhw6J_5YgJqXh1uQ9nhpjrqdqkVyS3nqa8726Uuh1-CkLGUU3SkRg3CgA=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/1GlkTXpq8V3OQ62DQv1LPY0R6LhFhw6J_5YgJqXh1uQ9nhpjrqdqkVyS3nqa8726Uuh1-CkLGUU3SkRg3CgA=w300" alt="Tranquile – generate your own meditation" loading="lazy"></a>
+            <a class="shot" href="https://play-lh.googleusercontent.com/cww7tlxSluKRp_7F6E_UcAOdJC6Nk3054ppjts-UgfOPPScxMu1h0I1tGC8tlkLOgM5dSbu0xEyds4LpDDmr8A=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/cww7tlxSluKRp_7F6E_UcAOdJC6Nk3054ppjts-UgfOPPScxMu1h0I1tGC8tlkLOgM5dSbu0xEyds4LpDDmr8A=w300" alt="Tranquile – 100% offline, always private" loading="lazy"></a>
+            <a class="shot" href="https://play-lh.googleusercontent.com/a-Pl09BJ86P1rDKm9Qv2qYF3XR4Upw241l2MthFtI7jkpMB3gl_Ny5PL9_lfjSMqfqaJoeBW-tKwGMjlbnOQ=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/a-Pl09BJ86P1rDKm9Qv2qYF3XR4Upw241l2MthFtI7jkpMB3gl_Ny5PL9_lfjSMqfqaJoeBW-tKwGMjlbnOQ=w300" alt="Tranquile – save & replay any session" loading="lazy"></a>
+            <a class="shot" href="https://play-lh.googleusercontent.com/83TI73t3F7-UDlhwMpciWkJBHU7Zxdx3QgYbongPrXAoGHhce4J1pK1SxHnzNCkMSToszvPwIbTL7LOm_UcEElo=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/83TI73t3F7-UDlhwMpciWkJBHU7Zxdx3QgYbongPrXAoGHhce4J1pK1SxHnzNCkMSToszvPwIbTL7LOm_UcEElo=w300" alt="Tranquile – follow your journey" loading="lazy"></a>
+            <a class="shot" href="https://play-lh.googleusercontent.com/5NPYMVIlGjULZmB2ZglI-dsZOZOOLu8GX0yPNLN8XquYhF7sthM6fh0SZM5mGFuk7CUGGifa1DjfZB-j683qDw=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/5NPYMVIlGjULZmB2ZglI-dsZOZOOLu8GX0yPNLN8XquYhF7sthM6fh0SZM5mGFuk7CUGGifa1DjfZB-j683qDw=w300" alt="Tranquile – join the community" loading="lazy"></a>
             <div class="shots-cap">On-device AI meditation generation, offline privacy, saved sessions, progress tracking &amp; community</div>
           </div>
           <div class="app-tags">
@@ -832,56 +836,55 @@ document.querySelectorAll('.num[data-count]').forEach(el=>statObs.observe(el));
   loop();
 })();
 
-/* ---- Windows Metro 3D Cursor Tracking Live Tile Effect ---- */
-document.querySelectorAll('.app-card, .stat, .skill-card, .ccard, .edu-card, .glass').forEach(card => {
-  if (!card.querySelector('.metro-glare')) {
-    const glare = document.createElement('div');
-    glare.className = 'metro-glare';
-    glare.style.cssText = 'position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 50%, rgba(255,255,255,0.25), transparent 60%);opacity:0;transition:opacity 0.2s ease;z-index:10;';
+/* ---- Windows Metro Live Tile Engine: 3D Card Rotation + Cursor Spotlight ---- */
+document.querySelectorAll('.app-card, .stat, .skill-card, .ccard, .edu-card').forEach(card => {
+  if (!card.querySelector('.metro-spotlight')) {
+    const spotlight = document.createElement('div');
+    spotlight.className = 'metro-spotlight';
+    spotlight.style.cssText = 'position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity 0.25s ease;z-index:2;border-radius:inherit;';
     card.style.position = 'relative';
-    card.appendChild(glare);
+    card.appendChild(spotlight);
   }
 
   card.style.transformStyle = 'preserve-3d';
-
-  let rect = null;
+  card.style.willChange = 'transform';
 
   card.addEventListener('mouseenter', () => {
-    rect = card.getBoundingClientRect();
+    card.style.transition = 'none';
+    const spotlight = card.querySelector('.metro-spotlight');
+    if (spotlight) spotlight.style.opacity = '1';
   });
 
   card.addEventListener('mousemove', e => {
-    if (!rect) rect = card.getBoundingClientRect();
-    
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-    
-    const xPct = (mouseX / rect.width) - 0.5;
-    const yPct = (mouseY / rect.height) - 0.5;
+    const rect = card.getBoundingClientRect();
+    const px = e.clientX - rect.left;
+    const py = e.clientY - rect.top;
 
-    const rotateX = (-yPct * 20).toFixed(2);
-    const rotateY = (xPct * 20).toFixed(2);
+    const x = (px / rect.width) - 0.5;
+    const y = (py / rect.height) - 0.5;
 
-    card.style.transition = 'transform 0.05s ease-out';
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+    // Physical 3D Card Tilt (rotateX & rotateY)
+    const rX = (-y * 22).toFixed(2);
+    const rY = (x * 22).toFixed(2);
 
-    const glare = card.querySelector('.metro-glare');
-    if (glare) {
-      glare.style.opacity = '1';
-      glare.style.background = `radial-gradient(circle at ${mouseX.toFixed(0)}px ${mouseY.toFixed(0)}px, rgba(255,255,255,0.25), transparent 60%)`;
+    card.style.transition = 'none';
+    card.style.transform = `perspective(1000px) rotateX(${rX}deg) rotateY(${rY}deg) scale3d(1.03, 1.03, 1.03)`;
+
+    const spotlight = card.querySelector('.metro-spotlight');
+    if (spotlight) {
+      spotlight.style.background = `radial-gradient(400px circle at ${px.toFixed(0)}px ${py.toFixed(0)}px, rgba(255, 255, 255, 0.18), transparent 80%)`;
     }
   });
 
   card.addEventListener('mouseleave', () => {
-    rect = null;
     card.style.transition = 'transform 0.4s cubic-bezier(0.1, 0.9, 0.2, 1)';
     card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-    const glare = card.querySelector('.metro-glare');
-    if (glare) glare.style.opacity = '0';
+    const spotlight = card.querySelector('.metro-spotlight');
+    if (spotlight) spotlight.style.opacity = '0';
   });
 
   card.addEventListener('mousedown', () => {
-    card.style.transition = 'transform 0.1s ease';
+    card.style.transition = 'transform 0.08s ease';
     card.style.transform += ' scale3d(0.96, 0.96, 0.96)';
   });
 });
