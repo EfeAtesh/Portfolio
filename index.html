@@ -1333,6 +1333,180 @@ h2 strong {
 .d1 { transition-delay: 0.1s; }
 .d2 { transition-delay: 0.2s; }
 .d3 { transition-delay: 0.3s; }
+
+/* ==========================================================================
+   FLOATING GLASS DOCK TOP SECTION BAR
+   ========================================================================== */
+.glass-nav-wrapper {
+  position: fixed;
+  top: 16px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  padding: 0 16px;
+}
+
+.glass-nav {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background: var(--taskbar-bg);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--border-acrylic);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  position: relative;
+  max-width: 95vw;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.glass-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  background: rgba(0, 120, 215, 0.15);
+  border: 1px solid rgba(0, 120, 215, 0.35);
+  margin-right: 4px;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.nav-brand:hover {
+  background: var(--win-blue);
+  color: #FFFFFF;
+}
+
+.nav-brand-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--win-cyan);
+  box-shadow: 0 0 8px var(--win-cyan);
+  animation: pulseDot 2s infinite;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 5px 11px;
+  border-radius: 9999px;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  color: #FFFFFF;
+  background: var(--win-blue);
+  box-shadow: 0 2px 10px rgba(0, 120, 215, 0.4);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 6px;
+  padding-left: 6px;
+  border-left: 1px solid var(--border-acrylic);
+}
+
+.nav-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: var(--win-blue);
+  padding: 5px 11px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav-cv-btn:hover {
+  background: var(--win-blue-light);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.nav-theme-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-acrylic);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.nav-theme-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: var(--win-blue);
+  transform: rotate(20deg);
+}
+
+.nav-theme-btn svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Scroll progress line at bottom of nav */
+.nav-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--win-blue), var(--win-cyan), var(--win-purple));
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.05s linear;
+}
 </style>
 </head>
 
@@ -1348,6 +1522,40 @@ h2 strong {
   <div class="aurora-prism-stream"></div>
   <div class="win-vignette"></div>
   <div class="ambient-noise-layer"></div>
+</div>
+
+<!-- FLOATING GLASS DOCK TOP SECTION BAR -->
+<div class="glass-nav-wrapper">
+  <nav class="glass-nav" aria-label="Main Navigation">
+    <a href="#" class="nav-brand" title="Scroll to Top">
+      <span class="nav-brand-dot"></span>
+      <span>Efe Ateş</span>
+    </a>
+    
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#apps" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#stack" class="nav-link">Tech Stack</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="EfeAtes_CV.pdf" download class="nav-cv-btn" title="Download CV (PDF)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16l-5-5h3V4h4v7h3l-5 5z"/></svg>
+        <span>CV</span>
+      </a>
+      <button type="button" class="nav-theme-btn" id="topThemeToggleBtn" title="Toggle Theme" aria-label="Toggle Theme">
+        <svg class="top-nav-icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="top-nav-icon-sun" viewBox="0 0 24 24" style="display:none;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </div>
+
+    <!-- Scroll progress line at bottom of nav -->
+    <div class="nav-progress-bar" id="navProg"></div>
+  </nav>
 </div>
 
 <!-- ==========================================================================
@@ -2574,28 +2782,74 @@ document.addEventListener('click', (e) => {
    3. THEME TOGGLE (Dark Acrylic <-> Light Aero)
    -------------------------------------------------------------------------- */
 const themeToggleBtn = document.getElementById('themeToggleBtn');
+const topThemeToggleBtn = document.getElementById('topThemeToggleBtn');
 const iconMoon = document.getElementById('iconMoon');
 const iconSun = document.getElementById('iconSun');
+const topIconMoon = document.querySelector('.top-nav-icon-moon');
+const topIconSun = document.querySelector('.top-nav-icon-sun');
 
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('portfolio_theme', theme);
   if (theme === 'light') {
-    iconMoon.style.display = 'none';
-    iconSun.style.display = 'block';
+    if (iconMoon) iconMoon.style.display = 'none';
+    if (iconSun) iconSun.style.display = 'block';
+    if (topIconMoon) topIconMoon.style.display = 'none';
+    if (topIconSun) topIconSun.style.display = 'block';
   } else {
-    iconMoon.style.display = 'block';
-    iconSun.style.display = 'none';
+    if (iconMoon) iconMoon.style.display = 'block';
+    if (iconSun) iconSun.style.display = 'none';
+    if (topIconMoon) topIconMoon.style.display = 'block';
+    if (topIconSun) topIconSun.style.display = 'none';
   }
 }
 
 const savedTheme = localStorage.getItem('portfolio_theme') || 'dark';
 applyTheme(savedTheme);
 
-themeToggleBtn.addEventListener('click', () => {
+function toggleCurrentTheme() {
   const cur = document.documentElement.getAttribute('data-theme');
   applyTheme(cur === 'dark' ? 'light' : 'dark');
-});
+}
+
+if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleCurrentTheme);
+if (topThemeToggleBtn) topThemeToggleBtn.addEventListener('click', toggleCurrentTheme);
+
+/* --------------------------------------------------------------------------
+   3.1. TOP NAV SCROLL PROGRESS BAR & SCROLLSPY
+   -------------------------------------------------------------------------- */
+const navProg = document.getElementById('navProg');
+const navLinks = document.querySelectorAll('.nav-link');
+const trackedSections = document.querySelectorAll('section[id]');
+
+function updateNavProgress() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+  if (navProg) {
+    navProg.style.transform = `scaleX(${Math.min(progress, 1)})`;
+  }
+
+  // ScrollSpy Active Link Tracking
+  let currentSection = '';
+  trackedSections.forEach(sec => {
+    const top = sec.offsetTop - 150;
+    const height = sec.offsetHeight;
+    if (scrollTop >= top && scrollTop < top + height) {
+      currentSection = sec.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (currentSection && link.getAttribute('href') === `#${currentSection}`) {
+      link.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateNavProgress, { passive: true });
+updateNavProgress();
 
 /* --------------------------------------------------------------------------
    4. SPATIAL 3D CARD TILT & REVEAL HIGHLIGHT ENGINE
