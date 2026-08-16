@@ -1347,6 +1347,14 @@ h2 strong {
   justify-content: center;
   pointer-events: none;
   padding: 0 16px;
+  opacity: 0;
+  transform: translateY(-24px) scale(0.96);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-nav-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .glass-nav {
@@ -2818,6 +2826,7 @@ if (topThemeToggleBtn) topThemeToggleBtn.addEventListener('click', toggleCurrent
 /* --------------------------------------------------------------------------
    3.1. TOP NAV SCROLL PROGRESS BAR & SCROLLSPY
    -------------------------------------------------------------------------- */
+const glassNavWrapper = document.querySelector('.glass-nav-wrapper');
 const navProg = document.getElementById('navProg');
 const navLinks = document.querySelectorAll('.nav-link');
 const trackedSections = document.querySelectorAll('section[id]');
@@ -2828,6 +2837,15 @@ function updateNavProgress() {
   const progress = docHeight > 0 ? scrollTop / docHeight : 0;
   if (navProg) {
     navProg.style.transform = `scaleX(${Math.min(progress, 1)})`;
+  }
+
+  // Reveal nav dock only when scrolled down past the hero (~220px)
+  if (glassNavWrapper) {
+    if (scrollTop > 220) {
+      glassNavWrapper.classList.add('visible');
+    } else {
+      glassNavWrapper.classList.remove('visible');
+    }
   }
 
   // ScrollSpy Active Link Tracking
