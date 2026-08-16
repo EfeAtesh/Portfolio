@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Efe Ateş – Mobile Developer & On-Device AI Engineer</title>
-<meta name="description" content="Efe Ateş – Android developer specializing in on-device AI, electrochemical sensing apps, and Kotlin/Jetpack Compose. 5 published apps, 2K+ downloads.">
+<title>Efe Ateş – Mobile Developer &amp; On-Device AI Engineer</title>
+<meta name="description" content="Efe Ateş – Android developer specializing in on-device AI, electrochemical sensing apps, and Kotlin/Jetpack Compose. 6 published apps, 2K+ downloads.">
 <meta name="author" content="Efe Ateş">
 <meta name="theme-color" content="#0B0F1A">
 <link rel="canonical" href="https://efeates.dev/">
 
-<!-- Open Graph / social preview -->
+<!-- Open Graph / Social Previews -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Efe Ateş – Mobile Developer & On-Device AI Engineer">
-<meta property="og:description" content="Privacy-first Android apps powered by on-device AI. 5 published apps, 2K+ downloads. Open to opportunities.">
+<meta property="og:title" content="Efe Ateş – Mobile Developer &amp; On-Device AI Engineer">
+<meta property="og:description" content="Privacy-first Android apps powered by on-device AI. 6 published apps, 2K+ downloads. Open to opportunities.">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/156576779?v=4">
 <meta property="og:url" content="https://efeates.dev/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Efe Ateş – Mobile Developer & On-Device AI Engineer">
+<meta name="twitter:title" content="Efe Ateş – Mobile Developer &amp; On-Device AI Engineer">
 <meta name="twitter:description" content="Privacy-first Android apps powered by on-device AI. Open to opportunities.">
 <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/156576779?v=4">
 
-<!-- Favicon (emoji) -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B1%3C/text%3E%3C/svg%3E">
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='46' height='46' fill='%230078D7'/%3E%3Crect x='54' width='46' height='46' fill='%230078D7'/%3E%3Crect y='54' width='46' height='46' fill='%230078D7'/%3E%3Crect x='54' y='54' width='46' height='46' fill='%230078D7'/%3E%3C/svg%3E">
 
-<!-- Structured data: helps recruiters' tools + Google understand the page -->
+<!-- Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,1063 +44,2437 @@
 }
 </script>
 
-<!-- Set theme before paint to avoid a flash: saved choice, else OS setting -->
-<script>(function(){try{var s=localStorage.getItem('theme');var t=s||(window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-
+<!-- Google Fonts: Fluent Font Family & JetBrains Mono -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root,html[data-theme="dark"]{
-  --p:#0078D7;
-  --p2:#2B88D8;
-  --p3:#005A9E;
-  --g:#00ABA9;
-  --g2:#33C4C2;
-  --emerald:#107C41;
-  --crimson:#E81123;
-  --amber:#FF8C00;
-  --purple:#68217A;
-  --bg:#111111;
-  --bg2:#181818;
-  --bg3:#222222;
-  --card:#1f1f1f;
-  --card-h:#2a2a2a;
-  --border:rgba(255,255,255,0.12);
-  --border-h:#0078D7;
-  --t1:#FFFFFF;
-  --t2:#CCCCCC;
-  --t3:#999999;
-  --orb-opacity:.15;
-  --noise-opacity:.02;
-  --featured-bg:rgba(0,120,215,0.08);
-  --featured-bh:rgba(0,120,215,0.16);
-  --featured-border:#0078D7;
-  --featured-border-h:#2B88D8;
-  --tag-bg:#0078D7;
-  --tag-border:#2B88D8;
-  --tag-green-bg:#00ABA9;
-  --tag-green-border:#33C4C2;
-  --app-link-bg:rgba(0,120,215,0.2);
-  --app-link-bg-h:rgba(0,120,215,0.4);
-  --nav-bg:rgba(20,20,20,0.92);
-}
-html[data-theme="light"]{
-  --p:#0078D7;
-  --p2:#005A9E;
-  --p3:#003B66;
-  --g:#008280;
-  --g2:#00ABA9;
-  --emerald:#0B5C30;
-  --crimson:#B00B1A;
-  --amber:#CC7000;
-  --purple:#4C1759;
-  --bg:#F2F2F2;
-  --bg2:#FFFFFF;
-  --bg3:#E5E5E5;
-  --card:#FFFFFF;
-  --card-h:#F9F9F9;
-  --border:rgba(0,0,0,0.12);
-  --border-h:#0078D7;
-  --t1:#111111;
-  --t2:#444444;
-  --t3:#777777;
-  --featured-bg:rgba(0,120,215,0.06);
-  --featured-bh:rgba(0,120,215,0.12);
-  --featured-border:#0078D7;
-  --featured-border-h:#005A9E;
-  --tag-bg:#0078D7;
-  --tag-border:#005A9E;
-  --tag-green-bg:#008280;
-  --tag-green-border:#00ABA9;
-  --app-link-bg:rgba(0,120,215,0.1);
-  --app-link-bg-h:rgba(0,120,215,0.2);
-  --nav-bg:rgba(242,242,242,0.92);
-}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Segoe UI','Inter',system-ui,-apple-system,sans-serif;
-  background:var(--bg);
-  color:var(--t1);
-  line-height:1.65;
-  overflow-x:hidden;
-  position:relative;
-  background-image:linear-gradient(to right,rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,0.03) 1px,transparent 1px);
-  background-size:40px 40px;
-}
-::-webkit-scrollbar{width:8px;height:8px}
-::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:var(--p);border-radius:0px}
-::-webkit-scrollbar-thumb:hover{background:var(--p2)}
-.progress-bar{position:fixed;top:0;left:0;height:4px;width:0;z-index:100;background:var(--p);box-shadow:0 0 10px var(--p);transition:width .1s linear}
-.orbs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.orb{position:absolute;border-radius:50%;filter:blur(140px);opacity:var(--orb-opacity,.15)}
-.o1{width:600px;height:600px;background:#0078D7;top:-200px;right:-100px;animation:drift 20s ease-in-out infinite}
-.o2{width:500px;height:500px;background:#00ABA9;bottom:-150px;left:-100px;animation:drift 25s ease-in-out infinite reverse}
-.o3{width:350px;height:350px;background:#E81123;top:50%;left:40%;animation:drift 30s ease-in-out infinite alternate}
-@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.03)}66%{transform:translate(-30px,40px) scale(.97)}}
-.container{max-width:960px;margin:0 auto;padding:0 24px}
-section{position:relative;z-index:1;padding:72px 0}
-.nav{
-  position:fixed;top:0;left:0;width:100%;transform:translateY(-100%);z-index:90;display:flex;justify-content:center;gap:8px;padding:12px 24px;
-  border-radius:0px;background:var(--nav-bg);border-bottom:2px solid var(--p);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease;
-}
-.nav.show{opacity:1;pointer-events:auto;transform:translateY(0)}
-.nav a{font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--t2);text-decoration:none;padding:8px 18px;border-radius:0px;border:1px solid transparent;transition:all .2s ease}
-.nav a:hover,.nav a.active{color:#ffffff;background:var(--p);border-color:var(--p)}
-@media(max-width:640px){.nav{display:none}}
-.app-grid, .stat-row, .skill-grid, .edu-grid {
-  perspective: 1000px !important;
-  transform-style: preserve-3d !important;
-}
-.app-card, .stat, .skill-card, .edu-card {
-  transform-style: preserve-3d !important;
-  will-change: transform;
-}
-.glass{
-  background:var(--card);border:2px solid var(--border);border-radius:0px;
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  transition:border-color .2s ease,box-shadow .2s ease;position:relative;
-}
-.glass:hover{background:var(--card-h);border-color:var(--p);box-shadow:0 12px 30px rgba(0,0,0,0.5)}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
-.reveal.visible{opacity:1;transform:none !important}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;position:relative;z-index:1;padding:90px 24px 40px}
-.hero-inner{animation:fadeUp .8s ease both}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.avatar{width:110px;height:110px;border-radius:0px;border:3px solid var(--p);margin:0 auto 18px;object-fit:cover;box-shadow:0 8px 20px rgba(0,120,215,0.4)}
-.avail{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:0px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;background:var(--g);border:1px solid var(--g2);color:#FFFFFF;margin-bottom:20px}
-.avail .dot{width:8px;height:8px;border-radius:50%;background:#FFFFFF;position:relative}
-.avail .dot::after{content:'';position:absolute;inset:0;border-radius:50%;background:#FFFFFF;animation:ping 1.8s cubic-bezier(0,0,.2,1) infinite}
-@keyframes ping{0%{transform:scale(1);opacity:.7}80%,100%{transform:scale(2.6);opacity:0}}
-.hero h1{font-family:'Segoe UI','Inter',sans-serif;font-size:clamp(38px,7vw,68px);font-weight:300;letter-spacing:-1px;line-height:1.08;margin-bottom:14px;text-transform:none}
-.hero h1 .grad{font-weight:700;color:var(--p2);background:none;-webkit-text-fill-color:initial}
-.hero .role{font-family:'Segoe UI','Inter',sans-serif;font-size:clamp(16px,2.5vw,22px);font-weight:600;color:var(--g2);margin-bottom:16px;min-height:1.5em;letter-spacing:0.5px;text-transform:uppercase}
-.hero .role .rot{display:inline-block;position:relative}
-.hero .role .cursor{display:inline-block;width:3px;height:1em;background:var(--g2);margin-left:2px;vertical-align:-2px;animation:blink 1s step-end infinite}
-@keyframes blink{50%{opacity:0}}
-.hero .sub{font-size:clamp(15px,2.2vw,18px);color:var(--t2);font-weight:300;max-width:580px;margin:0 auto 32px}
-.hero-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.hero-links a{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:0px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;text-decoration:none;border:2px solid transparent;transition:all .2s cubic-bezier(0.1,0.9,0.2,1)}
-.hero-links a:hover{transform:translateY(-3px) scale(1.02)}
-.hero-links a:active{transform:scale(0.97)}
-.btn-primary{background:var(--p);color:#fff;border-color:var(--p)}
-.btn-primary:hover{background:var(--p2);border-color:var(--p2);box-shadow:0 8px 24px rgba(0,120,215,0.4)}
-.btn-cv{background:var(--g);color:#fff;border-color:var(--g)}
-.btn-cv:hover{background:var(--g2);border-color:var(--g2);box-shadow:0 8px 24px rgba(0,171,169,0.4)}
-.btn-ghost{background:var(--card);border-color:var(--border);color:var(--t1)}
-.btn-ghost:hover{background:var(--p);border-color:var(--p);color:#fff}
-.hero-links svg{width:16px;height:16px;fill:currentColor}
-.scroll-hint{color:var(--t3);font-size:11px;display:flex;flex-direction:column;align-items:center;gap:6px;letter-spacing:1.5px;text-transform:uppercase;margin-top:48px}
-.scroll-hint svg{width:18px;height:18px;stroke:var(--t3);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;animation:bounce 2s infinite}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
-.stag{font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--p2);margin-bottom:8px}
-h2{font-family:'Segoe UI','Inter',sans-serif;font-size:32px;font-weight:400;margin-bottom:24px;letter-spacing:-0.5px;text-transform:none}
-h2 .dim{color:var(--t3);font-weight:300}
-.stat-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}
-.stat{flex:1;min-width:140px;padding:24px 16px;text-align:center;background:var(--card);border:2px solid var(--border);border-radius:0px;position:relative;transition:border-color 0.2s ease,box-shadow 0.2s ease}
-.stat::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:var(--p)}
-.stat:hover{border-color:var(--p);box-shadow:0 10px 25px rgba(0,120,215,0.3)}
-.stat .num{font-family:'Segoe UI','Inter',sans-serif;font-size:36px;font-weight:300;color:var(--p2)}
-.stat .lbl{font-size:11px;color:var(--t2);margin-top:4px;text-transform:uppercase;letter-spacing:1px;font-weight:600}
-.app-grid{display:flex;flex-direction:column;gap:24px}
-.app-card{display:flex;gap:28px;padding:32px;align-items:flex-start;flex-wrap:wrap;border-radius:0px}
-.app-card .app-icon{width:76px;height:76px;border-radius:0px;flex-shrink:0;object-fit:cover;border:2px solid var(--border)}
-.app-card .app-info{flex:1;min-width:260px}
-.app-card h3{font-family:'Segoe UI','Inter',sans-serif;font-size:18px;font-weight:600;margin-bottom:4px;color:var(--t1)}
-.app-card .app-dev{font-size:12px;color:var(--t3);margin-bottom:10px}
-.app-card p{font-size:14px;color:var(--t2);line-height:1.7}
-.app-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-.tag{font-size:10px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:5px 12px;border-radius:0px;background:var(--tag-bg);color:#ffffff;border:none}
-.tag.green{background:var(--tag-green-bg);color:#ffffff}
-.app-links{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
-.app-links a{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#ffffff;text-decoration:none;padding:8px 16px;border-radius:0px;background:var(--p);transition:all .2s ease}
-.app-links a:hover{background:var(--p2);box-shadow:0 4px 12px rgba(0,120,215,0.4)}
-.app-badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--g2);font-weight:700}
-.app-badge svg{width:14px;height:14px;fill:var(--g2)}
-.shots{display:flex;gap:14px;margin-top:18px;flex-wrap:wrap}
-.shot{width:128px;border-radius:0px;border:2px solid var(--border);overflow:hidden;background:var(--bg3);box-shadow:0 8px 20px rgba(0,0,0,.3);transition:transform .25s ease,border-color .25s ease;display:block}
-.shot:hover{transform:translateY(-6px) scale(1.04);border-color:var(--p);box-shadow:0 14px 30px rgba(0,120,215,.35)}
-.shot img{width:100%;display:block;height:auto;background:#0b0b0b}
-.shots-cap{font-size:11px;color:var(--t3);margin-top:8px;width:100%;letter-spacing:0.3px}
-@media(max-width:640px){.shots{justify-content:center}.shot{width:108px}}
-.cs{margin-top:14px;border-left:3px solid var(--p);padding:2px 0 2px 14px;display:flex;flex-direction:column;gap:6px}
-.cs div{font-size:12px;color:var(--t2);line-height:1.65}
-.cs .cs-k{font-weight:600;color:var(--p2);letter-spacing:.3px}
-.cs .cs-k.green{color:var(--g2)}
-.featured{border:2px solid var(--featured-border);background:var(--featured-bg)}
-.featured:hover{border-color:var(--featured-border-h);background:var(--featured-bh)}
-.featured-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--p2);margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.featured-label::before{content:'';width:8px;height:8px;border-radius:0px;background:var(--p2);animation:pulse-dot 2s infinite}
-@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
-.skill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
-.skill-card{padding:28px 20px;text-align:center;border-radius:0px;border-top:4px solid var(--p)}
-.skill-card h3{font-family:'Segoe UI','Inter',sans-serif;font-size:15px;font-weight:600;margin-bottom:6px;color:var(--t1)}
-.skill-card p{font-size:12px;color:var(--t2)}
-.skill-card .sk-icon{width:36px;height:36px;margin:0 auto 12px;stroke:var(--p2);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.skill-card .sk-icon path,.skill-card .sk-icon rect,.skill-card .sk-icon circle,.skill-card .sk-icon polyline,.skill-card .sk-icon line{stroke-dasharray:120;stroke-dashoffset:120;transition:stroke-dashoffset 1.1s ease}
-.skill-card.visible .sk-icon path,.skill-card.visible .sk-icon rect,.skill-card.visible .sk-icon circle,.skill-card.visible .sk-icon polyline,.skill-card.visible .sk-icon line{stroke-dashoffset:0}
-.badge-wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.badge-wrap img{height:30px;border-radius:0px;transition:transform .2s ease}
-.badge-wrap img:hover{transform:scale(1.1)}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px}
-.ccard{padding:28px 20px;text-align:center;text-decoration:none;color:var(--t1);display:block;border-radius:0px;border:2px solid var(--border);transition:border-color .2s ease,background .2s ease}
-.ccard:hover{border-color:var(--p);background:var(--p);color:#ffffff}
-.ccard:hover .cico{stroke:#ffffff}
-.ccard:hover p{color:rgba(255,255,255,0.8)}
-.ccard .cico{width:28px;height:28px;margin:0 auto 10px;stroke:var(--p2);fill:none;stroke-width:1.5;transition:stroke .2s ease}
-.ccard h3{font-size:14px;font-weight:600;margin-bottom:4px}
-.ccard p{font-size:12px;color:var(--t3)}
-footer{text-align:center;padding:40px 24px;font-size:12px;color:var(--t3);position:relative;z-index:1;letter-spacing:.5px;border-top:1px solid var(--border)}
-.timeline{display:flex;flex-direction:column;gap:0;position:relative;padding-left:24px}
-.timeline::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:3px;background:var(--p)}
-.tl-item{position:relative;padding:0 0 32px 20px}
-.tl-item:last-child{padding-bottom:0}
-.tl-item::before{content:'';position:absolute;left:-22px;top:6px;width:12px;height:12px;border-radius:0px;background:var(--p);border:2px solid var(--bg);z-index:1}
-.tl-item .tl-date{font-size:11px;color:var(--g2);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
-.tl-item h3{font-family:'Segoe UI','Inter',sans-serif;font-size:16px;font-weight:600;margin-bottom:2px}
-.tl-item .tl-place{font-size:13px;color:var(--p2);font-weight:600;margin-bottom:8px}
-.tl-item p{font-size:13px;color:var(--t2);line-height:1.7}
-.tl-item ul{margin:8px 0 0;padding-left:18px}
-.tl-item li{font-size:13px;color:var(--t2);line-height:1.7;margin-bottom:4px}
-.tl-item li::marker{color:var(--p2)}
-.tl-item .tl-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:640px){.edu-grid{grid-template-columns:1fr}}
-.edu-card{padding:32px;border-radius:0px;border-top:4px solid var(--g)}
-.edu-card h3{font-family:'Segoe UI','Inter',sans-serif;font-size:15px;font-weight:600;margin-bottom:4px}
-.edu-card .edu-place{font-size:13px;color:var(--p2);font-weight:600;margin-bottom:6px}
-.edu-card .edu-date{font-size:11px;color:var(--g2);font-weight:700;text-transform:uppercase;margin-bottom:10px}
-.edu-card p{font-size:13px;color:var(--t2);line-height:1.7}
-.edu-card .cert{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:5px 12px;border-radius:0px;background:var(--tag-green-bg);border:1px solid var(--tag-green-border);font-size:11px;font-weight:600;color:#ffffff}
-.theme-toggle{
-  position:fixed;top:20px;right:20px;z-index:99;
-  width:44px;height:44px;border-radius:0px;border:2px solid var(--border);
-  background:var(--card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  cursor:pointer;display:flex;align-items:center;justify-content:center;
-  transition:all .2s ease;
-}
-.theme-toggle:hover{background:var(--p);border-color:var(--p);transform:scale(1.08)}
-.theme-toggle:hover svg{stroke:#ffffff}
-.theme-toggle svg{width:20px;height:20px;stroke:var(--t2);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s}
-.theme-toggle .icon-sun{display:none}
-.theme-toggle .icon-moon{display:block}
-html[data-theme="light"] .theme-toggle .icon-sun{display:block}
-html[data-theme="light"] .theme-toggle .icon-moon{display:none}
-.to-top{
-  position:fixed;bottom:24px;right:24px;z-index:95;width:44px;height:44px;border-radius:0px;border:2px solid var(--border);
-  background:var(--card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);cursor:pointer;display:flex;align-items:center;justify-content:center;
-  opacity:0;pointer-events:none;transition:all .3s ease;
-}
-.to-top.show{opacity:1;pointer-events:auto}
-.to-top:hover{background:var(--p);border-color:var(--p);transform:translateY(-4px)}
-.to-top:hover svg{stroke:#ffffff}
-.to-top svg{width:20px;height:20px;stroke:var(--p2);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-html[data-theme="light"] .hero h1 .grad{color:var(--p2)}
-html[data-theme="light"] .btn-ghost{color:var(--t1)}
-html[data-theme="light"] .hero-links svg{fill:currentColor}
-@media(max-width:640px){
-  .app-card{flex-direction:column;align-items:center;text-align:center}
-  .app-tags,.app-links{justify-content:center}
-  .cs{text-align:left}
-  .stat-row{flex-direction:column}
-  .skill-grid{grid-template-columns:1fr 1fr}
-  .contact-grid{grid-template-columns:1fr 1fr}
-}
-@media(prefers-reduced-motion:reduce){
-  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
-  .reveal{opacity:1;transform:none}
-  .skill-card .sk-icon path,.skill-card .sk-icon rect,.skill-card .sk-icon circle,.skill-card .sk-icon polyline,.skill-card .sk-icon line{stroke-dashoffset:0}
+/* ==========================================================================
+   FLUENT & METRO SPATIAL DESIGN SYSTEM
+   ========================================================================== */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ---- Modern Interactive Contact Form ---- */
-.contact-title-grad{
-  font-family:'Segoe UI','Inter',sans-serif;
-  font-size:clamp(36px,5vw,56px);
-  font-weight:700;
-  margin-bottom:0px;
-  letter-spacing:-1px;
-  background:linear-gradient(135deg,#00D2FF 0%,#00ABA9 50%,#33C4C2 100%);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  display:inline-block;
+:root {
+  /* Accent Colors */
+  --win-blue: #0078D7;
+  --win-blue-light: #2B88D8;
+  --win-blue-dark: #005A9E;
+  --win-blue-glow: rgba(0, 120, 215, 0.45);
+  
+  --win-cyan: #00ABA9;
+  --win-cyan-light: #33C4C2;
+  --win-green: #107C41;
+  --win-amber: #FF8C00;
+  --win-crimson: #E81123;
+  --win-purple: #68217A;
+  --win-magenta: #B4009E;
+
+  --sensitify-navy: #004E81;
+
+  --font-fluent: 'Segoe UI', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, monospace;
+
+  --transition-fluent: 0.25s cubic-bezier(0.1, 0.9, 0.2, 1);
+  --transition-fast: 0.15s ease;
 }
-.contact-sub{
-  font-size:15px;
-  color:var(--t2);
-  margin-bottom:36px;
-  max-width:700px;
-  line-height:1.6;
+
+/* ------------------------------------------
+   THEME: OBSIDIAN ACRYLIC (DARK)
+   ------------------------------------------ */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-desktop: #060911;
+  --bg-acrylic: rgba(18, 24, 38, 0.72);
+  --bg-acrylic-hover: rgba(26, 34, 54, 0.85);
+  --bg-acrylic-active: rgba(34, 44, 70, 0.95);
+  --bg-tile: rgba(16, 22, 35, 0.82);
+  
+  --border-acrylic: rgba(255, 255, 255, 0.12);
+  --border-acrylic-hover: rgba(0, 120, 215, 0.85);
+  --reveal-glow: rgba(255, 255, 255, 0.22);
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
+  --text-tertiary: #8E9AAF;
+
+  --taskbar-bg: rgba(10, 14, 22, 0.88);
+  --taskbar-border: rgba(255, 255, 255, 0.12);
+
+  --tile-shadow: 0 14px 36px -8px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+  --card-shadow: 0 18px 45px -10px rgba(0, 0, 0, 0.75);
+
+  --titlebar-bg: rgba(15, 20, 32, 0.96);
+  --code-bg: rgba(6, 9, 16, 0.7);
 }
-.contact-form{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
+
+/* ------------------------------------------
+   THEME: AERO CRYSTAL (LIGHT)
+   ------------------------------------------ */
+html[data-theme="light"] {
+  color-scheme: light;
+  --bg-desktop: #eef3f9;
+  --bg-acrylic: rgba(255, 255, 255, 0.78);
+  --bg-acrylic-hover: rgba(255, 255, 255, 0.94);
+  --bg-acrylic-active: #FFFFFF;
+  --bg-tile: rgba(255, 255, 255, 0.88);
+
+  --border-acrylic: rgba(0, 0, 0, 0.1);
+  --border-acrylic-hover: var(--win-blue);
+  --reveal-glow: rgba(0, 120, 215, 0.22);
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-tertiary: #64748B;
+
+  --taskbar-bg: rgba(243, 246, 252, 0.92);
+  --taskbar-border: rgba(0, 0, 0, 0.12);
+
+  --tile-shadow: 0 12px 28px -6px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+  --card-shadow: 0 16px 38px -8px rgba(15, 23, 42, 0.08);
+
+  --titlebar-bg: rgba(246, 249, 254, 0.98);
+  --code-bg: rgba(238, 242, 248, 0.85);
 }
-.form-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
-@media(max-width:540px){
-  .form-row{grid-template-columns:1fr}
+
+body {
+  font-family: var(--font-fluent);
+  background-color: var(--bg-desktop);
+  color: var(--text-primary);
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 60px;
+  -webkit-font-smoothing: antialiased;
 }
-.form-group{
-  display:flex;
-  flex-direction:column;
-  gap:6px;
+
+/* ==========================================================================
+   VOLUMETRIC LIGHT & PRISM RAYS WALLPAPER
+   ========================================================================== */
+.hero-wallpaper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: var(--bg-desktop);
 }
-.form-group label{
-  font-size:13px;
-  font-weight:700;
-  color:#00D2FF;
-  letter-spacing:0.3px;
+
+.win-light-cone {
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110vw;
+  height: 95vh;
+  background: radial-gradient(ellipse 65% 55% at 50% 25%, rgba(0, 120, 215, 0.24) 0%, rgba(0, 171, 169, 0.08) 50%, transparent 80%);
+  filter: blur(50px);
 }
-html[data-theme="light"] .form-group label{color:#0078D7}
-.form-group input,.form-group textarea{
-  width:100%;
-  padding:12px 16px;
-  background:rgba(18,24,38,0.7);
-  border:2px solid #00D2FF;
-  border-radius:6px;
-  color:#ffffff;
-  font-family:inherit;
-  font-size:14px;
-  outline:none;
-  transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;
+
+.win-laser-ray1 {
+  position: absolute;
+  top: -10%;
+  left: 15%;
+  width: 65vw;
+  height: 110vh;
+  background: linear-gradient(130deg, rgba(0, 120, 215, 0.14) 0%, rgba(0, 171, 169, 0.04) 40%, transparent 70%);
+  transform: skewX(-20deg);
+  filter: blur(40px);
 }
-html[data-theme="light"] .form-group input,html[data-theme="light"] .form-group textarea{
-  background:#ffffff;
-  border-color:#0078D7;
-  color:#111111;
+
+.win-laser-ray2 {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 50vw;
+  height: 95vh;
+  background: linear-gradient(225deg, rgba(104, 33, 122, 0.12) 0%, rgba(0, 120, 215, 0.05) 50%, transparent 80%);
+  transform: skewX(15deg);
+  filter: blur(45px);
 }
-.form-group input:focus,.form-group textarea:focus{
-  border-color:#33E1FF;
-  box-shadow:0 0 16px rgba(0,210,255,0.4);
-  background:rgba(18,24,38,0.9);
+
+.win-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, transparent 30%, rgba(3, 6, 12, 0.75) 100%);
 }
-html[data-theme="light"] .form-group input:focus,html[data-theme="light"] .form-group textarea:focus{
-  border-color:#005A9E;
-  box-shadow:0 0 16px rgba(0,120,215,0.3);
-  background:#ffffff;
+
+html[data-theme="light"] .win-vignette {
+  background: radial-gradient(circle at 50% 40%, transparent 35%, rgba(215, 224, 238, 0.65) 100%);
 }
-.form-group textarea{resize:vertical;min-height:120px}
-.form-actions{display:flex;justify-content:flex-start}
-.btn-send{
-  display:inline-block;
-  padding:14px 44px;
-  background:#00D2FF;
-  color:#0B0F1A;
-  font-size:15px;
-  font-weight:800;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-  box-shadow:0 0 24px rgba(0,210,255,0.6);
-  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
-  letter-spacing:0.5px;
+
+html[data-theme="light"] .win-light-cone {
+  background: radial-gradient(ellipse 70% 50% at 50% 20%, rgba(0, 120, 215, 0.12) 0%, rgba(0, 171, 169, 0.05) 50%, transparent 80%);
 }
-.btn-send:hover{
-  background:#4DE6FF;
-  transform:translateY(-2px) scale(1.02);
-  box-shadow:0 0 32px rgba(0,210,255,0.85);
+
+html[data-theme="light"] .win-laser-ray1 {
+  background: linear-gradient(130deg, rgba(0, 120, 215, 0.07) 0%, transparent 60%);
 }
-.btn-send:active{transform:translateY(1px) scale(0.98)}
-.form-status{
-  font-size:13px;
-  font-weight:600;
-  color:#33C4C2;
-  min-height:20px;
+
+html[data-theme="light"] .win-laser-ray2 {
+  background: linear-gradient(225deg, rgba(104, 33, 122, 0.05) 0%, transparent 60%);
 }
+
+/* ==========================================================================
+   ACRYLIC MATERIAL & SPATIAL CARD
+   ========================================================================== */
+.fluent-acrylic {
+  background: var(--bg-acrylic);
+  backdrop-filter: blur(24px) saturate(170%);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  border: 1px solid var(--border-acrylic);
+  box-shadow: var(--tile-shadow);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fluent), 
+              border-color var(--transition-fast), 
+              box-shadow var(--transition-fluent),
+              background-color var(--transition-fast);
+}
+
+.fluent-acrylic::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(450px circle at var(--reveal-x, 50%) var(--reveal-y, 50%), var(--reveal-glow), transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.fluent-acrylic:hover::after {
+  opacity: 1;
+}
+
+.fluent-acrylic:hover {
+  border-color: var(--win-blue);
+  box-shadow: 0 16px 40px -10px var(--win-blue-glow), var(--tile-shadow);
+}
+
+.spatial-tile {
+  transform-style: preserve-3d;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.spatial-tile:active {
+  transform: scale3d(0.965, 0.965, 0.965) !important;
+}
+
+.spatial-content-elevated {
+  transform: translateZ(16px);
+  transform-style: preserve-3d;
+}
+
+/* ==========================================================================
+   ASYMMETRIC METRO LIVE TILES HUB
+   ========================================================================== */
+.metro-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 170px;
+  gap: 16px;
+  margin: 32px 0 48px;
+  perspective: 1200px;
+}
+
+@media (max-width: 960px) {
+  .metro-hub-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+  }
+}
+
+@media (max-width: 540px) {
+  .metro-hub-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 160px;
+  }
+}
+
+.tile-w1-h1 { grid-column: span 1; grid-row: span 1; }
+.tile-w2-h1 { grid-column: span 2; grid-row: span 1; }
+.tile-w2-h2 { grid-column: span 2; grid-row: span 2; }
+
+@media (max-width: 540px) {
+  .tile-w2-h1, .tile-w2-h2 { grid-column: span 1; }
+  .tile-w2-h2 { grid-row: span 1; }
+}
+
+.live-tile {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--text-primary);
+  border-radius: 0px;
+}
+
+.tile-flipper {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.tile-face {
+  position: absolute;
+  inset: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: inherit;
+}
+
+.tile-back {
+  transform: rotateX(180deg);
+  background: var(--win-blue-dark);
+  color: #FFFFFF;
+}
+
+.tile-flipper.flipped {
+  transform: rotateX(180deg);
+}
+
+.tile-badge-bottom {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.tile-icon-hero {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px;
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 8px;
+}
+
+.tile-accent-blue { background: var(--win-blue); color: #FFFFFF; border-color: rgba(255,255,255,0.25); }
+.tile-accent-cyan { background: var(--win-cyan); color: #FFFFFF; border-color: rgba(255,255,255,0.25); }
+.tile-accent-green { background: var(--win-green); color: #FFFFFF; border-color: rgba(255,255,255,0.25); }
+.tile-accent-amber { background: var(--win-amber); color: #FFFFFF; border-color: rgba(255,255,255,0.25); }
+.tile-accent-purple { background: var(--win-purple); color: #FFFFFF; border-color: rgba(255,255,255,0.25); }
+
+canvas#miniPotCanvas {
+  width: 100%;
+  height: 60px;
+  display: block;
+  border-radius: 0px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   LAYOUT & CONTAINER
+   ========================================================================== */
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+section {
+  position: relative;
+  padding: 56px 0;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--win-blue);
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: clamp(1.85rem, 3.8vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+h2 strong {
+  font-weight: 700;
+  color: var(--win-blue);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px 30px;
+  position: relative;
+}
+
+.hero-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 0px;
+  border: 3px solid var(--win-blue);
+  box-shadow: 0 10px 28px rgba(0, 120, 215, 0.4), inset 0 0 0 2px rgba(255,255,255,0.4);
+  object-fit: cover;
+  margin: 0 auto 18px;
+  display: block;
+}
+
+.avail-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: var(--win-cyan);
+  color: #FFFFFF;
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(0, 171, 169, 0.35);
+}
+
+.avail-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 0 8px #FFFFFF;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6.5vw, 4.2rem);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.hero h1 strong {
+  font-weight: 700;
+  color: var(--win-blue);
+}
+
+.hero-role {
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  font-weight: 600;
+  color: var(--win-cyan-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  min-height: 1.6em;
+}
+
+.hero-role .cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.1em;
+  background: var(--win-cyan-light);
+  margin-left: 4px;
+  vertical-align: -2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.hero-sub {
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.hero-btn-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.win-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.win-btn:active {
+  transform: scale(0.96);
+}
+
+.btn-blue { background: var(--win-blue); color: #FFFFFF; border-color: var(--win-blue); }
+.btn-blue:hover { background: var(--win-blue-light); border-color: var(--win-blue-light); box-shadow: 0 6px 20px var(--win-blue-glow); }
+
+.btn-cyan { background: var(--win-cyan); color: #FFFFFF; border-color: var(--win-cyan); }
+.btn-cyan:hover { background: var(--win-cyan-light); border-color: var(--win-cyan-light); box-shadow: 0 6px 20px rgba(0, 171, 169, 0.4); }
+
+.btn-acrylic { background: var(--bg-acrylic); color: var(--text-primary); border-color: var(--border-acrylic); }
+.btn-acrylic:hover { background: var(--win-blue); color: #FFFFFF; border-color: var(--win-blue); }
+
+/* ==========================================================================
+   APP WINDOW TITLEBAR CHROME
+   ========================================================================== */
+.window-frame {
+  margin-bottom: 24px;
+}
+
+.window-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: var(--titlebar-bg);
+  border-bottom: 1px solid var(--border-acrylic);
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  user-select: none;
+}
+
+.window-title-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.window-controls {
+  display: flex;
+  align-items: center;
+}
+
+.window-btn {
+  width: 34px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.window-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+}
+
+.window-btn.btn-close:hover {
+  background: var(--win-crimson);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   FEATURED PROJECT & APP CARDS
+   ========================================================================== */
+.app-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.app-card-body {
+  padding: 32px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.app-icon-box {
+  width: 76px;
+  height: 76px;
+  border-radius: 0px;
+  object-fit: cover;
+  border: 2px solid var(--border-acrylic);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.app-info-col {
+  flex: 1;
+  min-width: 280px;
+}
+
+.app-info-col h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.app-meta-sub {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  margin-bottom: 10px;
+}
+
+.app-info-col p {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.case-study-box {
+  margin-top: 14px;
+  border-left: 3px solid var(--win-blue);
+  padding: 4px 0 4px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+}
+
+.case-study-box strong {
+  color: var(--win-blue-light);
+}
+
+.case-study-box strong.green {
+  color: var(--win-cyan-light);
+}
+
+.app-tags-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.metro-tag {
+  font-size: 0.675rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  background: var(--win-blue);
+  color: #FFFFFF;
+}
+
+.metro-tag.green {
+  background: var(--win-cyan);
+}
+
+.metro-tag.sensitify {
+  background: var(--sensitify-navy);
+}
+
+.app-links-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.shots-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.shot-thumb {
+  width: 124px;
+  border: 2px solid var(--border-acrylic);
+  overflow: hidden;
+  background: #000000;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  display: block;
+}
+
+.shot-thumb:hover {
+  transform: translateY(-4px) scale(1.04);
+  border-color: var(--win-blue);
+}
+
+.shot-thumb img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* 3D CAD Mini Viewer Buttons */
+.cad-mini-btn {
+  padding: 4px 10px;
+  background: var(--code-bg);
+  border: 1px solid var(--border-acrylic);
+  color: var(--text-secondary);
+  font-size: 0.725rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0px;
+  transition: all var(--transition-fast);
+}
+
+.cad-mini-btn:hover, .cad-mini-btn.active {
+  background: var(--win-blue);
+  color: #FFFFFF;
+  border-color: var(--win-blue);
+}
+
+/* ==========================================================================
+   CAREER TIMELINE & EDUCATION
+   ========================================================================== */
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  background: var(--win-blue);
+}
+
+.tl-item {
+  position: relative;
+  padding: 0 0 32px 20px;
+}
+
+.tl-item:last-child {
+  padding-bottom: 0;
+}
+
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: var(--win-blue);
+  border: 2px solid var(--bg-desktop);
+  z-index: 1;
+}
+
+.tl-date {
+  font-size: 0.725rem;
+  color: var(--win-cyan-light);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.tl-item h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.tl-place {
+  font-size: 0.85rem;
+  color: var(--win-blue-light);
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tl-item p, .tl-item li {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.tl-item ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.tl-item li::marker {
+  color: var(--win-blue);
+}
+
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .edu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.edu-card {
+  padding: 28px;
+  border-top: 4px solid var(--win-cyan);
+}
+
+/* ==========================================================================
+   SKILLS & TECH BADGES
+   ========================================================================== */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  padding: 28px 20px;
+  text-align: center;
+  border-top: 4px solid var(--win-blue);
+}
+
+.sk-icon {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 12px;
+  stroke: var(--win-blue-light);
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.badge-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.badge-wrap img {
+  height: 30px;
+  border-radius: 0px;
+  transition: transform var(--transition-fast);
+}
+
+.badge-wrap img:hover {
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   CONTACT FORM & NETWORKING
+   ========================================================================== */
+.contact-form-card {
+  padding: 36px 40px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 540px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--win-blue-light);
+  letter-spacing: 0.5px;
+}
+
+.win-input, .win-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--code-bg);
+  border: 2px solid var(--border-acrylic);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.win-input:focus, .win-textarea:focus {
+  border-color: var(--win-blue);
+  box-shadow: 0 0 16px var(--win-blue-glow);
+}
+
+.win-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.contact-card {
+  padding: 24px 18px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  display: block;
+}
+
+.contact-card .cico {
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 10px;
+  stroke: var(--win-blue-light);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.contact-card:hover {
+  background: var(--win-blue);
+  color: #FFFFFF;
+}
+
+.contact-card:hover .cico {
+  stroke: #FFFFFF;
+}
+
+/* ==========================================================================
+   SPATIAL TASKBAR & START MENU FLYOUT
+   ========================================================================== */
+.win10-taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: var(--taskbar-bg);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-top: 1px solid var(--taskbar-border);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  user-select: none;
+}
+
+.taskbar-left {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+}
+
+.start-btn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.start-btn:hover, .start-btn.active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.win-logo-icon {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.win-logo-icon span {
+  background: #0078D7;
+  display: block;
+}
+
+.taskbar-search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-acrylic);
+  height: 34px;
+  margin-left: 4px;
+}
+
+.taskbar-search input {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-family: inherit;
+  outline: none;
+  width: 140px;
+}
+
+.taskbar-pinned {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  height: 100%;
+}
+
+.taskbar-icon-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  text-decoration: none;
+}
+
+.taskbar-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+}
+
+.taskbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+}
+
+.sys-clock {
+  padding: 4px 10px;
+  text-align: right;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--text-primary);
+  font-family: var(--font-fluent);
+  cursor: default;
+}
+
+/* Start Menu Flyout */
+.start-menu-flyout {
+  position: fixed;
+  bottom: 48px;
+  left: 0;
+  width: 380px;
+  max-width: 95vw;
+  background: var(--taskbar-bg);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--border-acrylic);
+  border-bottom: none;
+  box-shadow: 0 -12px 35px rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  padding: 16px;
+  animation: flyoutUp 0.25s cubic-bezier(0.1, 0.9, 0.2, 1) both;
+}
+
+.start-menu-flyout.active {
+  display: flex;
+}
+
+@keyframes flyoutUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.start-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-acrylic);
+  margin-bottom: 14px;
+}
+
+.start-user-avatar {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--win-blue);
+  object-fit: cover;
+}
+
+.start-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.start-link-tile {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-acrylic);
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+}
+
+.start-link-tile:hover {
+  background: var(--win-blue);
+  color: #FFFFFF;
+}
+
+/* Scroll reveal utility */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.d1 { transition-delay: 0.1s; }
+.d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; }
 </style>
 </head>
+
 <body>
-<div class="progress-bar" id="progressBar"></div>
 
-<nav class="nav" id="nav">
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#apps">Apps</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
-  <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-  <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-</button>
-
-<button class="to-top" id="toTop" aria-label="Back to top">
-  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
-</button>
-
-<div class="orbs">
-  <div class="orb o1"></div>
-  <div class="orb o2"></div>
-  <div class="orb o3"></div>
+<!-- Volumetric Light Wallpaper -->
+<div class="hero-wallpaper">
+  <div class="win-light-cone"></div>
+  <div class="win-laser-ray1"></div>
+  <div class="win-laser-ray2"></div>
+  <div class="win-vignette"></div>
 </div>
 
-<!-- HERO -->
+<!-- ==========================================================================
+   HERO & DESKTOP HUB
+   ========================================================================== -->
 <header class="hero">
-  <div class="hero-inner">
-    <img class="avatar" src="https://avatars.githubusercontent.com/u/156576779?v=4" alt="Portrait of Efe Ateş">
-    <div class="avail"><span class="dot"></span>Open to opportunities &middot; Ankara / Remote</div>
-    <h1>Efe <span class="grad">Ateş</span></h1>
-    <div class="role" aria-label="Mobile Developer and On-Device AI Engineer"><span class="rot" id="rot"></span><span class="cursor"></span></div>
-    <p class="sub">I build privacy-first Android apps that run AI on-device, with no cloud and no data leaks. 6 apps shipped on Google Play, 2k+ downloads.</p>
-    <div class="hero-links">
-      <a href="EfeAtes_CV.pdf" download class="btn-cv">
-        <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
-        Download CV
-      </a>
-      <a href="https://play.google.com/store/apps/developer?id=SensiStudio" target="_blank" rel="noopener" class="btn-primary">
-        <svg viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302L8.364 18.143l8.635-8.635zM14.5 12l-2.302-2.302 8.635-8.635L14.5 12z"/></svg>
-        Google Play
-      </a>
-      <a href="https://github.com/EfeAtesh" target="_blank" rel="noopener" class="btn-ghost">
-        <svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.81 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.21.69.82.57A12 12 0 0 0 12 .3"/></svg>
-        GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/efeates/" target="_blank" rel="noopener" class="btn-ghost">
-        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-        LinkedIn
-      </a>
-    </div>
-    <div class="scroll-hint">
-      <span>Explore</span>
-      <svg viewBox="0 0 24 24"><polyline points="7 10 12 15 17 10"/></svg>
+  <div class="container">
+    <div class="hero-inner reveal">
+      <img class="hero-avatar" src="https://avatars.githubusercontent.com/u/156576779?v=4" alt="Portrait of Efe Ateş">
+      <div class="avail-pill"><span class="avail-dot"></span>Open to opportunities &middot; Ankara / Remote</div>
+      
+      <h1>Efe <strong>Ateş</strong></h1>
+      <div class="hero-role" aria-label="Mobile Developer and On-Device AI Engineer">
+        <span id="roleText"></span><span class="cursor"></span>
+      </div>
+
+      <p class="hero-sub">
+        Building privacy-first Android apps that run AI on-device with zero cloud dependency and zero data leaks. 6 published apps on Google Play &middot; 2K+ downloads.
+      </p>
+
+      <div class="hero-btn-row">
+        <a href="EfeAtes_CV.pdf" download class="win-btn btn-cyan">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
+          Download CV (PDF)
+        </a>
+        <a href="https://play.google.com/store/apps/developer?id=SensiStudio" target="_blank" rel="noopener" class="win-btn btn-blue">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302L8.364 18.143l8.635-8.635zM14.5 12l-2.302-2.302 8.635-8.635L14.5 12z"/></svg>
+          Google Play Store
+        </a>
+        <a href="https://github.com/EfeAtesh" target="_blank" rel="noopener" class="win-btn btn-acrylic">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.81 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.21.69.82.57A12 12 0 0 0 12 .3"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/efeates/" target="_blank" rel="noopener" class="win-btn btn-acrylic">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <!-- ====================================================================
+           ASYMMETRIC METRO LIVE TILES HUB
+           ==================================================================== -->
+      <div class="metro-hub-grid">
+        
+        <!-- Live Tile 1: Microsoft AI Innovators (Wide 2x1 Flip Tile with Microsoft 4-Color Logo) -->
+        <div class="fluent-acrylic live-tile spatial-tile tile-w2-h1 tile-accent-blue" id="tileMicrosoft" onclick="window.open('https://github.com/EfeAtesh/Foundry-Local-Rag', '_blank')">
+          <div class="tile-flipper">
+            <!-- Front Face -->
+            <div class="tile-face">
+              <div class="spatial-content-elevated">
+                <div class="tile-icon-hero" style="background:rgba(0,0,0,0.25); border:1px solid rgba(255,255,255,0.3);">
+                  <!-- Microsoft 4-color Logo SVG -->
+                  <svg viewBox="0 0 21 21" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0" y="0" width="10" height="10" fill="#F25022"/>
+                    <rect x="11" y="0" width="10" height="10" fill="#7FBA00"/>
+                    <rect x="0" y="11" width="10" height="10" fill="#00A4EF"/>
+                    <rect x="11" y="11" width="10" height="10" fill="#FFB900"/>
+                  </svg>
+                </div>
+                <div style="font-size:1.15rem; font-weight:700;">Microsoft AI Innovators</div>
+                <div style="font-size:0.8rem; opacity:0.9;">Foundry Local RAG &middot; SummerSchool 2026</div>
+              </div>
+              <div class="tile-badge-bottom">
+                <span>100% Offline AI Solution ↗</span>
+              </div>
+            </div>
+            <!-- Back Face -->
+            <div class="tile-face tile-back">
+              <div class="spatial-content-elevated">
+                <div style="font-size:0.85rem; font-weight:700; text-transform:uppercase; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
+                  <svg viewBox="0 0 21 21" width="14" height="14" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="#F25022"/><rect x="11" y="0" width="10" height="10" fill="#7FBA00"/><rect x="0" y="11" width="10" height="10" fill="#00A4EF"/><rect x="11" y="11" width="10" height="10" fill="#FFB900"/></svg>
+                  Local Edge-RAG Engine
+                </div>
+                <p style="font-size:0.8rem; line-height:1.4;">Zero cloud calls, on-device vector search with Foundry. Enterprise privacy architecture.</p>
+              </div>
+              <div class="tile-badge-bottom">
+                <span>View on GitHub &rarr;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Tile 2: NFC Potentiostat Hardware (Medium 1x1 Tile) -->
+        <div class="fluent-acrylic live-tile spatial-tile tile-w1-h1 tile-accent-cyan" onclick="window.open('https://efeatesh.github.io/NFCPotentiostatQuickGlance/', '_blank')">
+          <div class="spatial-content-elevated">
+            <div class="tile-icon-hero">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div style="font-size:1.05rem; font-weight:700;">NFC Potentiostat</div>
+            <div style="font-size:0.75rem; opacity:0.9;">Zero-Battery Sensing</div>
+          </div>
+          <div class="tile-badge-bottom">
+            <span>TÜBİTAK 2209-B ↗</span>
+          </div>
+        </div>
+
+        <!-- Live Tile 3: Live System Digital Clock (Medium 1x1 Tile) -->
+        <div class="fluent-acrylic live-tile spatial-tile tile-w1-h1" style="background:var(--bg-tile); border-color:var(--border-acrylic);">
+          <div class="spatial-content-elevated">
+            <div style="font-size:0.75rem; font-weight:700; color:var(--win-blue-light); text-transform:uppercase;">Ankara / Local Time</div>
+            <div id="liveClockDisplay" style="font-family:var(--font-mono); font-size:1.6rem; font-weight:700; color:var(--text-primary); margin:6px 0;">00:00:00</div>
+            <div id="liveDateDisplay" style="font-size:0.75rem; color:var(--text-tertiary);">Sunday, 16 August</div>
+          </div>
+          <div class="tile-badge-bottom" style="color:var(--win-cyan-light)">
+            <span>Status: Available &bull; Active</span>
+          </div>
+        </div>
+
+        <!-- Live Tile 4: Sensitify GO Live Waveform with Sensitify Vector Logo (Wide 2x1 Tile) -->
+        <div class="fluent-acrylic live-tile spatial-tile tile-w2-h1" style="background:var(--bg-tile);" onclick="window.open('https://play.google.com/store/apps/details?id=com.sensitify.sensitifygo', '_blank')">
+          <div class="spatial-content-elevated" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <!-- Sensitify Vector Logo SVG -->
+              <div style="width:30px; height:30px; flex-shrink:0; border-radius:4px; overflow:hidden; box-shadow:0 2px 8px rgba(0,78,129,0.5);">
+                <svg viewBox="0 0 15 15" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.012,0.012h15v15h-15z" fill="#004e81"/>
+                  <path d="m11.137,7.537v-6.519h1.429,1.429v6.519,6.519h-1.429,-1.429z" fill="#ffffff"/>
+                  <path d="m7.163,7.537v-6.589h0.976,0.976v6.589,6.589h-0.976,-0.976z" fill="#ffffff"/>
+                  <path d="m4.304,7.537v-6.589h0.697,0.697v6.589,6.589h-0.697,-0.697z" fill="#ffffff"/>
+                  <path d="m2.352,7.537v-6.589h0.453,0.453v6.589,6.589h-0.453,-0.453z" fill="#ffffff"/>
+                  <path d="m1.097,7.537v-6.589h0.209,0.209v6.589,6.589h-0.209,-0.209z" fill="#ffffff"/>
+                </svg>
+              </div>
+              <div>
+                <div style="font-size:1rem; font-weight:700; color:var(--text-primary);">Sensitify GO &middot; Real-Time CV</div>
+                <div style="font-size:0.75rem; color:var(--win-blue-light);">9 Techniques &middot; USB Host Stream</div>
+              </div>
+            </div>
+            <span class="metro-tag green" style="font-size:0.65rem;">LIVE SCAN</span>
+          </div>
+          <canvas id="miniPotCanvas"></canvas>
+          <div class="tile-badge-bottom" style="margin-top:6px; color:var(--text-tertiary)">
+            <span>Google Play Store ↗</span>
+          </div>
+        </div>
+
+        <!-- Live Tile 5: Published Apps Count (Medium 1x1 Tile) -->
+        <div class="fluent-acrylic live-tile spatial-tile tile-w1-h1 tile-accent-green" onclick="location.href='#apps'">
+          <div class="spatial-content-elevated">
+            <div style="font-size:2.4rem; font-weight:300; line-height:1; font-family:var(--font-fluent);">6</div>
+            <div style="font-size:0.85rem; font-weight:700; text-transform:uppercase; margin-top:4px;">Published Apps</div>
+          </div>
+          <div class="tile-badge-bottom">
+            <span>SensiStudio on Play Store</span>
+          </div>
+        </div>
+
+        <!-- Live Tile 6: Downloads Metric (Medium 1x1 Tile) -->
+        <div class="fluent-acrylic live-tile spatial-tile tile-w1-h1 tile-accent-purple" onclick="location.href='#apps'">
+          <div class="spatial-content-elevated">
+            <div style="font-size:2.4rem; font-weight:300; line-height:1; font-family:var(--font-fluent);">2K+</div>
+            <div style="font-size:0.85rem; font-weight:700; text-transform:uppercase; margin-top:4px;">Active Downloads</div>
+          </div>
+          <div class="tile-badge-bottom">
+            <span>Gemma 3 &middot; LibreChat</span>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </header>
 
 <main>
-<!-- ABOUT -->
+
+<!-- ABOUT SECTION -->
 <section id="about">
   <div class="container">
-    <div class="glass reveal" style="max-width:720px;margin:0 auto;padding:40px">
-      <div class="stag">About</div>
-      <h2>Straight to the solution</h2>
-      <p style="color:var(--t2);font-size:14px;line-height:1.8">
-        Fresh graudate Computer Engineering &amp; Biomedical Engineering (Acreditted by MÜDEK) at Ankara University. I build Android apps that run AI on-device, with no cloud, no data leaks, and no compromises. My work spans scientific instrumentation (NFC potentiostats), on-device LLM inference (Gemma 3), and productivity tools, all published on Google Play under SensiStudio. I care about shipping real products, fast, and making complex hardware feel simple on a phone.
-      </p>
-      <div class="stat-row">
-        <div class="glass stat reveal d1">
-          <div class="num" data-count="6">0</div>
-          <div class="lbl">Published Apps</div>
+    <div class="window-frame fluent-acrylic reveal">
+      <div class="window-titlebar">
+        <div class="window-title-left">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>Engineering Philosophy &middot; About</span>
         </div>
-        <div class="glass stat reveal d2">
-          <div class="num" data-count="11">0</div>
-          <div class="lbl">GitHub Public Repos</div>
+        <div class="window-controls">
+          <div class="window-btn">&minus;</div>
+          <div class="window-btn">&square;</div>
+          <div class="window-btn btn-close">&times;</div>
         </div>
-        <div class="glass stat reveal d3">
-          <div class="num" data-count="2000" data-suffix="+" data-format="k">0</div>
-          <div class="lbl">Downloads</div>
+      </div>
+      <div style="padding:36px 40px">
+        <div class="section-tag">About Me</div>
+        <h2>Straight to the <strong>Solution</strong></h2>
+        <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.8; margin-bottom:24px;">
+          Fresh graduate in <strong>Computer Engineering Minor &amp; Biomedical Engineering</strong> (Accredited by MÜDEK) at Ankara University. I build Android apps that run AI on-device with zero cloud latency, zero data leaks, and no compromises. My work spans scientific instrumentation (NFC potentiostats), on-device LLM inference (Gemma 3), and productivity tools, all published on Google Play under <strong>SensiStudio</strong>. I care about shipping real products fast and making complex hardware feel natural on a phone.
+        </p>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+          <div class="metro-tag">Ankara University</div>
+          <div class="metro-tag green">MÜDEK Accredited</div>
+          <div class="metro-tag">TÜBİTAK 2209-B Approved</div>
+          <div class="metro-tag green" style="display:inline-flex; align-items:center; gap:6px;">
+            <svg viewBox="0 0 21 21" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="#F25022"/><rect x="11" y="0" width="10" height="10" fill="#7FBA00"/><rect x="0" y="11" width="10" height="10" fill="#00A4EF"/><rect x="11" y="11" width="10" height="10" fill="#FFB900"/></svg>
+            Microsoft AI Innovators 2026
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- EXPERIENCE SECTION -->
 <section id="experience">
   <div class="container">
     <div class="reveal">
-      <div class="stag">Career</div>
-      <h2>Experience</h2>
+      <div class="section-tag">Career</div>
+      <h2>Work <strong>Experience</strong></h2>
     </div>
-    <div class="glass reveal d1" style="padding:36px 40px">
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-date">Jun 2026 – Present</div>
-          <h3>AI Intern (Microsoft AI Innovators SummerSchool 2026 Program)</h3>
-          <div class="tl-place">Microsoft</div>
-          <p>Selected for the Microsoft AI Innovators program to independently engineer a high-performance, privacy-first AI solution.</p>
-          <ul>
-            <li>Architecting a secure, enterprise-grade AI system using Foundry, specifically designed to operate 100% local and offline.</li>
-            <li>Responsible for handling the entire development lifecycle and optimizing local model deployment for zero-connectivity environments.</li>
-            <li>Refining the architecture through weekly engineering iterations and benchmark evaluations.</li>
-          </ul>
-          <div class="tl-tags">
-            <span class="tag">Microsoft AI Innovators</span>
-            <span class="tag">Foundry</span>
-            <span class="tag">Local RAG</span>
-            <span class="tag">Privacy-First AI</span>
-            <a class="tag green" href="https://github.com/EfeAtesh/Foundry-Local-Rag" target="_blank" rel="noopener" style="text-decoration:none">View on GitHub (Foundry-Local-Rag) ↗</a>
-          </div>
+
+    <div class="window-frame fluent-acrylic reveal d1">
+      <div class="window-titlebar">
+        <div class="window-title-left">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <span>Career Experience Timeline</span>
         </div>
-        <div class="tl-item">
-          <div class="tl-date">Dec 2024 – Jun 2026</div>
-          <h3>R&D Software Developer (Working Student)</h3>
-          <div class="tl-place">Sensitify</div>
-          <p>Owned the full development lifecycle of the Sensitify Go Android app, from architecture to Play Store release.</p>
-          <ul>
-            <li>Shipped a mobile potentiostat-control app supporting <strong>9 electrochemical techniques</strong> (CV, DPV, SWV, EIS, CA, LSV, NPV, OCP, Potentiometry) with real-time plotting.</li>
-            <li>Built USB-host device communication for ECA/MCA hardware and data export to <strong>.xlsx / .m</strong> formats.</li>
-            <li>Fine-tuned an on-device LLM for <strong>voice-controlled</strong> electrochemistry guidance, fully offline, zero data collection.</li>
-          </ul>
-          <div class="tl-tags">
-            <span class="tag">Android</span>
-            <span class="tag">Kotlin</span>
-            <span class="tag">On-Device AI</span>
-            <a class="tag green" href="https://play.google.com/store/apps/details?id=com.sensitify.sensitifygo" target="_blank" rel="noopener" style="text-decoration:none">Published on Play Store ↗</a>
-          </div>
+        <div class="window-controls">
+          <div class="window-btn">&minus;</div>
+          <div class="window-btn">&square;</div>
+          <div class="window-btn btn-close">&times;</div>
         </div>
-        <div class="tl-item">
-          <div class="tl-date">Mar 2024 – Dec 2024</div>
-          <h3>Engineering Intern</h3>
-          <div class="tl-place">Sensitify</div>
-          <p>Improved the Sensitify Studio desktop app and the company's web presence.</p>
-          <ul>
-            <li>Rebuilt UI components in <strong>C++ / Qt &amp; QML</strong> for a smoother instrument-control experience.</li>
-            <li>Designed and developed the company's official website, strengthening brand identity.</li>
-          </ul>
-          <div class="tl-tags">
-            <span class="tag">C++</span>
-            <span class="tag">Qt/QML</span>
-            <span class="tag">Web Design</span>
+      </div>
+
+      <div style="padding:36px 40px">
+        <div class="timeline-list">
+          
+          <!-- 1. Microsoft AI Innovators -->
+          <div class="tl-item">
+            <div class="tl-date">Jun 2026 – Present</div>
+            <h3>AI Intern (Microsoft AI Innovators SummerSchool 2026 Program)</h3>
+            <div class="tl-place">
+              <!-- Microsoft 4-Color Logo SVG -->
+              <svg viewBox="0 0 21 21" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="10" height="10" fill="#F25022"/>
+                <rect x="11" y="0" width="10" height="10" fill="#7FBA00"/>
+                <rect x="0" y="11" width="10" height="10" fill="#00A4EF"/>
+                <rect x="11" y="11" width="10" height="10" fill="#FFB900"/>
+              </svg>
+              <span>Microsoft</span>
+            </div>
+            <p>Selected for the Microsoft AI Innovators program to independently engineer a high-performance, privacy-first AI solution.</p>
+            <ul>
+              <li>Architecting a secure, enterprise-grade AI system using Foundry, specifically designed to operate 100% local and offline.</li>
+              <li>Responsible for handling the entire development lifecycle and optimizing local model deployment for zero-connectivity environments.</li>
+              <li>Refining the architecture through weekly engineering iterations and benchmark evaluations.</li>
+            </ul>
+            <div class="app-tags-row">
+              <span class="metro-tag" style="display:inline-flex; align-items:center; gap:6px;">
+                <svg viewBox="0 0 21 21" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="#F25022"/><rect x="11" y="0" width="10" height="10" fill="#7FBA00"/><rect x="0" y="11" width="10" height="10" fill="#00A4EF"/><rect x="11" y="11" width="10" height="10" fill="#FFB900"/></svg>
+                Microsoft AI Innovators
+              </span>
+              <span class="metro-tag">Foundry</span>
+              <span class="metro-tag">Local RAG</span>
+              <a class="metro-tag green" href="https://github.com/EfeAtesh/Foundry-Local-Rag" target="_blank" rel="noopener" style="text-decoration:none">GitHub (Foundry-Local-Rag) ↗</a>
+            </div>
           </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-date">Jan 2024 – Feb 2024</div>
-          <h3>Engineering Intern</h3>
-          <div class="tl-place">İbn-i Sina Hospital</div>
-          <p>Maintained, repaired, and calibrated medical devices across multiple hospital departments, as a mandatory Biomedical Engineering clinical internship.</p>
-          <div class="tl-tags">
-            <span class="tag">Medical Devices</span>
-            <span class="tag">Calibration</span>
+
+          <!-- 2. Sensitify (Working Student) -->
+          <div class="tl-item">
+            <div class="tl-date">Dec 2024 – Jun 2026</div>
+            <h3>R&amp;D Software Developer (Working Student)</h3>
+            <div class="tl-place">
+              <!-- Sensitify Vector Logo SVG -->
+              <svg viewBox="0 0 15 15" width="16" height="16" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px; box-shadow:0 1px 4px rgba(0,0,0,0.3);">
+                <path d="M0.012,0.012h15v15h-15z" fill="#004e81"/>
+                <path d="m11.137,7.537v-6.519h1.429,1.429v6.519,6.519h-1.429,-1.429z" fill="#ffffff"/>
+                <path d="m7.163,7.537v-6.589h0.976,0.976v6.589,6.589h-0.976,-0.976z" fill="#ffffff"/>
+                <path d="m4.304,7.537v-6.589h0.697,0.697v6.589,6.589h-0.697,-0.697z" fill="#ffffff"/>
+                <path d="m2.352,7.537v-6.589h0.453,0.453v6.589,6.589h-0.453,-0.453z" fill="#ffffff"/>
+                <path d="m1.097,7.537v-6.589h0.209,0.209v6.589,6.589h-0.209,-0.209z" fill="#ffffff"/>
+              </svg>
+              <span>Sensitify</span>
+            </div>
+            <p>Owned the full development lifecycle of the Sensitify Go Android app, from architecture to Google Play Store release.</p>
+            <ul>
+              <li>Shipped a mobile potentiostat-control app supporting <strong>9 electrochemical techniques</strong> (CV, DPV, SWV, EIS, CA, LSV, NPV, OCP, Potentiometry) with real-time plotting.</li>
+              <li>Built USB-host device communication for ECA/MCA hardware and data export to <strong>.xlsx / .m</strong> formats.</li>
+              <li>Fine-tuned an on-device LLM for <strong>voice-controlled</strong> electrochemistry guidance, fully offline, zero data collection.</li>
+            </ul>
+            <div class="app-tags-row">
+              <span class="metro-tag sensitify" style="display:inline-flex; align-items:center; gap:6px;">
+                <svg viewBox="0 0 15 15" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M0.012,0.012h15v15h-15z" fill="#004e81"/><path d="m11.137,7.537v-6.519h1.429,1.429v6.519,6.519h-1.429,-1.429z" fill="#ffffff"/><path d="m7.163,7.537v-6.589h0.976,0.976v6.589,6.589h-0.976,-0.976z" fill="#ffffff"/><path d="m4.304,7.537v-6.589h0.697,0.697v6.589,6.589h-0.697,-0.697z" fill="#ffffff"/><path d="m2.352,7.537v-6.589h0.453,0.453v6.589,6.589h-0.453,-0.453z" fill="#ffffff"/><path d="m1.097,7.537v-6.589h0.209,0.209v6.589,6.589h-0.209,-0.209z" fill="#ffffff"/></svg>
+                Sensitify R&amp;D
+              </span>
+              <span class="metro-tag">Android</span>
+              <span class="metro-tag">Kotlin</span>
+              <a class="metro-tag green" href="https://play.google.com/store/apps/details?id=com.sensitify.sensitifygo" target="_blank" rel="noopener" style="text-decoration:none">Play Store Release ↗</a>
+            </div>
           </div>
+
+          <!-- 3. Sensitify (Intern) -->
+          <div class="tl-item">
+            <div class="tl-date">Mar 2024 – Dec 2024</div>
+            <h3>Engineering Intern</h3>
+            <div class="tl-place">
+              <svg viewBox="0 0 15 15" width="16" height="16" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;">
+                <path d="M0.012,0.012h15v15h-15z" fill="#004e81"/>
+                <path d="m11.137,7.537v-6.519h1.429,1.429v6.519,6.519h-1.429,-1.429z" fill="#ffffff"/>
+                <path d="m7.163,7.537v-6.589h0.976,0.976v6.589,6.589h-0.976,-0.976z" fill="#ffffff"/>
+                <path d="m4.304,7.537v-6.589h0.697,0.697v6.589,6.589h-0.697,-0.697z" fill="#ffffff"/>
+                <path d="m2.352,7.537v-6.589h0.453,0.453v6.589,6.589h-0.453,-0.453z" fill="#ffffff"/>
+                <path d="m1.097,7.537v-6.589h0.209,0.209v6.589,6.589h-0.209,-0.209z" fill="#ffffff"/>
+              </svg>
+              <span>Sensitify</span>
+            </div>
+            <p>Improved the Sensitify Studio desktop app and the company's official web presence.</p>
+            <ul>
+              <li>Rebuilt UI components in <strong>C++ / Qt &amp; QML</strong> for a smoother instrument-control experience.</li>
+              <li>Designed and developed the company's official website, strengthening brand identity.</li>
+            </ul>
+            <div class="app-tags-row">
+              <span class="metro-tag">C++</span>
+              <span class="metro-tag">Qt/QML</span>
+              <span class="metro-tag">Web Design</span>
+            </div>
+          </div>
+
+          <!-- 4. İbn-i Sina Hospital -->
+          <div class="tl-item">
+            <div class="tl-date">Jan 2024 – Feb 2024</div>
+            <h3>Engineering Intern</h3>
+            <div class="tl-place">İbn-i Sina Hospital</div>
+            <p>Maintained, repaired, and calibrated medical devices across multiple hospital departments as a mandatory Biomedical Engineering clinical internship.</p>
+            <div class="app-tags-row">
+              <span class="metro-tag">Medical Devices</span>
+              <span class="metro-tag">Calibration</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
-  <div class="container">
-    <div class="reveal">
-      <div class="stag">Academic</div>
-      <h2>Education</h2>
-    </div>
-    <div class="edu-grid">
-      <div class="glass edu-card reveal d1">
-        <div class="edu-date">2023 – 2026</div>
-        <h3>B.Sc. Minor in Computer Engineering</h3>
-        <div class="edu-place">Ankara University</div>
-        <p>Software engineering, algorithms, data structures, OOP, database systems, deep learning. Selected for Microsoft AI Innovators Summer School 2026 (Edge-AI &amp; On-Device AI).</p>
-      </div>
-      <div class="glass edu-card reveal d2">
-        <div class="edu-date">2022 – 2026</div>
-        <h3>B.Sc. in Biomedical Engineering</h3>
-        <div class="edu-place">Ankara University</div>
-        <p>Biomedical instrumentation, electrochemistry, HCI usability studies, medical device technologies.</p>
-        <div class="cert">ISO 13485:2016 Medical Devices QMS (Kiwa)</div>
-      </div>
-    </div>
-    <div class="glass reveal d3" style="margin-top:14px;padding:20px 28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center">
-      <span style="font-size:12px;color:var(--t2)">TOEIC Total: <strong style="color:var(--t1)">855/990</strong> (CEFR B2)</span>
-      <span style="width:1px;height:16px;background:var(--border)"></span>
-      <span style="font-size:12px;color:var(--t2)">TÜBİTAK 2209-B <strong style="color:var(--g2)">Approved</strong></span>
-      <span style="width:1px;height:16px;background:var(--border)"></span>
-      <span style="font-size:12px;color:var(--t2)">Microsoft AI Innovators <strong style="color:var(--p2)">2026</strong></span>
-    </div>
-  </div>
-</section>
-
-<!-- APPS -->
+<!-- APPS & PROJECTS SECTION -->
 <section id="apps">
   <div class="container">
     <div class="reveal">
-      <div class="stag">Portfolio</div>
-      <h2>Projects &amp; Published Apps</h2>
+      <div class="section-tag">Portfolio</div>
+      <h2>Projects &amp; <strong>Published Apps</strong></h2>
     </div>
+
     <div class="app-grid">
-      <!-- Foundry Local RAG (Microsoft AI Innovators) -->
-      <div class="glass app-card featured reveal d1" style="border-color:rgba(16,185,129,0.3)">
-        <div class="app-info">
-          <div class="featured-label" style="color:var(--g2)">Microsoft AI Innovators Program · Enterprise AI</div>
-          <h3>Foundry Local RAG – Privacy-First Offline AI</h3>
-          <div class="app-dev">Microsoft &middot; On-Device AI &middot; Local RAG &middot; Open Source</div>
-          <p>Selected for the Microsoft AI Innovators program to independently engineer a high-performance, privacy-first AI solution. Architecting a secure, enterprise-grade AI system using Foundry, specifically designed to operate 100% local and offline with zero cloud dependency.</p>
-          <div class="cs">
-            <div><span class="cs-k">Challenge:</span> Enterprise AI solutions often require cloud APIs, compromising privacy and requiring active internet connectivity.</div>
-            <div><span class="cs-k green">Solution:</span> Built a fully offline local RAG architecture, optimizing model deployment for zero-connectivity environments with weekly engineering iterations.</div>
+      
+      <!-- 1. Foundry Local RAG (Microsoft AI Innovators) -->
+      <div class="window-frame fluent-acrylic reveal d1">
+        <div class="window-titlebar">
+          <div class="window-title-left">
+            <svg viewBox="0 0 21 21" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="10" height="10" fill="#F25022"/>
+              <rect x="11" y="0" width="10" height="10" fill="#7FBA00"/>
+              <rect x="0" y="11" width="10" height="10" fill="#00A4EF"/>
+              <rect x="11" y="11" width="10" height="10" fill="#FFB900"/>
+            </svg>
+            <span>Microsoft Foundry Local RAG</span>
           </div>
-          <div class="app-tags">
-            <span class="tag">Microsoft AI Innovators</span>
-            <span class="tag">Foundry</span>
-            <span class="tag">Local RAG</span>
-            <span class="tag">On-Device AI</span>
-            <span class="tag green">100% Offline</span>
+          <div class="window-controls">
+            <div class="window-btn">&minus;</div>
+            <div class="window-btn">&square;</div>
+            <div class="window-btn btn-close">&times;</div>
           </div>
-          <div class="app-links">
-            <a href="https://github.com/EfeAtesh/Foundry-Local-Rag" target="_blank" rel="noopener">GitHub (Foundry-Local-Rag) →</a>
+        </div>
+        <div class="app-card-body">
+          <div class="app-icon-box" style="background:#0F172A; border-color:rgba(0,120,215,0.4); padding:16px;">
+            <svg viewBox="0 0 21 21" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="10" height="10" fill="#F25022"/>
+              <rect x="11" y="0" width="10" height="10" fill="#7FBA00"/>
+              <rect x="0" y="11" width="10" height="10" fill="#00A4EF"/>
+              <rect x="11" y="11" width="10" height="10" fill="#FFB900"/>
+            </svg>
+          </div>
+          <div class="app-info-col">
+            <div style="font-size:0.75rem; font-weight:700; color:var(--win-cyan-light); text-transform:uppercase; margin-bottom:4px;">Microsoft AI Innovators Program &middot; Enterprise AI</div>
+            <h3>Foundry Local RAG &ndash; Privacy-First Offline AI</h3>
+            <div class="app-meta-sub">Microsoft &middot; On-Device AI &middot; Local RAG &middot; Open Source</div>
+            <p>Selected for the Microsoft AI Innovators program to independently engineer a high-performance, privacy-first AI solution. Architecting a secure, enterprise-grade AI system using Foundry, specifically designed to operate 100% local and offline with zero cloud dependency.</p>
+            <div class="case-study-box">
+              <div><strong>Challenge:</strong> Enterprise AI solutions often require cloud APIs, compromising privacy and requiring active internet connectivity.</div>
+              <div><strong class="green">Solution:</strong> Built a fully offline local RAG architecture, optimizing model deployment for zero-connectivity environments with weekly engineering iterations.</div>
+            </div>
+            <div class="app-tags-row">
+              <span class="metro-tag" style="display:inline-flex; align-items:center; gap:6px;">
+                <svg viewBox="0 0 21 21" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="#F25022"/><rect x="11" y="0" width="10" height="10" fill="#7FBA00"/><rect x="0" y="11" width="10" height="10" fill="#00A4EF"/><rect x="11" y="11" width="10" height="10" fill="#FFB900"/></svg>
+                Microsoft AI Innovators
+              </span>
+              <span class="metro-tag">Foundry</span>
+              <span class="metro-tag">Local RAG</span>
+              <span class="metro-tag green">100% Offline</span>
+            </div>
+            <div class="app-links-row">
+              <a href="https://github.com/EfeAtesh/Foundry-Local-Rag" target="_blank" rel="noopener" class="win-btn btn-blue">GitHub (Foundry-Local-Rag) &rarr;</a>
+            </div>
           </div>
         </div>
       </div>
-      <!-- NFC Potentiostat (Featured graduation project) -->
-      <div class="glass app-card featured reveal d1">
-        <img class="app-icon" src="https://efeatesh.github.io/NFCPotentiostatQuickGlance/1000083839.jpg" alt="NFC Potentiostat assembled device" loading="lazy">
-        <div class="app-info">
-          <a class="featured-label" href="https://efeatesh.github.io/NFCPotentiostatQuickGlance/" target="_blank" rel="noopener" style="text-decoration:none;cursor:pointer">Featured Project · Graduation Thesis ↗</a>
-          <h3>NFC Potentiostat – Battery-Free Electrochemical Platform</h3>
-          <div class="app-dev">BME4496 &middot; Hardware + Firmware + Android + On-Device AI</div>
-          <p>A fully wireless, <strong>battery-free</strong> potentiostat powered entirely by NFC energy harvesting from a smartphone. Custom 4-layer PCB (STM32U545 + ST25DV), 3D-printed magnetic enclosure, CNC-milled 13.56 MHz antennas, and a companion Android app with real-time plotting and an on-device Gemma 3 1B AI agent for voice-controlled analysis. TÜBİTAK 2209-B approved.</p>
-          <div class="cs">
-            <div><span class="cs-k">Challenge:</span> Benchtop potentiostats are bulky, expensive, and need wired power, making them unusable for portable point-of-care diagnostics.</div>
-            <div><span class="cs-k green">Solution:</span> Designed the full stack end-to-end (analog AFE, embedded firmware over an ST25DV mailbox protocol, Android app, fine-tuned on-device AI), cutting cost &gt;90% vs. lab equipment with 98.5% measured accuracy.</div>
+
+      <!-- 2. Sensitify GO -->
+      <div class="window-frame fluent-acrylic reveal d1">
+        <div class="window-titlebar">
+          <div class="window-title-left">
+            <svg viewBox="0 0 15 15" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.012,0.012h15v15h-15z" fill="#004e81"/>
+              <path d="m11.137,7.537v-6.519h1.429,1.429v6.519,6.519h-1.429,-1.429z" fill="#ffffff"/>
+              <path d="m7.163,7.537v-6.589h0.976,0.976v6.589,6.589h-0.976,-0.976z" fill="#ffffff"/>
+              <path d="m4.304,7.537v-6.589h0.697,0.697v6.589,6.589h-0.697,-0.697z" fill="#ffffff"/>
+              <path d="m2.352,7.537v-6.589h0.453,0.453v6.589,6.589h-0.453,-0.453z" fill="#ffffff"/>
+              <path d="m1.097,7.537v-6.589h0.209,0.209v6.589,6.589h-0.209,-0.209z" fill="#ffffff"/>
+            </svg>
+            <span>Sensitify GO</span>
           </div>
-          <div class="shots">
-            <a class="shot" href="https://efeatesh.github.io/Portfolio/Screenshot_20260621-165224_SensitifyGoNE.png" target="_blank" rel="noopener">
-              <img src="https://efeatesh.github.io/Portfolio/Screenshot_20260621-165224_SensitifyGoNE.png" alt="NanoBiosens Lab app – Cyclic Voltammetry measurement" loading="lazy">
-            </a>
-       
-            <div class="shots-cap">NanoBiosens Lab: real-time cyclic voltammetry &amp; 10-run calibration in the companion app</div>
+          <div class="window-controls">
+            <div class="window-btn">&minus;</div>
+            <div class="window-btn">&square;</div>
+            <div class="window-btn btn-close">&times;</div>
           </div>
-          <div class="app-tags">
-            <span class="tag">NFC Energy Harvesting</span>
-            <span class="tag">STM32 + PCB</span>
-            <span class="tag">On-Device AI</span>
-            <span class="tag green">TÜBİTAK Approved</span>
+        </div>
+        <div class="app-card-body">
+          <div class="app-icon-box" style="background:#004e81; border:none; box-shadow:0 8px 24px rgba(0,78,129,0.5);">
+            <svg viewBox="0 0 15 15" width="76" height="76" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.012,0.012h15v15h-15z" fill="#004e81"/>
+              <path d="m11.137,7.537v-6.519h1.429,1.429v6.519,6.519h-1.429,-1.429z" fill="#ffffff"/>
+              <path d="m7.163,7.537v-6.589h0.976,0.976v6.589,6.589h-0.976,-0.976z" fill="#ffffff"/>
+              <path d="m4.304,7.537v-6.589h0.697,0.697v6.589,6.589h-0.697,-0.697z" fill="#ffffff"/>
+              <path d="m2.352,7.537v-6.589h0.453,0.453v6.589,6.589h-0.453,-0.453z" fill="#ffffff"/>
+              <path d="m1.097,7.537v-6.589h0.209,0.209v6.589,6.589h-0.209,-0.209z" fill="#ffffff"/>
+            </svg>
           </div>
-          <div class="app-links">
-            <a href="https://efeatesh.github.io/NFCPotentiostatQuickGlance/" target="_blank" rel="noopener">View Case Study →</a>
+          <div class="app-info-col">
+            <h3>Sensitify GO &ndash; EIS On The Go</h3>
+            <div class="app-meta-sub">Sensitify &middot; Tools &middot; Mobile Electrochemistry</div>
+            <p>Professional electrochemical analysis app for MCA devices. Controls potentiostat hardware via USB, supports 9 measurement techniques, real-time plotting, and data export in .xlsx and .m formats. Zero data collection, fully offline.</p>
+            <div class="case-study-box">
+              <div><strong>Challenge:</strong> Bring lab-grade potentiostat control, normally a desktop-only workflow, onto a phone, talking to custom hardware over USB in real time.</div>
+              <div><strong class="green">Solution:</strong> Built a USB-host communication layer and a high-throughput real-time plotting engine, exposing all 9 techniques in a touch-first UI with one-tap data export.</div>
+            </div>
+            <div class="app-tags-row">
+              <span class="metro-tag sensitify" style="display:inline-flex; align-items:center; gap:6px;">
+                <svg viewBox="0 0 15 15" width="10" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M0.012,0.012h15v15h-15z" fill="#004e81"/><path d="m11.137,7.537v-6.519h1.429,1.429v6.519,6.519h-1.429,-1.429z" fill="#ffffff"/><path d="m7.163,7.537v-6.589h0.976,0.976v6.589,6.589h-0.976,-0.976z" fill="#ffffff"/><path d="m4.304,7.537v-6.589h0.697,0.697v6.589,6.589h-0.697,-0.697z" fill="#ffffff"/><path d="m2.352,7.537v-6.589h0.453,0.453v6.589,6.589h-0.453,-0.453z" fill="#ffffff"/><path d="m1.097,7.537v-6.589h0.209,0.209v6.589,6.589h-0.209,-0.209z" fill="#ffffff"/></svg>
+                Sensitify Official
+              </span>
+              <span class="metro-tag">USB Host</span>
+              <span class="metro-tag">Real-time Plotting</span>
+              <span class="metro-tag green">Professional Tool</span>
+            </div>
+            <div class="app-links-row">
+              <a href="https://play.google.com/store/apps/details?id=com.sensitify.sensitifygo" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Sensitify GO -->
-      <div class="glass app-card reveal d1">
-        <img class="app-icon" src="https://play-lh.googleusercontent.com/TXi7yRirEgd6leaNAORhyBfBL0zF7j_DgSKwVwdFTqooUu4yakFUfQeNv8rOuOGk0-Jm1eiWcHdtuSZeEHIPqA=w240-h480" alt="Sensitify GO app icon" loading="lazy">
-        <div class="app-info">
-          <h3>Sensitify GO – EIS On The Go</h3>
-          <div class="app-dev">SensiStudio &middot; Tools</div>
-          <p>Professional electrochemical analysis app for MCA devices. Controls potentiostat hardware via USB, supports 9 measurement techniques, real-time plotting, and data export in .xlsx and .m formats. Zero data collection, fully offline.</p>
-          <div class="cs">
-            <div><span class="cs-k">Challenge:</span> Bring lab-grade potentiostat control, normally a desktop-only workflow, onto a phone, talking to custom hardware over USB in real time.</div>
-            <div><span class="cs-k green">Solution:</span> Built a USB-host communication layer and a high-throughput real-time plotting engine, exposing all 9 techniques in a touch-first UI with one-tap data export.</div>
+
+      <!-- 3. NFC Potentiostat -->
+      <div class="window-frame fluent-acrylic reveal d2">
+        <div class="window-titlebar">
+          <div class="window-title-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span>NFC Potentiostat &middot; Graduation Thesis</span>
           </div>
-          <div class="app-tags">
-            <span class="tag">USB Host</span>
-            <span class="tag">Real-time Plotting</span>
-            <span class="tag">Electrochemistry</span>
-            <span class="tag green">Professional Tool</span>
+          <div class="window-controls">
+            <div class="window-btn">&minus;</div>
+            <div class="window-btn">&square;</div>
+            <div class="window-btn btn-close">&times;</div>
           </div>
-          <div class="app-links">
-            <a href="https://play.google.com/store/apps/details?id=com.sensitify.sensitifygo" target="_blank" rel="noopener">Google Play →</a>
+        </div>
+        <div class="app-card-body">
+          <img class="app-icon-box" src="https://efeatesh.github.io/NFCPotentiostatQuickGlance/1000083839.jpg" alt="NFC Potentiostat assembled device" loading="lazy">
+          <div class="app-info-col">
+            <div style="font-size:0.75rem; font-weight:700; color:var(--win-blue-light); text-transform:uppercase; margin-bottom:4px;">Featured Project &middot; Graduation Thesis</div>
+            <h3>NFC Potentiostat &ndash; Battery-Free Electrochemical Platform</h3>
+            <div class="app-meta-sub">BME4496 &middot; Hardware + Firmware + Android + On-Device AI</div>
+            <p>A fully wireless, <strong>battery-free</strong> potentiostat powered entirely by NFC energy harvesting from a smartphone. Custom 4-layer PCB (STM32U545 + ST25DV), 3D-printed magnetic enclosure, CNC-milled 13.56 MHz antennas, and a companion Android app with real-time plotting and an on-device Gemma 3 1B AI agent for voice-controlled analysis. TÜBİTAK 2209-B approved.</p>
+            <div class="case-study-box">
+              <div><strong>Challenge:</strong> Benchtop potentiostats are bulky, expensive, and need wired power, making them unusable for portable point-of-care diagnostics.</div>
+              <div><strong class="green">Solution:</strong> Designed the full stack end-to-end (analog AFE, embedded firmware over an ST25DV mailbox protocol, Android app, fine-tuned on-device AI), cutting cost &gt;90% vs. lab equipment with 98.5% measured accuracy.</div>
+            </div>
+            <div class="shots-row">
+              <a class="shot-thumb" href="https://efeatesh.github.io/Portfolio/Screenshot_20260621-165224_SensitifyGoNE.png" target="_blank" rel="noopener">
+                <img src="https://efeatesh.github.io/Portfolio/Screenshot_20260621-165224_SensitifyGoNE.png" alt="NanoBiosens Lab app – Cyclic Voltammetry measurement" loading="lazy">
+              </a>
+            </div>
+
+            <!-- Interactive 3D CAD Enclosure Model Showcase -->
+            <div class="cad-preview-box" style="margin-top:20px; border-radius:0px; overflow:hidden; border:1px solid var(--border-acrylic); background:radial-gradient(circle at 50% 50%, rgba(0, 120, 215, 0.1) 0%, rgba(10, 15, 26, 0.95) 100%); position:relative;">
+              <div style="padding:10px 14px; background:var(--titlebar-bg); border-bottom:1px solid var(--border-acrylic); display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; font-weight:700; color:var(--win-blue-light);">
+                <div style="display:flex; align-items:center; gap:6px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                  <span>Interactive 3D Enclosure Model (CAD)</span>
+                </div>
+                <span class="metro-tag green" style="font-size:0.65rem; padding:2px 8px;">360° ORBIT</span>
+              </div>
+              
+              <div style="position:relative; width:100%; height:320px;">
+                <canvas id="portfolio3DCanvas" style="width:100%; height:100%; display:block;"></canvas>
+                
+                <div id="portfolioCadLoader" style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; background:rgba(6,10,18,0.85); color:var(--win-blue-light); font-size:0.85rem; font-weight:600; gap:8px;">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10"/></svg>
+                  <span>Loading 3D Enclosure Mesh...</span>
+                </div>
+
+                <div style="position:absolute; bottom:10px; left:10px; padding:4px 10px; background:rgba(0,0,0,0.6); backdrop-filter:blur(10px); font-size:0.7rem; font-weight:600; color:var(--win-cyan-light); border-radius:0px; pointer-events:none;">
+                  Drag to Rotate &bull; Scroll to Zoom
+                </div>
+              </div>
+
+              <div style="padding:10px 14px; background:var(--titlebar-bg); border-top:1px solid var(--border-acrylic); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+                <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                  <button type="button" class="cad-mini-btn active" data-mat="obsidian" onclick="setPortfolioCadMaterial('obsidian')">Obsidian Matte</button>
+                  <button type="button" class="cad-mini-btn" data-mat="cyan" onclick="setPortfolioCadMaterial('cyan')">Bio Cyan</button>
+                  <button type="button" class="cad-mini-btn" data-mat="glass" onclick="setPortfolioCadMaterial('glass')">Frosted Glass</button>
+                  <button type="button" class="cad-mini-btn" data-mat="wireframe" onclick="setPortfolioCadMaterial('wireframe')">Wireframe</button>
+                </div>
+                <button type="button" class="cad-mini-btn" id="btnPortfolioAutoRotate" onclick="togglePortfolioCadAutoRotate()">Auto-Rotate: ON</button>
+              </div>
+            </div>
+            <div class="app-tags-row">
+              <span class="metro-tag">NFC Energy Harvesting</span>
+              <span class="metro-tag">STM32 + PCB</span>
+              <span class="metro-tag">On-Device AI</span>
+              <span class="metro-tag green">TÜBİTAK Approved</span>
+            </div>
+            <div class="app-links-row">
+              <a href="https://efeatesh.github.io/NFCPotentiostatQuickGlance/" target="_blank" rel="noopener" class="win-btn btn-cyan">View Interactive Case Study &rarr;</a>
+              <a href="https://efeatesh.github.io/NFCPotentiostatQuickGlance/#cad-explorer" target="_blank" rel="noopener" class="win-btn btn-blue">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                3D CAD Model (STL)
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Clinical No-Contact IR Thermometer -->
-      <div class="glass app-card reveal d2">
-        <img class="app-icon" src="https://raw.githubusercontent.com/EfeAtesh/Clinical-NoContact-IR-Thermometer/main/docs/images/thermometer_prototype_side.jpg" alt="Clinical IR Thermometer prototype" loading="lazy">
-        <div class="app-info">
-          <h3>Clinical No-Contact IR Thermometer</h3>
-          <div class="app-dev">BME425 / BME4496 &middot; Embedded Systems &middot; Open Source</div>
-          <p>DIY clinical-grade non-contact infrared thermometer designed according to international <strong>EN ISO 80601-2-56:2017</strong> medical standards. Features custom PCB hardware (ESP32-C3 Mini, MLX90614 IR sensor, TP4056 USB-C Li-Po charging, SSD1306 OLED display, active buzzer), Clean Code C++ firmware with audio-visual alerts, ergonomic 3D-printed enclosure, and complete V2TP/ATP laboratory verification docs.</p>
-          <div class="cs">
-            <div><span class="cs-k">Challenge:</span> Designing an affordable, high-accuracy clinical body thermometer from scratch while complying strictly with medical safety and ISO performance standards.</div>
-            <div><span class="cs-k green">Solution:</span> Engineered an integrated hardware-firmware stack with I2C sensor/display communication, non-blocking UI animations, fever threshold alarms, and verified 113.17g mass prototype testing.</div>
+
+      <!-- 4. Clinical No-Contact IR Thermometer -->
+      <div class="window-frame fluent-acrylic reveal d2">
+        <div class="window-titlebar">
+          <div class="window-title-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+            <span>Clinical IR Thermometer</span>
           </div>
-          <div class="app-tags">
-            <span class="tag">ESP32-C3</span>
-            <span class="tag">MLX90614 IR Sensor</span>
-            <span class="tag">Embedded C++</span>
-            <span class="tag">KiCad &amp; PCB</span>
-            <span class="tag green">EN ISO 80601-2-56</span>
+          <div class="window-controls">
+            <div class="window-btn">&minus;</div>
+            <div class="window-btn">&square;</div>
+            <div class="window-btn btn-close">&times;</div>
           </div>
-          <div class="app-links">
-            <a href="https://github.com/EfeAtesh/Clinical-NoContact-IR-Thermometer" target="_blank" rel="noopener">GitHub →</a>
+        </div>
+        <div class="app-card-body">
+          <img class="app-icon-box" src="https://raw.githubusercontent.com/EfeAtesh/Clinical-NoContact-IR-Thermometer/main/docs/images/thermometer_prototype_side.jpg" alt="Clinical IR Thermometer prototype" loading="lazy">
+          <div class="app-info-col">
+            <h3>Clinical No-Contact IR Thermometer</h3>
+            <div class="app-meta-sub">BME425 / BME4496 &middot; Embedded Systems &middot; Open Source</div>
+            <p>DIY clinical-grade non-contact infrared thermometer designed according to international <strong>EN ISO 80601-2-56:2017</strong> medical standards. Features custom PCB hardware (ESP32-C3 Mini, MLX90614 IR sensor, TP4056 USB-C Li-Po charging, SSD1306 OLED display, active buzzer), Clean Code C++ firmware, ergonomic 3D-printed enclosure, and complete laboratory verification documentation.</p>
+            <div class="app-tags-row">
+              <span class="metro-tag">ESP32-C3</span>
+              <span class="metro-tag">MLX90614 IR</span>
+              <span class="metro-tag">Embedded C++</span>
+              <span class="metro-tag green">EN ISO 80601-2-56</span>
+            </div>
+            <div class="app-links-row">
+              <a href="https://github.com/EfeAtesh/Clinical-NoContact-IR-Thermometer" target="_blank" rel="noopener" class="win-btn btn-acrylic">GitHub Repository &rarr;</a>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Tranquile -->
-      <div class="glass app-card reveal d2">
-        <img class="app-icon" src="https://play-lh.googleusercontent.com/QZhPelvhk5ExCfpxfHsrsJOekRRU8qoCDvlv_7umtyLaX0yoqt3jz68AqvLptCo53E7_yfL8DXVZnTr8rmGqCf4=w240-h480" alt="Tranquile app icon" loading="lazy">
-        <div class="app-info">
-          <h3>Tranquile – Meditations by Local AI</h3>
-          <div class="app-dev">SensiStudio &middot; Health &amp; Fitness</div>
-          <p>Generates personalized guided meditations entirely on-device with Gemma 3, 100% offline, no account, nothing leaves the phone. Describe what's on your mind and the AI writes a unique session in seconds, with 5 narrator voices (text-to-speech), real-time sentence highlighting, save &amp; replay, streak/goal tracking, and a community to share prompts.</p>
-          <div class="shots">
-            <a class="shot" href="https://play-lh.googleusercontent.com/1GlkTXpq8V3OQ62DQv1LPY0R6LhFhw6J_5YgJqXh1uQ9nhpjrqdqkVyS3nqa8726Uuh1-CkLGUU3SkRg3CgA=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/1GlkTXpq8V3OQ62DQv1LPY0R6LhFhw6J_5YgJqXh1uQ9nhpjrqdqkVyS3nqa8726Uuh1-CkLGUU3SkRg3CgA=w300" alt="Tranquile – generate your own meditation" loading="lazy"></a>
-            <a class="shot" href="https://play-lh.googleusercontent.com/cww7tlxSluKRp_7F6E_UcAOdJC6Nk3054ppjts-UgfOPPScxMu1h0I1tGC8tlkLOgM5dSbu0xEyds4LpDDmr8A=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/cww7tlxSluKRp_7F6E_UcAOdJC6Nk3054ppjts-UgfOPPScxMu1h0I1tGC8tlkLOgM5dSbu0xEyds4LpDDmr8A=w300" alt="Tranquile – 100% offline, always private" loading="lazy"></a>
-            <a class="shot" href="https://play-lh.googleusercontent.com/a-Pl09BJ86P1rDKm9Qv2qYF3XR4Upw241l2MthFtI7jkpMB3gl_Ny5PL9_lfjSMqfqaJoeBW-tKwGMjlbnOQ=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/a-Pl09BJ86P1rDKm9Qv2qYF3XR4Upw241l2MthFtI7jkpMB3gl_Ny5PL9_lfjSMqfqaJoeBW-tKwGMjlbnOQ=w300" alt="Tranquile – save & replay any session" loading="lazy"></a>
-            <a class="shot" href="https://play-lh.googleusercontent.com/83TI73t3F7-UDlhwMpciWkJBHU7Zxdx3QgYbongPrXAoGHhce4J1pK1SxHnzNCkMSToszvPwIbTL7LOm_UcEElo=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/83TI73t3F7-UDlhwMpciWkJBHU7Zxdx3QgYbongPrXAoGHhce4J1pK1SxHnzNCkMSToszvPwIbTL7LOm_UcEElo=w300" alt="Tranquile – follow your journey" loading="lazy"></a>
-            <a class="shot" href="https://play-lh.googleusercontent.com/5NPYMVIlGjULZmB2ZglI-dsZOZOOLu8GX0yPNLN8XquYhF7sthM6fh0SZM5mGFuk7CUGGifa1DjfZB-j683qDw=w480" target="_blank" rel="noopener"><img src="https://play-lh.googleusercontent.com/5NPYMVIlGjULZmB2ZglI-dsZOZOOLu8GX0yPNLN8XquYhF7sthM6fh0SZM5mGFuk7CUGGifa1DjfZB-j683qDw=w300" alt="Tranquile – join the community" loading="lazy"></a>
-            <div class="shots-cap">On-device AI meditation generation, offline privacy, saved sessions, progress tracking &amp; community</div>
+
+      <!-- 5. Tranquile -->
+      <div class="window-frame fluent-acrylic reveal d3">
+        <div class="window-titlebar">
+          <div class="window-title-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span>Tranquile &middot; On-Device Meditation AI</span>
           </div>
-          <div class="app-tags">
-            <span class="tag">On-Device AI</span>
-            <span class="tag">Gemma 3</span>
-            <span class="tag">Text-to-Speech</span>
-            <span class="tag green">Privacy-First</span>
+          <div class="window-controls">
+            <div class="window-btn">&minus;</div>
+            <div class="window-btn">&square;</div>
+            <div class="window-btn btn-close">&times;</div>
           </div>
-          <div class="app-links">
-            <a href="https://play.google.com/store/apps/details?id=com.calmi.app" target="_blank" rel="noopener">Google Play →</a>
+        </div>
+        <div class="app-card-body">
+          <img class="app-icon-box" src="https://play-lh.googleusercontent.com/QZhPelvhk5ExCfpxfHsrsJOekRRU8qoCDvlv_7umtyLaX0yoqt3jz68AqvLptCo53E7_yfL8DXVZnTr8rmGqCf4=w240-h480" alt="Tranquile app icon" loading="lazy">
+          <div class="app-info-col">
+            <h3>Tranquile &ndash; Meditations by Local AI</h3>
+            <div class="app-meta-sub">SensiStudio &middot; Health &amp; Fitness</div>
+            <p>Generates personalized guided meditations entirely on-device with Gemma 3, 100% offline, no account, nothing leaves the phone. Describe what's on your mind and the AI writes a unique session in seconds with 5 narrator voices (TTS), real-time sentence highlighting, save &amp; replay, and streak tracking.</p>
+            <div class="app-tags-row">
+              <span class="metro-tag">On-Device AI</span>
+              <span class="metro-tag">Gemma 3</span>
+              <span class="metro-tag">TTS Engine</span>
+              <span class="metro-tag green">Privacy-First</span>
+            </div>
+            <div class="app-links-row">
+              <a href="https://play.google.com/store/apps/details?id=com.calmi.app" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
+            </div>
           </div>
         </div>
       </div>
-      <!-- LibreChat -->
-      <div class="glass app-card reveal d2">
-        <img class="app-icon" src="https://play-lh.googleusercontent.com/XbPKlHsxUCoKVq6wF8AiQ-dlqr_S6_0oGn5PM_Absi3P-rjkEJf4GmkXYXhcJczd9_TShak-BkyvM7QEVt9t=w240-h480" alt="LibreChat app icon">
-        <div class="app-info">
-          <h3>LibreChat | Run AI Locally!</h3>
-          <div class="app-dev">SensiStudio &middot; Productivity &middot; <span class="app-badge"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg> 2k+ downloads</span></div>
-          <p>100% offline on-device LLM chat powered by Google's Gemma 3. No accounts, no tracking, and chats deleted when app closes. Voice assistance with LibreChat Live Mode. Privacy-first AI on your phone.</p>
-          <div class="cs">
-            <div><span class="cs-k">Challenge:</span> Run a multi-billion-parameter LLM entirely on a phone, with usable speed and no cloud calls.</div>
-            <div><span class="cs-k green">Solution:</span> Integrated Gemma 3 via MediaPipe LLM Inference with on-device decoding and a streaming voice mode, keeping every token on the device.</div>
+
+      <!-- 6. LibreChat -->
+      <div class="window-frame fluent-acrylic reveal d3">
+        <div class="window-titlebar">
+          <div class="window-title-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>LibreChat &middot; Offline LLM</span>
           </div>
-          <div class="app-tags">
-            <span class="tag">On-Device AI</span>
-            <span class="tag">Gemma 3</span>
-            <span class="tag">MediaPipe</span>
-            <span class="tag green">Privacy-First</span>
+          <div class="window-controls">
+            <div class="window-btn">&minus;</div>
+            <div class="window-btn">&square;</div>
+            <div class="window-btn btn-close">&times;</div>
           </div>
-          <div class="app-links">
-            <a href="https://play.google.com/store/apps/details?id=com.efeates.localllm" target="_blank" rel="noopener">Google Play →</a>
+        </div>
+        <div class="app-card-body">
+          <img class="app-icon-box" src="https://play-lh.googleusercontent.com/XbPKlHsxUCoKVq6wF8AiQ-dlqr_S6_0oGn5PM_Absi3P-rjkEJf4GmkXYXhcJczd9_TShak-BkyvM7QEVt9t=w240-h480" alt="LibreChat app icon" loading="lazy">
+          <div class="app-info-col">
+            <h3>LibreChat | Run AI Locally!</h3>
+            <div class="app-meta-sub">SensiStudio &middot; Productivity &middot; <strong style="color:var(--win-cyan-light)">2K+ Downloads</strong></div>
+            <p>100% offline on-device LLM chat powered by Google's Gemma 3. No accounts, no tracking, and chats deleted when app closes. Voice assistance with LibreChat Live Mode. Privacy-first AI on your phone.</p>
+            <div class="app-tags-row">
+              <span class="metro-tag">On-Device AI</span>
+              <span class="metro-tag">Gemma 3</span>
+              <span class="metro-tag">MediaPipe</span>
+              <span class="metro-tag green">Privacy-First</span>
+            </div>
+            <div class="app-links-row">
+              <a href="https://play.google.com/store/apps/details?id=com.efeates.localllm" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
+            </div>
           </div>
         </div>
       </div>
-      <!-- Local AI Benchmark -->
-      <div class="glass app-card reveal d2">
-        <img class="app-icon" src="https://play-lh.googleusercontent.com/LHJm_m7KREXXKpA7j7A2ZL3kRwAwn5h4wEkJ4kqb2BO_lsLSLzhwk6kHD4SLi90IeSD9vw3rv80UWhD_wmb4Cw=w240-h480" alt="Local AI Benchmark app icon">
-        <div class="app-info">
-          <h3>Local AI Benchmark</h3>
-          <div class="app-dev">SensiStudio &middot; Productivity</div>
-          <p>Benchmark your device's on-device LLM performance. Measures tokens/sec, CPU clock speed, and RAM usage in real time with dynamic charts. Scoring system ranks devices from Entry-Level to Flagship Class. Built with Kotlin &amp; Jetpack Compose.</p>
-          <div class="app-tags">
-            <span class="tag">Jetpack Compose</span>
-            <span class="tag">Benchmarking</span>
-            <span class="tag">MediaPipe</span>
-            <span class="tag">Gemma</span>
-          </div>
-          <div class="app-links">
-            <a href="https://play.google.com/store/apps/details?id=com.efea.SLMBenchmark" target="_blank" rel="noopener">Google Play →</a>
-            <a href="https://github.com/EfeAtesh/LocalAIBenchmark" target="_blank" rel="noopener">GitHub →</a>
-          </div>
-        </div>
-      </div>
-      <!-- Nuclear Routines -->
-      <div class="glass app-card reveal d3">
-        <img class="app-icon" src="https://play-lh.googleusercontent.com/IS05UTXdKwy0fHYizoetmgjc2mULBbDMkZupv3a4Zh4W0VtZTX0Ac99Jh_dqsv0CF9olv7XsrzcKQROJ9yT69g=w240-h480" alt="Nuclear Routines app icon">
-        <div class="app-info">
-          <h3>Nuclear Routines: Life-Changer</h3>
-          <div class="app-dev">SensiStudio &middot; Productivity &middot; <span class="app-badge"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg> 5.0★</span></div>
-          <p>Habit and routine tracker that helps determine where, when, and how habits occur. Personalized tracking with reminders, achievements, and Turkish language support.</p>
-          <div class="app-tags">
-            <span class="tag">Habit Tracker</span>
-            <span class="tag">Android</span>
-          </div>
-          <div class="app-links">
-            <a href="https://play.google.com/store/apps/details?id=com.efea.nuclearroutines" target="_blank" rel="noopener">Google Play →</a>
-          </div>
-        </div>
-      </div>
-      <!-- ReadFacile -->
-      <div class="glass app-card reveal d3">
-        <img class="app-icon" src="https://play-lh.googleusercontent.com/SJfX84ZxQ1AhlaVYOGfm3RHOw7wd_TSTk4D1BZtMacw_l9iGvrLVP7r9m3yduaoH5CtUvf6KILZ60Y1Ct0De1X8=w240-h480" alt="ReadFacile app icon">
-        <div class="app-info">
-          <h3>ReadFacile: Read Easier!</h3>
-          <div class="app-dev">SensiStudio &middot; Productivity &middot; <span class="app-badge"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg> 5.0★</span></div>
-          <p>Speed reading app based on scientific research: lighter-colored word suffixes let the brain predict and read faster. Export as PDF or DOCX. Designed for people with learning difficulties.</p>
-          <div class="app-tags">
-            <span class="tag">Bionic Reading</span>
-            <span class="tag">Accessibility</span>
-            <span class="tag">PDF Export</span>
-          </div>
-          <div class="app-links">
-            <a href="https://play.google.com/store/apps/details?id=com.efea.ReadFacile.ReadFacile" target="_blank" rel="noopener">Google Play →</a>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- SKILLS SECTION -->
 <section id="skills">
   <div class="container">
     <div class="reveal">
-      <div class="stag">Expertise</div>
-      <h2>Core Skills</h2>
+      <div class="section-tag">Expertise</div>
+      <h2>Core <strong>Skills</strong></h2>
     </div>
+
     <div class="skill-grid">
-      <div class="glass skill-card reveal d1">
+      <div class="fluent-acrylic skill-card reveal d1">
         <svg class="sk-icon" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-        <h3>Android Development</h3>
-        <p>Kotlin, Java, Jetpack Compose, Fragment Architecture, Material 3</p>
+        <h3 style="font-size:1rem; font-weight:700; margin-bottom:6px;">Android Development</h3>
+        <p style="font-size:0.8rem; color:var(--text-secondary);">Kotlin, Java, Jetpack Compose, Fragment Architecture, Material 3</p>
       </div>
-      <div class="glass skill-card reveal d2">
+
+      <div class="fluent-acrylic skill-card reveal d2">
         <svg class="sk-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        <h3>On-Device AI</h3>
-        <p>MediaPipe, Gemma 3, TensorFlow Lite, CMSIS-NN, Edge Inference</p>
+        <h3 style="font-size:1rem; font-weight:700; margin-bottom:6px;">On-Device AI</h3>
+        <p style="font-size:0.8rem; color:var(--text-secondary);">MediaPipe, Gemma 3, TensorFlow Lite, CMSIS-NN, Edge Inference</p>
       </div>
-      <div class="glass skill-card reveal d3">
+
+      <div class="fluent-acrylic skill-card reveal d3">
         <svg class="sk-icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/></svg>
-        <h3>Embedded Systems</h3>
-        <p>STM32, NFC (ST25DV), PCB Design (KiCad), 3D Printing (Fusion 360)</p>
+        <h3 style="font-size:1rem; font-weight:700; margin-bottom:6px;">Embedded Systems</h3>
+        <p style="font-size:0.8rem; color:var(--text-secondary);">STM32, NFC (ST25DV), PCB Design (KiCad), 3D Printing (Fusion 360)</p>
       </div>
-      <div class="glass skill-card reveal d4">
+
+      <div class="fluent-acrylic skill-card reveal d4">
         <svg class="sk-icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
-        <h3>Languages &amp; Tools</h3>
-        <p>Kotlin, Java, C/C++, Python, JavaScript, SQL, Git, Qt/QML</p>
+        <h3 style="font-size:1rem; font-weight:700; margin-bottom:6px;">Languages &amp; Tools</h3>
+        <p style="font-size:0.8rem; color:var(--text-secondary);">Kotlin, Java, C/C++, Python, JavaScript, SQL, Git, Qt/QML</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TECH STACK -->
-<section id="stack">
-  <div class="container">
-    <div class="reveal">
-      <div class="stag">Technologies</div>
-      <h2>Tech Stack</h2>
-    </div>
-    <div class="badge-wrap reveal d1">
-      <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white">
-      <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
-      <img alt="Android" src="https://img.shields.io/badge/Android-34A853?style=for-the-badge&logo=android&logoColor=white">
-      <img alt="Jetpack Compose" src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white">
-      <img alt="C/C++" src="https://img.shields.io/badge/C/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white">
-      <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-      <img alt="Qt" src="https://img.shields.io/badge/Qt/QML-41CD52?style=for-the-badge&logo=qt&logoColor=white">
-      <img alt="STM32" src="https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white">
-      <img alt="NFC" src="https://img.shields.io/badge/NFC-002E5F?style=for-the-badge&logo=nfc&logoColor=white">
-      <img alt="KiCad" src="https://img.shields.io/badge/KiCad-314CB0?style=for-the-badge&logo=kicad&logoColor=white">
-      <img alt="Fusion 360" src="https://img.shields.io/badge/Fusion_360-FF6600?style=for-the-badge&logo=autodesk&logoColor=white">
-      <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white">
-      <img alt="Material Design" src="https://img.shields.io/badge/Material_3-757575?style=for-the-badge&logo=materialdesign&logoColor=white">
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
+<!-- CONTACT SECTION -->
 <section id="contact">
   <div class="container">
-    <div class="reveal" style="text-align:center;margin-bottom:28px">
-      <h2 class="contact-title-grad">Contact</h2>
+    <div class="reveal">
+      <div class="section-tag">Networking</div>
+      <h2>Get In <strong>Touch</strong></h2>
     </div>
 
-    <div class="glass reveal d1" style="max-width:760px;margin:0 auto;padding:36px 40px">
-      <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="c-name">Name</label>
-            <input type="text" id="c-name" name="name" required placeholder="Name">
-          </div>
-          <div class="form-group">
-            <label for="c-lastname">Last Name</label>
-            <input type="text" id="c-lastname" name="lastname" required placeholder="Last Name">
-          </div>
+    <div class="window-frame fluent-acrylic reveal d1">
+      <div class="window-titlebar">
+        <div class="window-title-left">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Send Message &middot; Mail Client</span>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="c-email">Email</label>
-            <input type="email" id="c-email" name="email" required placeholder="Email">
+        <div class="window-controls">
+          <div class="window-btn">&minus;</div>
+          <div class="window-btn">&square;</div>
+          <div class="window-btn btn-close">&times;</div>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <form id="contactForm" onsubmit="handleContactSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-name">First Name</label>
+              <input type="text" id="c-name" class="win-input" required placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <label for="c-lastname">Last Name</label>
+              <input type="text" id="c-lastname" class="win-input" required placeholder="Last Name">
+            </div>
           </div>
-          <div class="form-group">
-            <label for="c-subject">Message Subject</label>
-            <input type="text" id="c-subject" name="subject" required placeholder="Message Subject">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-email">Your Email</label>
+              <input type="email" id="c-email" class="win-input" required placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+              <label for="c-subject">Subject</label>
+              <input type="text" id="c-subject" class="win-input" required placeholder="Project or Opportunity">
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="c-details">Details</label>
-          <textarea id="c-details" name="details" rows="5" required placeholder="Details"></textarea>
-        </div>
-        <div class="form-actions">
-          <button type="submit" class="btn-send">Send it!</button>
-        </div>
-        <div class="form-status" id="formStatus"></div>
-      </form>
+          <div class="form-group" style="margin-bottom:20px;">
+            <label for="c-details">Message Details</label>
+            <textarea id="c-details" class="win-textarea" rows="4" required placeholder="How can we collaborate?"></textarea>
+          </div>
+          <button type="submit" class="win-btn btn-blue" style="padding:14px 36px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+          <div id="formStatus" style="font-size:0.85rem; font-weight:600; color:var(--win-cyan-light); margin-top:12px; min-height:20px;"></div>
+        </form>
+      </div>
     </div>
 
-    <div class="contact-grid reveal d2" style="margin-top:36px">
-      <a href="mailto:efeates3300@gmail.com" class="glass ccard">
+    <div class="contact-grid reveal d2">
+      <a href="mailto:efeates3300@gmail.com" class="fluent-acrylic contact-card">
         <svg class="cico" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <h3>Email</h3>
-        <p>efeates3300@gmail.com</p>
+        <h3 style="font-size:0.95rem; font-weight:700; margin-bottom:2px;">Email</h3>
+        <p style="font-size:0.75rem; color:var(--text-tertiary);">efeates3300@gmail.com</p>
       </a>
-      <a href="https://www.linkedin.com/in/efeates/" target="_blank" rel="noopener" class="glass ccard">
+      <a href="https://www.linkedin.com/in/efeates/" target="_blank" rel="noopener" class="fluent-acrylic contact-card">
         <svg class="cico" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        <h3>LinkedIn</h3>
-        <p>in/efeates</p>
+        <h3 style="font-size:0.95rem; font-weight:700; margin-bottom:2px;">LinkedIn</h3>
+        <p style="font-size:0.75rem; color:var(--text-tertiary);">in/efeates</p>
       </a>
-      <a href="https://github.com/EfeAtesh" target="_blank" rel="noopener" class="glass ccard">
+      <a href="https://github.com/EfeAtesh" target="_blank" rel="noopener" class="fluent-acrylic contact-card">
         <svg class="cico" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        <h3>GitHub</h3>
-        <p>EfeAtesh</p>
+        <h3 style="font-size:0.95rem; font-weight:700; margin-bottom:2px;">GitHub</h3>
+        <p style="font-size:0.75rem; color:var(--text-tertiary);">EfeAtesh</p>
       </a>
-      <a href="https://play.google.com/store/apps/developer?id=SensiStudio" target="_blank" rel="noopener" class="glass ccard">
+      <a href="https://play.google.com/store/apps/developer?id=SensiStudio" target="_blank" rel="noopener" class="fluent-acrylic contact-card">
         <svg class="cico" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        <h3>Google Play</h3>
-        <p>SensiStudio</p>
+        <h3 style="font-size:0.95rem; font-weight:700; margin-bottom:2px;">Google Play</h3>
+        <p style="font-size:0.75rem; color:var(--text-tertiary);">SensiStudio</p>
       </a>
     </div>
   </div>
 </section>
+
 </main>
 
-<footer>
-  <p>&copy; 2026 Efe Ateş &middot; Ankara, Turkey &middot; Built from scratch with HTML &amp; CSS</p>
-</footer>
+<!-- ==========================================================================
+   START MENU FLYOUT
+   ========================================================================== -->
+<div class="start-menu-flyout" id="startMenuFlyout">
+  <div class="start-header">
+    <img class="start-user-avatar" src="https://avatars.githubusercontent.com/u/156576779?v=4" alt="User Avatar">
+    <div>
+      <div style="font-weight:700; font-size:0.95rem; color:var(--text-primary); display:flex; align-items:center; gap:6px;">
+        <span>Efe Ateş</span>
+        <svg viewBox="0 0 21 21" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="#F25022"/><rect x="11" y="0" width="10" height="10" fill="#7FBA00"/><rect x="0" y="11" width="10" height="10" fill="#00A4EF"/><rect x="11" y="11" width="10" height="10" fill="#FFB900"/></svg>
+      </div>
+      <div style="font-size:0.75rem; color:var(--win-blue-light);">Mobile &amp; On-Device AI Engineer</div>
+    </div>
+  </div>
 
+  <div style="font-size:0.725rem; font-weight:700; color:var(--text-tertiary); text-transform:uppercase; margin-bottom:8px;">Quick Navigation</div>
+  <div class="start-links-grid">
+    <a href="#about" class="start-link-tile" onclick="toggleStartMenu()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/></svg>
+      <span>About</span>
+    </a>
+    <a href="#experience" class="start-link-tile" onclick="toggleStartMenu()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/></svg>
+      <span>Experience</span>
+    </a>
+    <a href="#apps" class="start-link-tile" onclick="toggleStartMenu()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
+      <span>Projects</span>
+    </a>
+    <a href="#skills" class="start-link-tile" onclick="toggleStartMenu()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 8 22 9 17 14 18 21 12 17 6 21 7 14 2 9 9 8 12 2"/></svg>
+      <span>Skills</span>
+    </a>
+    <a href="#contact" class="start-link-tile" onclick="toggleStartMenu()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg>
+      <span>Contact</span>
+    </a>
+    <a href="EfeAtes_CV.pdf" download class="start-link-tile" style="background:var(--win-blue); color:#FFFFFF;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16l-5-5h3V4h4v7h3l-5 5z"/></svg>
+      <span>Download CV</span>
+    </a>
+  </div>
+</div>
+
+<!-- ==========================================================================
+   SPATIAL TASKBAR
+   ========================================================================== -->
+<div class="win10-taskbar">
+  <div class="taskbar-left">
+    <!-- Start Button -->
+    <div class="start-btn" id="startBtn" onclick="toggleStartMenu()" title="Start">
+      <div class="win-logo-icon">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Search Box -->
+    <div class="taskbar-search">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-tertiary)" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="taskbarSearchInput" placeholder="Type here to search..." oninput="handleSearch(this.value)">
+    </div>
+
+    <!-- Pinned Taskbar Apps -->
+    <div class="taskbar-pinned">
+      <!-- Sensitify App Shortcut with Vector Logo -->
+      <a href="#apps" class="taskbar-icon-btn" title="Sensitify GO">
+        <svg viewBox="0 0 15 15" width="20" height="20" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;">
+          <path d="M0.012,0.012h15v15h-15z" fill="#004e81"/>
+          <path d="m11.137,7.537v-6.519h1.429,1.429v6.519,6.519h-1.429,-1.429z" fill="#ffffff"/>
+          <path d="m7.163,7.537v-6.589h0.976,0.976v6.589,6.589h-0.976,-0.976z" fill="#ffffff"/>
+          <path d="m4.304,7.537v-6.589h0.697,0.697v6.589,6.589h-0.697,-0.697z" fill="#ffffff"/>
+          <path d="m2.352,7.537v-6.589h0.453,0.453v6.589,6.589h-0.453,-0.453z" fill="#ffffff"/>
+          <path d="m1.097,7.537v-6.589h0.209,0.209v6.589,6.589h-0.209,-0.209z" fill="#ffffff"/>
+        </svg>
+      </a>
+      <!-- Microsoft Foundry RAG with 4-Color Logo -->
+      <a href="https://github.com/EfeAtesh/Foundry-Local-Rag" target="_blank" rel="noopener" class="taskbar-icon-btn" title="Microsoft Foundry RAG">
+        <svg viewBox="0 0 21 21" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="10" height="10" fill="#F25022"/>
+          <rect x="11" y="0" width="10" height="10" fill="#7FBA00"/>
+          <rect x="0" y="11" width="10" height="10" fill="#00A4EF"/>
+          <rect x="11" y="11" width="10" height="10" fill="#FFB900"/>
+        </svg>
+      </a>
+      <a href="https://github.com/EfeAtesh" target="_blank" rel="noopener" class="taskbar-icon-btn" title="GitHub Profile">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.81 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.21.69.82.57A12 12 0 0 0 12 .3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="taskbar-right">
+    <!-- Theme Switcher -->
+    <div class="taskbar-icon-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+      <svg id="iconMoon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg id="iconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </div>
+
+    <!-- Live Digital Clock -->
+    <div class="sys-clock" id="taskbarClock">
+      <div id="clockTime">00:00</div>
+      <div id="clockDate">16.08.2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================================================
+   INTERACTIVE JAVASCRIPT & SPATIAL ENGINE
+   ========================================================================== -->
 <script>
-/* ---- Scroll reveal ---- */
-const obs=new IntersectionObserver(e=>{
-  e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}});
-},{threshold:.12,rootMargin:'0px 0px -30px 0px'});
-document.querySelectorAll('.reveal,.skill-card').forEach(el=>obs.observe(el));
+/* --------------------------------------------------------------------------
+   1. REAL-TIME DIGITAL CLOCK & DATE ENGINE
+   -------------------------------------------------------------------------- */
+function updateSystemClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
 
-/* ---- Count-up stats ---- */
-function animateCount(el){
-  const target=+el.dataset.count;
-  const fmt=el.dataset.format;
-  const suffix=el.dataset.suffix||'';
-  const dur=1400;const start=performance.now();
-  function tick(now){
-    const p=Math.min((now-start)/dur,1);
-    const eased=1-Math.pow(1-p,3);
-    let val=Math.round(target*eased);
-    let out=(fmt==='k'&&val>=1000)?(val/1000).toFixed(val<10000?0:0)+'K':val.toLocaleString();
-    if(fmt==='k'&&val<1000)out=val;
-    el.textContent=out+(p===1?suffix:'');
-    if(p<1)requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
+  const timeStr = `${hours}:${minutes}`;
+  const timeWithSec = `${hours}:${minutes}:${seconds}`;
+
+  const day = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const year = now.getFullYear();
+  const dateStr = `${day}.${month}.${year}`;
+
+  const options = { weekday: 'long', day: 'numeric', month: 'long' };
+  const fullDateStr = now.toLocaleDateString('en-US', options);
+
+  const clockTime = document.getElementById('clockTime');
+  const clockDate = document.getElementById('clockDate');
+  const liveClockDisplay = document.getElementById('liveClockDisplay');
+  const liveDateDisplay = document.getElementById('liveDateDisplay');
+
+  if (clockTime) clockTime.textContent = timeStr;
+  if (clockDate) clockDate.textContent = dateStr;
+  if (liveClockDisplay) liveClockDisplay.textContent = timeWithSec;
+  if (liveDateDisplay) liveDateDisplay.textContent = fullDateStr;
 }
-const statObs=new IntersectionObserver(e=>{
-  e.forEach(x=>{if(x.isIntersecting){animateCount(x.target);statObs.unobserve(x.target);}});
-},{threshold:.6});
-document.querySelectorAll('.num[data-count]').forEach(el=>statObs.observe(el));
+setInterval(updateSystemClock, 1000);
+updateSystemClock();
 
-/* ---- Hero role rotator (typewriter) ---- */
-(function(){
-  const el=document.getElementById('rot');
-  const roles=['Mobile Developer','On-Device AI Engineer','Android · Kotlin · Compose','Edge-AI Builder'];
-  let r=0,i=0,deleting=false;
-  function loop(){
-    const word=roles[r];
-    el.textContent=word.slice(0,i);
-    if(!deleting&&i<word.length){i++;setTimeout(loop,70);}
-    else if(!deleting&&i===word.length){deleting=true;setTimeout(loop,1600);}
-    else if(deleting&&i>0){i--;setTimeout(loop,35);}
-    else{deleting=false;r=(r+1)%roles.length;setTimeout(loop,300);}
+/* --------------------------------------------------------------------------
+   2. START MENU FLYOUT TOGGLE
+   -------------------------------------------------------------------------- */
+const startBtn = document.getElementById('startBtn');
+const startMenuFlyout = document.getElementById('startMenuFlyout');
+
+function toggleStartMenu() {
+  const isOpen = startMenuFlyout.classList.contains('active');
+  if (isOpen) {
+    startMenuFlyout.classList.remove('active');
+    startBtn.classList.remove('active');
+  } else {
+    startMenuFlyout.classList.add('active');
+    startBtn.classList.add('active');
   }
-  loop();
-})();
+}
 
-/* ---- Windows Metro Live Tile Engine: 3D Card Rotation + Cursor Spotlight ---- */
-document.querySelectorAll('.app-card, .stat, .skill-card, .edu-card').forEach(card => {
-  if (!card.querySelector('.metro-spotlight')) {
-    const spotlight = document.createElement('div');
-    spotlight.className = 'metro-spotlight';
-    spotlight.style.cssText = 'position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity 0.25s ease;z-index:2;border-radius:inherit;';
-    card.style.position = 'relative';
-    card.appendChild(spotlight);
+document.addEventListener('click', (e) => {
+  if (!startMenuFlyout.contains(e.target) && !startBtn.contains(e.target)) {
+    startMenuFlyout.classList.remove('active');
+    startBtn.classList.remove('active');
   }
+});
 
-  card.style.transformStyle = 'preserve-3d';
-  card.style.willChange = 'transform';
+/* --------------------------------------------------------------------------
+   3. THEME TOGGLE (Dark Acrylic <-> Light Aero)
+   -------------------------------------------------------------------------- */
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+const iconMoon = document.getElementById('iconMoon');
+const iconSun = document.getElementById('iconSun');
 
-  card.addEventListener('mouseenter', () => {
-    card.style.transition = 'none';
-    const spotlight = card.querySelector('.metro-spotlight');
-    if (spotlight) spotlight.style.opacity = '1';
-  });
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('portfolio_theme', theme);
+  if (theme === 'light') {
+    iconMoon.style.display = 'none';
+    iconSun.style.display = 'block';
+  } else {
+    iconMoon.style.display = 'block';
+    iconSun.style.display = 'none';
+  }
+}
 
-  card.addEventListener('mousemove', e => {
+const savedTheme = localStorage.getItem('portfolio_theme') || 'dark';
+applyTheme(savedTheme);
+
+themeToggleBtn.addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme');
+  applyTheme(cur === 'dark' ? 'light' : 'dark');
+});
+
+/* --------------------------------------------------------------------------
+   4. SPATIAL 3D CARD TILT & REVEAL HIGHLIGHT ENGINE
+   -------------------------------------------------------------------------- */
+const acrylicCards = document.querySelectorAll('.fluent-acrylic');
+
+acrylicCards.forEach(card => {
+  card.addEventListener('mousemove', (e) => {
     const rect = card.getBoundingClientRect();
-    const px = e.clientX - rect.left;
-    const py = e.clientY - rect.top;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-    const x = (px / rect.width) - 0.5;
-    const y = (py / rect.height) - 0.5;
+    card.style.setProperty('--reveal-x', `${x}px`);
+    card.style.setProperty('--reveal-y', `${y}px`);
 
-    // Physical 3D Card Tilt (rotateX & rotateY)
-    const rX = (-y * 22).toFixed(2);
-    const rY = (x * 22).toFixed(2);
+    if (card.classList.contains('spatial-tile')) {
+      const centerX = x / rect.width - 0.5;
+      const centerY = y / rect.height - 0.5;
 
-    card.style.transition = 'none';
-    card.style.transform = `perspective(1000px) rotateX(${rX}deg) rotateY(${rY}deg) scale3d(1.03, 1.03, 1.03)`;
+      const rotateX = (-centerY * 18).toFixed(2);
+      const rotateY = (centerX * 18).toFixed(2);
 
-    const spotlight = card.querySelector('.metro-spotlight');
-    if (spotlight) {
-      spotlight.style.background = `radial-gradient(400px circle at ${px.toFixed(0)}px ${py.toFixed(0)}px, rgba(255, 255, 255, 0.18), transparent 80%)`;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
     }
   });
 
   card.addEventListener('mouseleave', () => {
-    card.style.transition = 'transform 0.4s cubic-bezier(0.1, 0.9, 0.2, 1)';
-    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-    const spotlight = card.querySelector('.metro-spotlight');
-    if (spotlight) spotlight.style.opacity = '0';
-  });
-
-  card.addEventListener('mousedown', () => {
-    card.style.transition = 'transform 0.08s ease';
-    card.style.transform += ' scale3d(0.96, 0.96, 0.96)';
+    if (card.classList.contains('spatial-tile')) {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    }
   });
 });
 
-/* ---- Scroll progress + nav + back-to-top ---- */
-const bar=document.getElementById('progressBar');
-const nav=document.getElementById('nav');
-const toTop=document.getElementById('toTop');
-const navLinks=[...document.querySelectorAll('.nav a')];
-const sections=navLinks.map(a=>document.querySelector(a.getAttribute('href')));
-function onScroll(){
-  const h=document.documentElement;
-  const sc=h.scrollTop;
-  const max=h.scrollHeight-h.clientHeight;
-  bar.style.width=(max>0?(sc/max*100):0)+'%';
-  if(sc>window.innerHeight*.7){nav.classList.add('show');toTop.classList.add('show');}
-  else{nav.classList.remove('show');toTop.classList.remove('show');}
-  let cur=sections.length-1;
-  for(let i=0;i<sections.length;i++){
-    if(sections[i]&&sections[i].getBoundingClientRect().top<140)cur=i;
-  }
-  navLinks.forEach((a,i)=>a.classList.toggle('active',i===cur));
+/* --------------------------------------------------------------------------
+   5. LIVE TILES PERIODIC FLIP ANIMATION
+   -------------------------------------------------------------------------- */
+const tileFlipper = document.querySelector('#tileMicrosoft .tile-flipper');
+if (tileFlipper) {
+  setInterval(() => {
+    tileFlipper.classList.toggle('flipped');
+  }, 4500);
 }
-window.addEventListener('scroll',onScroll,{passive:true});onScroll();
-toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
-/* ---- Theme: follow system by default, manual toggle overrides ---- */
-const html=document.documentElement;
-const toggle=document.getElementById('themeToggle');
-const mq=window.matchMedia('(prefers-color-scheme: light)');
-const systemTheme=()=>mq.matches?'light':'dark';
-function setMeta(t){document.querySelector('meta[name=theme-color]').setAttribute('content',t==='dark'?'#0B0F1A':'#F8F9FC');}
-function applyTheme(t){html.setAttribute('data-theme',t);setMeta(t);}
-/* On load: use saved manual choice if any, otherwise the OS setting */
-applyTheme(localStorage.getItem('theme')||systemTheme());
-/* Live-follow the OS as long as the user hasn't made a manual choice */
-mq.addEventListener('change',()=>{if(!localStorage.getItem('theme'))applyTheme(systemTheme());});
-/* Manual toggle: remember the choice and stop following the OS */
-toggle.addEventListener('click',()=>{
-  const next=(html.getAttribute('data-theme')||systemTheme())==='dark'?'light':'dark';
-  applyTheme(next);
-  localStorage.setItem('theme',next);
-});
+/* --------------------------------------------------------------------------
+   6. LIVE MINI CANVAS POTENTIOSTAT WAVEFORM
+   -------------------------------------------------------------------------- */
+const miniCanvas = document.getElementById('miniPotCanvas');
+if (miniCanvas) {
+  const miniCtx = miniCanvas.getContext('2d');
+  let t = 0;
 
-/* ---- Contact form submit handler ---- */
-function handleContactSubmit(e){
+  function renderMiniCanvas() {
+    miniCanvas.width = miniCanvas.parentElement.clientWidth * window.devicePixelRatio;
+    miniCanvas.height = 60 * window.devicePixelRatio;
+    miniCtx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+    const w = miniCanvas.parentElement.clientWidth;
+    const h = 60;
+
+    miniCtx.clearRect(0, 0, w, h);
+
+    miniCtx.strokeStyle = '#0078D7';
+    miniCtx.lineWidth = 2;
+    miniCtx.beginPath();
+
+    for (let x = 0; x < w; x += 3) {
+      const y = h / 2 + Math.sin(x * 0.05 + t) * 16 * Math.cos(x * 0.02);
+      if (x === 0) miniCtx.moveTo(x, y);
+      else miniCtx.lineTo(x, y);
+    }
+    miniCtx.stroke();
+
+    t += 0.04;
+    requestAnimationFrame(renderMiniCanvas);
+  }
+  renderMiniCanvas();
+}
+
+/* --------------------------------------------------------------------------
+   7. TYPEWRITER HERO ROLE ROTATOR
+   -------------------------------------------------------------------------- */
+(function() {
+  const el = document.getElementById('roleText');
+  const roles = [
+    'Mobile Developer',
+    'On-Device AI Engineer',
+    'Microsoft AI Innovators 2026',
+    'Kotlin & Jetpack Compose',
+    'Edge-AI & Local RAG Specialist'
+  ];
+  let r = 0, i = 0, deleting = false;
+
+  function loop() {
+    const word = roles[r];
+    if (el) el.textContent = word.slice(0, i);
+    if (!deleting && i < word.length) {
+      i++; setTimeout(loop, 70);
+    } else if (!deleting && i === word.length) {
+      deleting = true; setTimeout(loop, 1800);
+    } else if (deleting && i > 0) {
+      i--; setTimeout(loop, 35);
+    } else {
+      deleting = false;
+      r = (r + 1) % roles.length;
+      setTimeout(loop, 300);
+    }
+  }
+  loop();
+})();
+
+/* --------------------------------------------------------------------------
+   8. TASKBAR LIVE SEARCH FILTER
+   -------------------------------------------------------------------------- */
+function handleSearch(query) {
+  const q = query.toLowerCase().trim();
+  const cards = document.querySelectorAll('.app-grid .window-frame');
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    if (text.includes(q)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   9. SCROLL REVEAL OBSERVER
+   -------------------------------------------------------------------------- */
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+/* --------------------------------------------------------------------------
+   10. CONTACT FORM SUBMISSION HANDLER
+   -------------------------------------------------------------------------- */
+function handleContactSubmit(e) {
   e.preventDefault();
-  const name=document.getElementById('c-name').value;
-  const lastname=document.getElementById('c-lastname').value;
-  const email=document.getElementById('c-email').value;
-  const subject=document.getElementById('c-subject').value;
-  const details=document.getElementById('c-details').value;
-  const status=document.getElementById('formStatus');
-  status.textContent='Preparing email client...';
-  const mailtoUrl=`mailto:efeates3300@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} ${lastname} (${email})\n\nMessage:\n${details}`)}`;
-  window.location.href=mailtoUrl;
-  setTimeout(()=>{
-    status.textContent='Thank you! Your email client has been opened to send the message.';
-  },800);
+  const name = document.getElementById('c-name').value;
+  const lastname = document.getElementById('c-lastname').value;
+  const email = document.getElementById('c-email').value;
+  const subject = document.getElementById('c-subject').value;
+  const details = document.getElementById('c-details').value;
+  const status = document.getElementById('formStatus');
+
+  status.textContent = 'Opening default mail client...';
+  const mailtoUrl = `mailto:efeates3300@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} ${lastname} (${email})\n\nMessage:\n${details}`)}`;
+  
+  window.location.href = mailtoUrl;
+  setTimeout(() => {
+    status.textContent = 'Mail client triggered successfully. Thank you!';
+  }, 1000);
 }
 </script>
+
+<!-- THREE.JS 3D STL VIEWER SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+<script src="enclosure_model.js"></script>
+
+<script>
+/* --------------------------------------------------------------------------
+   11. PORTFOLIO THREE.JS 3D ENCLOSURE VIEWER
+   -------------------------------------------------------------------------- */
+let portCadScene, portCadCamera, portCadRenderer, portCadControls, portCadMesh;
+let portCadAutoRotate = true;
+
+const portCadMaterials = {
+  obsidian: new THREE.MeshStandardMaterial({
+    color: 0x1E2638,
+    roughness: 0.35,
+    metalness: 0.25
+  }),
+  cyan: new THREE.MeshStandardMaterial({
+    color: 0x0078D7,
+    roughness: 0.2,
+    metalness: 0.5,
+    emissive: 0x003366,
+    emissiveIntensity: 0.2
+  }),
+  glass: new THREE.MeshPhysicalMaterial({
+    color: 0xFFFFFF,
+    transparent: true,
+    opacity: 0.65,
+    roughness: 0.1,
+    transmission: 0.85,
+    ior: 1.5
+  }),
+  wireframe: new THREE.MeshBasicMaterial({
+    color: 0x00ABA9,
+    wireframe: true
+  })
+};
+
+function initPortfolio3DViewer() {
+  const canvas = document.getElementById('portfolio3DCanvas');
+  if (!canvas) return;
+  const container = canvas.parentElement;
+  if (!container) return;
+
+  portCadScene = new THREE.Scene();
+
+  portCadCamera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+  portCadCamera.position.set(65, 45, 65);
+
+  portCadRenderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  portCadRenderer.setSize(container.clientWidth, container.clientHeight);
+  portCadRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  portCadControls = new THREE.OrbitControls(portCadCamera, portCadRenderer.domElement);
+  portCadControls.enableDamping = true;
+  portCadControls.dampingFactor = 0.05;
+  portCadControls.autoRotate = portCadAutoRotate;
+  portCadControls.autoRotateSpeed = 2.2;
+
+  // Studio Lights
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+  portCadScene.add(ambientLight);
+
+  const keyLight = new THREE.DirectionalLight(0xffffff, 1.2);
+  keyLight.position.set(50, 80, 50);
+  portCadScene.add(keyLight);
+
+  const fillLight = new THREE.DirectionalLight(0x0078D7, 0.8);
+  fillLight.position.set(-50, -20, -50);
+  portCadScene.add(fillLight);
+
+  const topLight = new THREE.DirectionalLight(0x00ABA9, 0.6);
+  topLight.position.set(0, 100, 0);
+  portCadScene.add(topLight);
+
+  function base64ToArrayBuffer(base64) {
+    const binaryString = window.atob(base64);
+    const len = binaryString.length;
+    const bytes = new Uint8Array(len);
+    for (let i = 0; i < len; i++) {
+      bytes[i] = binaryString.charCodeAt(i);
+    }
+    return bytes.buffer;
+  }
+
+  // Load STL
+  const loader = new THREE.STLLoader();
+  const loaderEl = document.getElementById('portfolioCadLoader');
+
+  function renderMeshFromGeometry(geometry) {
+    geometry.center();
+    geometry.computeVertexNormals();
+
+    portCadMesh = new THREE.Mesh(geometry, portCadMaterials.obsidian);
+    portCadMesh.rotation.x = -Math.PI / 2;
+    portCadMesh.scale.set(0.75, 0.75, 0.75);
+    portCadScene.add(portCadMesh);
+
+    if (loaderEl) loaderEl.style.display = 'none';
+  }
+
+  if (window.ENCLOSURE_STL_B64) {
+    try {
+      const buffer = base64ToArrayBuffer(window.ENCLOSURE_STL_B64);
+      const geom = loader.parse(buffer);
+      renderMeshFromGeometry(geom);
+    } catch (e) {
+      console.warn('Portfolio base64 parse error, fallback to load:', e);
+      loader.load('enclosure.stl', renderMeshFromGeometry, undefined, () => {
+        if (loaderEl) loaderEl.style.display = 'none';
+      });
+    }
+  } else {
+    loader.load('enclosure.stl', renderMeshFromGeometry, undefined, () => {
+      if (loaderEl) loaderEl.style.display = 'none';
+    });
+  }
+
+  function animate() {
+    requestAnimationFrame(animate);
+    portCadControls.update();
+    portCadRenderer.render(portCadScene, portCadCamera);
+  }
+  animate();
+
+  window.addEventListener('resize', () => {
+    if (!container) return;
+    portCadCamera.aspect = container.clientWidth / container.clientHeight;
+    portCadCamera.updateProjectionMatrix();
+    portCadRenderer.setSize(container.clientWidth, container.clientHeight);
+  });
+}
+
+function setPortfolioCadMaterial(type) {
+  if (!portCadMesh) return;
+  document.querySelectorAll('.cad-preview-box .cad-mini-btn').forEach(b => {
+    if (b.getAttribute('data-mat')) {
+      b.classList.toggle('active', b.getAttribute('data-mat') === type);
+    }
+  });
+  if (portCadMaterials[type]) {
+    portCadMesh.material = portCadMaterials[type];
+  }
+}
+
+function togglePortfolioCadAutoRotate() {
+  if (!portCadControls) return;
+  portCadAutoRotate = !portCadAutoRotate;
+  portCadControls.autoRotate = portCadAutoRotate;
+  const btn = document.getElementById('btnPortfolioAutoRotate');
+  if (btn) btn.textContent = `Auto-Rotate: ${portCadAutoRotate ? 'ON' : 'OFF'}`;
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  initPortfolio3DViewer();
+});
+</script>
+
 </body>
 </html>
