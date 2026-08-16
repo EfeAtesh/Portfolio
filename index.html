@@ -825,32 +825,60 @@ h2 strong {
   flex-wrap: wrap;
 }
 
+.shots,
 .shots-row {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   margin-top: 18px;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
+.shot,
 .shot-thumb {
-  width: 124px;
+  width: 128px;
+  border-radius: 0px;
   border: 2px solid var(--border-acrylic);
   overflow: hidden;
-  background: #000000;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  background: #0b0b0b;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   display: block;
+  text-decoration: none;
 }
 
+.shot:hover,
 .shot-thumb:hover {
-  transform: translateY(-4px) scale(1.04);
+  transform: translateY(-6px) scale(1.04);
   border-color: var(--win-blue);
+  box-shadow: 0 14px 30px rgba(0, 120, 215, 0.4);
 }
 
+.shot img,
 .shot-thumb img {
   width: 100%;
   display: block;
   height: auto;
+  background: #0b0b0b;
+}
+
+.shots-cap {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+  width: 100%;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 640px) {
+  .shots,
+  .shots-row {
+    justify-content: center;
+  }
+  .shot,
+  .shot-thumb {
+    width: 110px;
+  }
 }
 
 /* 3D CAD Mini Viewer Buttons */
@@ -1837,8 +1865,8 @@ h2 strong {
               <a class="shot-thumb" href="https://play-lh.googleusercontent.com/6STXVaOoa6Dv9bNZhQU0Gwdz4-cs5bA8XFvZj3-97yl2Eo930-yeSdd7otlqtllXOQ3GcnlfmnN1M_uEq7pb" target="_blank" rel="noopener">
                 <img src="https://play-lh.googleusercontent.com/6STXVaOoa6Dv9bNZhQU0Gwdz4-cs5bA8XFvZj3-97yl2Eo930-yeSdd7otlqtllXOQ3GcnlfmnN1M_uEq7pb=w300" alt="Sensitify GO – Real-time Plotting" loading="lazy">
               </a>
-              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/xSyOHzPWYqsilXi3UclRs56e0eA0mbhuW6-FPOWOHo1aZ3Zz1r79FyKklUxV2TTzkQ6hezw8e5ePPVsxx2oMVY" target="_blank" rel="noopener">
-                <img src="https://play-lh.googleusercontent.com/xSyOHzPWYqsilXi3UclRs56e0eA0mbhuW6-FPOWOHo1aZ3Zz1r79FyKklUxV2TTzkQ6hezw8e5ePPVsxx2oMVY=w300" alt="Sensitify GO – 9 Techniques" loading="lazy">
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/xSyOHzPWYqsilXi3UclRs56e0eA0mbhuW6-FPOWOHo1aZ3Zz1r79FyKklUxV2TTzkQ6hezw8e5ePPpVsxx2oMVY" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/xSyOHzPWYqsilXi3UclRs56e0eA0mbhuW6-FPOWOHo1aZ3Zz1r79FyKklUxV2TTzkQ6hezw8e5ePPpVsxx2oMVY=w300" alt="Sensitify GO – 9 Techniques" loading="lazy">
               </a>
               <a class="shot-thumb" href="https://play-lh.googleusercontent.com/Aj7xjBQt_VlfcQEzyGyIF_D7e_PEUWiE7kEfZICv_ILF3BH-0akO0uzHIUABHmkaGY00iKkTLwXNy6nRigw_FtY" target="_blank" rel="noopener">
                 <img src="https://play-lh.googleusercontent.com/Aj7xjBQt_VlfcQEzyGyIF_D7e_PEUWiE7kEfZICv_ILF3BH-0akO0uzHIUABHmkaGY00iKkTLwXNy6nRigw_FtY=w300" alt="Sensitify GO – Export" loading="lazy">
@@ -1848,10 +1876,6 @@ h2 strong {
               </a>
             </div>
             <div class="app-tags-row">
-              <span class="metro-tag sensitify" style="display:inline-flex; align-items:center; gap:6px;">
-                <svg viewBox="0 0 15 15" width="10" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M0.012,0.012h15v15h-15z" fill="#004e81"/><path d="m11.137,7.537v-6.519h1.429,1.429v6.519,6.519h-1.429,-1.429z" fill="#ffffff"/><path d="m7.163,7.537v-6.589h0.976,0.976v6.589,6.589h-0.976,-0.976z" fill="#ffffff"/><path d="m4.304,7.537v-6.589h0.697,0.697v6.589,6.589h-0.697,-0.697z" fill="#ffffff"/><path d="m2.352,7.537v-6.589h0.453,0.453v6.589,6.589h-0.453,-0.453z" fill="#ffffff"/><path d="m1.097,7.537v-6.589h0.209,0.209v6.589,6.589h-0.209,-0.209z" fill="#ffffff"/></svg>
-                Sensitify Official
-              </span>
               <span class="metro-tag">USB Host</span>
               <span class="metro-tag">Real-time Plotting</span>
               <span class="metro-tag green">Professional Tool</span>
@@ -1891,6 +1915,7 @@ h2 strong {
               <a class="shot-thumb" href="https://efeatesh.github.io/Portfolio/Screenshot_20260621-165224_SensitifyGoNE.png" target="_blank" rel="noopener">
                 <img src="https://efeatesh.github.io/Portfolio/Screenshot_20260621-165224_SensitifyGoNE.png" alt="NanoBiosens Lab app – Cyclic Voltammetry measurement" loading="lazy">
               </a>
+              <div class="shots-cap">NanoBiosens Lab: real-time cyclic voltammetry &amp; 10-run calibration in the companion app</div>
             </div>
 
             <!-- Interactive 3D CAD Enclosure Model Showcase -->
@@ -2010,6 +2035,7 @@ h2 strong {
               <a class="shot-thumb" href="https://play-lh.googleusercontent.com/5NPYMVIlGjULZmB2ZglI-dsZOZOOLu8GX0yPNLN8XquYhF7sthM6fh0SZM5mGFuk7CUGGifa1DjfZB-j683qDw=w480" target="_blank" rel="noopener">
                 <img src="https://play-lh.googleusercontent.com/5NPYMVIlGjULZmB2ZglI-dsZOZOOLu8GX0yPNLN8XquYhF7sthM6fh0SZM5mGFuk7CUGGifa1DjfZB-j683qDw=w300" alt="Tranquile – join the community" loading="lazy">
               </a>
+              <div class="shots-cap">On-device AI meditation generation, offline privacy, saved sessions, progress tracking &amp; community</div>
             </div>
             <div class="app-tags-row">
               <span class="metro-tag">On-Device AI</span>
@@ -2048,9 +2074,6 @@ h2 strong {
               <div><strong class="green">Solution:</strong> Integrated Gemma 3 via MediaPipe LLM Inference with on-device decoding and a streaming voice mode, keeping every token on the device.</div>
             </div>
             <div class="shots-row">
-              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/KpOiBPjP7SzB1R5RUpWeeKvNbbaNiFmnXAOMBRwDof1szVc24cAYyg-1QP3Bwsoe83fkBI4ITaWaQL9gJeADjw" target="_blank" rel="noopener">
-                <img src="https://play-lh.googleusercontent.com/KpOiBPjP7SzB1R5RUpWeeKvNbbaNiFmnXAOMBRwDof1szVc24cAYyg-1QP3Bwsoe83fkBI4ITaWaQL9gJeADjw=w300" alt="LibreChat – On-Device Chat" loading="lazy">
-              </a>
               <a class="shot-thumb" href="https://play-lh.googleusercontent.com/ibq8KmM5yk_wo80iMubXQl4zVepAeaRZk2sWbOHPnVlNKxp6xf0lSZWL4DYi53QoCoFR9ARZxIV4kC8ycCGbxA" target="_blank" rel="noopener">
                 <img src="https://play-lh.googleusercontent.com/ibq8KmM5yk_wo80iMubXQl4zVepAeaRZk2sWbOHPnVlNKxp6xf0lSZWL4DYi53QoCoFR9ARZxIV4kC8ycCGbxA=w300" alt="LibreChat – 100% Offline AI" loading="lazy">
               </a>
@@ -2197,9 +2220,6 @@ h2 strong {
               </a>
               <a class="shot-thumb" href="https://play-lh.googleusercontent.com/ST8U0g2z4H36jOqv091uZomXfnNkB17JE2gAvj1eAi3Y5IwHy-35_1zAaSsDthwJgyFR-HN3kfvX7Hhlw6PDUw" target="_blank" rel="noopener">
                 <img src="https://play-lh.googleusercontent.com/ST8U0g2z4H36jOqv091uZomXfnNkB17JE2gAvj1eAi3Y5IwHy-35_1zAaSsDthwJgyFR-HN3kfvX7Hhlw6PDUw=w300" alt="ReadFacile – PDF Export" loading="lazy">
-              </a>
-              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/45czRX9erxFEOc6qbrwm0pDCG1ZgRM1gO3Tg3MHHeuwbPJ0BT7x66Lh1gQKjff5YaLjr7w9SotXQsjDxFiwV" target="_blank" rel="noopener">
-                <img src="https://play-lh.googleusercontent.com/45czRX9erxFEOc6qbrwm0pDCG1ZgRM1gO3Tg3MHHeuwbPJ0BT7x66Lh1gQKjff5YaLjr7w9SotXQsjDxFiwV=w300" alt="ReadFacile – Accessibility" loading="lazy">
               </a>
             </div>
             <div class="app-tags-row">
