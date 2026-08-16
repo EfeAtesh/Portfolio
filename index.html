@@ -160,7 +160,7 @@ body {
 }
 
 /* ==========================================================================
-   VOLUMETRIC LIGHT & PRISM RAYS WALLPAPER
+   DYNAMIC SPATIAL AURORA & PRISMATIC WALLPAPER
    ========================================================================== */
 .hero-wallpaper {
   position: fixed;
@@ -169,61 +169,164 @@ body {
   pointer-events: none;
   overflow: hidden;
   background: var(--bg-desktop);
+  contain: strict;
 }
 
-.win-light-cone {
+.aurora-orb {
   position: absolute;
-  top: -15%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 110vw;
-  height: 95vh;
-  background: radial-gradient(ellipse 65% 55% at 50% 25%, rgba(0, 120, 215, 0.24) 0%, rgba(0, 171, 169, 0.08) 50%, transparent 80%);
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform, opacity;
+  opacity: 0.7;
+  transition: opacity var(--transition-normal);
+}
+
+.aurora-orb-1 {
+  width: 65vw;
+  height: 65vw;
+  max-width: 850px;
+  max-height: 850px;
+  top: -20%;
+  left: 10%;
+  background: radial-gradient(circle, rgba(0, 120, 215, 0.5) 0%, rgba(0, 78, 129, 0.22) 50%, transparent 75%);
+  animation: floatOrb1 22s ease-in-out infinite alternate;
+}
+
+.aurora-orb-2 {
+  width: 55vw;
+  height: 55vw;
+  max-width: 750px;
+  max-height: 750px;
+  top: 30%;
+  right: -10%;
+  background: radial-gradient(circle, rgba(0, 183, 195, 0.4) 0%, rgba(0, 122, 204, 0.18) 50%, transparent 75%);
+  animation: floatOrb2 26s ease-in-out infinite alternate;
+}
+
+.aurora-orb-3 {
+  width: 50vw;
+  height: 50vw;
+  max-width: 650px;
+  max-height: 650px;
+  bottom: -15%;
+  left: 20%;
+  background: radial-gradient(circle, rgba(104, 33, 122, 0.35) 0%, rgba(0, 120, 215, 0.15) 50%, transparent 75%);
+  animation: floatOrb3 28s ease-in-out infinite alternate;
+}
+
+.aurora-orb-4 {
+  width: 40vw;
+  height: 40vw;
+  max-width: 500px;
+  max-height: 500px;
+  top: 15%;
+  left: 45%;
+  background: radial-gradient(circle, rgba(242, 80, 34, 0.22) 0%, rgba(255, 185, 0, 0.1) 50%, transparent 70%);
+  animation: floatOrb4 18s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb1 {
+  0% { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate3d(8vw, 12vh, 0) scale(1.15) rotate(45deg); }
+  100% { transform: translate3d(-6vw, 6vh, 0) scale(0.95) rotate(-30deg); }
+}
+
+@keyframes floatOrb2 {
+  0% { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate3d(-10vw, -12vh, 0) scale(1.12) rotate(-40deg); }
+  100% { transform: translate3d(6vw, 8vh, 0) scale(0.9) rotate(35deg); }
+}
+
+@keyframes floatOrb3 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(12vw, -8vh, 0) scale(1.18); }
+  100% { transform: translate3d(-8vw, 10vh, 0) scale(0.92); }
+}
+
+@keyframes floatOrb4 {
+  0% { transform: translate3d(0, 0, 0) scale(0.9) opacity: 0.15; }
+  50% { transform: translate3d(-8vw, 14vh, 0) scale(1.25) opacity: 0.32; }
+  100% { transform: translate3d(10vw, -6vh, 0) scale(1) opacity: 0.15; }
+}
+
+/* Interactive Cursor Reactive Light Field */
+.aurora-cursor-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 164, 239, 0.22) 0%, rgba(0, 120, 215, 0.1) 40%, transparent 70%);
+  filter: blur(60px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  will-change: transform;
+  opacity: 0.85;
+  transition: opacity 0.5s ease;
+}
+
+/* Dynamic Prismatic Light Stream */
+.aurora-prism-stream {
+  position: absolute;
+  top: -30%;
+  left: -20%;
+  width: 140vw;
+  height: 140vh;
+  background: linear-gradient(135deg, 
+    transparent 20%, 
+    rgba(0, 120, 215, 0.09) 35%, 
+    rgba(0, 183, 195, 0.07) 50%, 
+    rgba(127, 186, 0, 0.05) 65%, 
+    transparent 80%);
+  transform: rotate(-12deg);
+  animation: prismPulse 16s ease-in-out infinite alternate;
   filter: blur(50px);
 }
 
-.win-laser-ray1 {
-  position: absolute;
-  top: -10%;
-  left: 15%;
-  width: 65vw;
-  height: 110vh;
-  background: linear-gradient(130deg, rgba(0, 120, 215, 0.14) 0%, rgba(0, 171, 169, 0.04) 40%, transparent 70%);
-  transform: skewX(-20deg);
-  filter: blur(40px);
-}
-
-.win-laser-ray2 {
-  position: absolute;
-  top: 15%;
-  right: 10%;
-  width: 50vw;
-  height: 95vh;
-  background: linear-gradient(225deg, rgba(104, 33, 122, 0.12) 0%, rgba(0, 120, 215, 0.05) 50%, transparent 80%);
-  transform: skewX(15deg);
-  filter: blur(45px);
+@keyframes prismPulse {
+  0% { transform: rotate(-15deg) scale(0.95); opacity: 0.5; }
+  50% { transform: rotate(-8deg) scale(1.08); opacity: 0.85; }
+  100% { transform: rotate(-18deg) scale(1); opacity: 0.5; }
 }
 
 .win-vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 40%, transparent 30%, rgba(3, 6, 12, 0.75) 100%);
+  background: radial-gradient(ellipse at 50% 40%, transparent 40%, rgba(4, 7, 14, 0.82) 100%);
+}
+
+.ambient-noise-layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+/* Light Theme Adaptations */
+html[data-theme="light"] .aurora-orb-1 {
+  background: radial-gradient(circle, rgba(0, 120, 215, 0.24) 0%, rgba(0, 164, 239, 0.12) 50%, transparent 75%);
+}
+
+html[data-theme="light"] .aurora-orb-2 {
+  background: radial-gradient(circle, rgba(0, 183, 195, 0.2) 0%, rgba(127, 186, 0, 0.1) 50%, transparent 75%);
+}
+
+html[data-theme="light"] .aurora-orb-3 {
+  background: radial-gradient(circle, rgba(104, 33, 122, 0.14) 0%, rgba(0, 120, 215, 0.08) 50%, transparent 75%);
+}
+
+html[data-theme="light"] .aurora-orb-4 {
+  background: radial-gradient(circle, rgba(242, 80, 34, 0.12) 0%, rgba(255, 185, 0, 0.06) 50%, transparent 70%);
+}
+
+html[data-theme="light"] .aurora-cursor-glow {
+  background: radial-gradient(circle, rgba(0, 120, 215, 0.16) 0%, transparent 65%);
 }
 
 html[data-theme="light"] .win-vignette {
-  background: radial-gradient(circle at 50% 40%, transparent 35%, rgba(215, 224, 238, 0.65) 100%);
-}
-
-html[data-theme="light"] .win-light-cone {
-  background: radial-gradient(ellipse 70% 50% at 50% 20%, rgba(0, 120, 215, 0.12) 0%, rgba(0, 171, 169, 0.05) 50%, transparent 80%);
-}
-
-html[data-theme="light"] .win-laser-ray1 {
-  background: linear-gradient(130deg, rgba(0, 120, 215, 0.07) 0%, transparent 60%);
-}
-
-html[data-theme="light"] .win-laser-ray2 {
-  background: linear-gradient(225deg, rgba(104, 33, 122, 0.05) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 40%, transparent 50%, rgba(218, 226, 239, 0.72) 100%);
 }
 
 /* ==========================================================================
@@ -1207,12 +1310,16 @@ h2 strong {
 
 <body>
 
-<!-- Volumetric Light Wallpaper -->
-<div class="hero-wallpaper">
-  <div class="win-light-cone"></div>
-  <div class="win-laser-ray1"></div>
-  <div class="win-laser-ray2"></div>
+<!-- Spatial Dynamic Aurora & Prismatic Wallpaper -->
+<div class="hero-wallpaper" id="wallpaperHost">
+  <div class="aurora-orb aurora-orb-1"></div>
+  <div class="aurora-orb aurora-orb-2"></div>
+  <div class="aurora-orb aurora-orb-3"></div>
+  <div class="aurora-orb aurora-orb-4"></div>
+  <div class="aurora-cursor-glow" id="cursorBgGlow"></div>
+  <div class="aurora-prism-stream"></div>
   <div class="win-vignette"></div>
+  <div class="ambient-noise-layer"></div>
 </div>
 
 <!-- ==========================================================================
@@ -1400,13 +1507,29 @@ h2 strong {
           Fresh graduate in <strong>Computer Engineering Minor &amp; Biomedical Engineering</strong> (Accredited by MÜDEK) at Ankara University. I build Android apps that run AI on-device with zero cloud latency, zero data leaks, and no compromises. My work spans scientific instrumentation (NFC potentiostats), on-device LLM inference (Gemma 3), and productivity tools, all published on Google Play under <strong>SensiStudio</strong>. I care about shipping real products fast and making complex hardware feel natural on a phone.
         </p>
 
-        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+        <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-bottom:24px;">
           <div class="metro-tag">Ankara University</div>
           <div class="metro-tag green">MÜDEK Accredited</div>
           <div class="metro-tag">TÜBİTAK 2209-B Approved</div>
           <div class="metro-tag green" style="display:inline-flex; align-items:center; gap:6px;">
             <svg viewBox="0 0 21 21" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="#F25022"/><rect x="11" y="0" width="10" height="10" fill="#7FBA00"/><rect x="0" y="11" width="10" height="10" fill="#00A4EF"/><rect x="11" y="11" width="10" height="10" fill="#FFB900"/></svg>
             Microsoft AI Innovators 2026
+          </div>
+        </div>
+
+        <!-- 3 Stat Counters -->
+        <div class="stat-row" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:24px;">
+          <div class="fluent-acrylic" style="padding:20px; text-align:center; border:1px solid var(--border-acrylic);">
+            <div class="num" data-count="6" style="font-size:2.2rem; font-weight:800; color:var(--win-cyan-light); line-height:1;">6</div>
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--text-tertiary); margin-top:6px; letter-spacing:1px;">Published Apps</div>
+          </div>
+          <div class="fluent-acrylic" style="padding:20px; text-align:center; border:1px solid var(--border-acrylic);">
+            <div class="num" data-count="11" style="font-size:2.2rem; font-weight:800; color:var(--win-blue-light); line-height:1;">11</div>
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--text-tertiary); margin-top:6px; letter-spacing:1px;">GitHub Public Repos</div>
+          </div>
+          <div class="fluent-acrylic" style="padding:20px; text-align:center; border:1px solid var(--border-acrylic);">
+            <div class="num" data-count="2000" data-suffix="+" data-format="k" style="font-size:2.2rem; font-weight:800; color:var(--win-green); line-height:1;">2K+</div>
+            <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--text-tertiary); margin-top:6px; letter-spacing:1px;">Downloads</div>
           </div>
         </div>
       </div>
@@ -1547,6 +1670,68 @@ h2 strong {
   </div>
 </section>
 
+<!-- ACADEMIC & EDUCATION SECTION -->
+<section id="education">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Academic</div>
+      <h2>Academic <strong>Education</strong></h2>
+    </div>
+
+    <div class="window-frame fluent-acrylic reveal d1">
+      <div class="window-titlebar">
+        <div class="window-title-left">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <span>Academic Education &middot; Degrees &amp; Qualifications</span>
+        </div>
+        <div class="window-controls">
+          <div class="window-btn">&minus;</div>
+          <div class="window-btn">&square;</div>
+          <div class="window-btn btn-close">&times;</div>
+        </div>
+      </div>
+
+      <div style="padding:36px 40px">
+        <div class="edu-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+          
+          <!-- Degree 1 -->
+          <div class="fluent-acrylic" style="padding:24px; border:1px solid var(--border-acrylic);">
+            <div style="font-size:0.75rem; font-weight:700; color:var(--win-cyan-light); text-transform:uppercase; margin-bottom:4px;">2023 – 2026</div>
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;">B.Sc. Minor in Computer Engineering</h3>
+            <div style="font-size:0.85rem; color:var(--win-blue-light); margin-bottom:10px;">Ankara University</div>
+            <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
+              Software engineering, algorithms, data structures, OOP, database systems, deep learning. Selected for Microsoft AI Innovators Summer School 2026 (Edge-AI &amp; On-Device AI).
+            </p>
+          </div>
+
+          <!-- Degree 2 -->
+          <div class="fluent-acrylic" style="padding:24px; border:1px solid var(--border-acrylic);">
+            <div style="font-size:0.75rem; font-weight:700; color:var(--win-green); text-transform:uppercase; margin-bottom:4px;">2022 – 2026</div>
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;">B.Sc. in Biomedical Engineering</h3>
+            <div style="font-size:0.85rem; color:var(--win-blue-light); margin-bottom:10px;">Ankara University (MÜDEK Accredited)</div>
+            <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6; margin-bottom:12px;">
+              Biomedical instrumentation, electrochemistry, HCI usability studies, medical device technologies.
+            </p>
+            <div class="metro-tag green" style="font-size:0.75rem;">ISO 13485:2016 Medical Devices QMS (Kiwa)</div>
+          </div>
+        </div>
+
+        <!-- Certifications & Qualifications Bar -->
+        <div style="margin-top:20px; padding:16px 24px; background:var(--titlebar-bg); border:1px solid var(--border-acrylic); display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
+          <span style="font-size:0.85rem; color:var(--text-secondary);">TOEIC Total: <strong style="color:var(--text-primary)">855/990</strong> (CEFR B2)</span>
+          <span style="width:1px; height:16px; background:var(--border-acrylic);"></span>
+          <span style="font-size:0.85rem; color:var(--text-secondary);">TÜBİTAK 2209-B <strong style="color:var(--win-green)">Approved</strong></span>
+          <span style="width:1px; height:16px; background:var(--border-acrylic);"></span>
+          <span style="font-size:0.85rem; color:var(--text-secondary); display:inline-flex; align-items:center; gap:6px;">
+            <svg viewBox="0 0 21 21" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="#F25022"/><rect x="11" y="0" width="10" height="10" fill="#7FBA00"/><rect x="0" y="11" width="10" height="10" fill="#00A4EF"/><rect x="11" y="11" width="10" height="10" fill="#FFB900"/></svg>
+            Microsoft AI Innovators <strong style="color:var(--win-cyan-light)">2026</strong>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- APPS & PROJECTS SECTION -->
 <section id="apps">
   <div class="container">
@@ -1647,6 +1832,20 @@ h2 strong {
             <div class="case-study-box">
               <div><strong>Challenge:</strong> Bring lab-grade potentiostat control, normally a desktop-only workflow, onto a phone, talking to custom hardware over USB in real time.</div>
               <div><strong class="green">Solution:</strong> Built a USB-host communication layer and a high-throughput real-time plotting engine, exposing all 9 techniques in a touch-first UI with one-tap data export.</div>
+            </div>
+            <div class="shots-row">
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/6STXVaOoa6Dv9bNZhQU0Gwdz4-cs5bA8XFvZj3-97yl2Eo930-yeSdd7otlqtllXOQ3GcnlfmnN1M_uEq7pb" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/6STXVaOoa6Dv9bNZhQU0Gwdz4-cs5bA8XFvZj3-97yl2Eo930-yeSdd7otlqtllXOQ3GcnlfmnN1M_uEq7pb=w300" alt="Sensitify GO – Real-time Plotting" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/xSyOHzPWYqsilXi3UclRs56e0eA0mbhuW6-FPOWOHo1aZ3Zz1r79FyKklUxV2TTzkQ6hezw8e5ePPVsxx2oMVY" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/xSyOHzPWYqsilXi3UclRs56e0eA0mbhuW6-FPOWOHo1aZ3Zz1r79FyKklUxV2TTzkQ6hezw8e5ePPVsxx2oMVY=w300" alt="Sensitify GO – 9 Techniques" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/Aj7xjBQt_VlfcQEzyGyIF_D7e_PEUWiE7kEfZICv_ILF3BH-0akO0uzHIUABHmkaGY00iKkTLwXNy6nRigw_FtY" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/Aj7xjBQt_VlfcQEzyGyIF_D7e_PEUWiE7kEfZICv_ILF3BH-0akO0uzHIUABHmkaGY00iKkTLwXNy6nRigw_FtY=w300" alt="Sensitify GO – Export" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/2qxRUqmaKmNWrH9g_s-s6uRoEvgMh9JuQVO9EGDuTrT2wDTEXZw7ZdAvZfb8eEhJ7UneNflmBhrW2ugLOfjcyA" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/2qxRUqmaKmNWrH9g_s-s6uRoEvgMh9JuQVO9EGDuTrT2wDTEXZw7ZdAvZfb8eEhJ7UneNflmBhrW2ugLOfjcyA=w300" alt="Sensitify GO – Analysis" loading="lazy">
+              </a>
             </div>
             <div class="app-tags-row">
               <span class="metro-tag sensitify" style="display:inline-flex; align-items:center; gap:6px;">
@@ -1795,6 +1994,23 @@ h2 strong {
             <h3>Tranquile &ndash; Meditations by Local AI</h3>
             <div class="app-meta-sub">SensiStudio &middot; Health &amp; Fitness</div>
             <p>Generates personalized guided meditations entirely on-device with Gemma 3, 100% offline, no account, nothing leaves the phone. Describe what's on your mind and the AI writes a unique session in seconds with 5 narrator voices (TTS), real-time sentence highlighting, save &amp; replay, and streak tracking.</p>
+            <div class="shots-row">
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/1GlkTXpq8V3OQ62DQv1LPY0R6LhFhw6J_5YgJqXh1uQ9nhpjrqdqkVyS3nqa8726Uuh1-CkLGUU3SkRg3CgA=w480" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/1GlkTXpq8V3OQ62DQv1LPY0R6LhFhw6J_5YgJqXh1uQ9nhpjrqdqkVyS3nqa8726Uuh1-CkLGUU3SkRg3CgA=w300" alt="Tranquile – generate your own meditation" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/cww7tlxSluKRp_7F6E_UcAOdJC6Nk3054ppjts-UgfOPPScxMu1h0I1tGC8tlkLOgM5dSbu0xEyds4LpDDmr8A=w480" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/cww7tlxSluKRp_7F6E_UcAOdJC6Nk3054ppjts-UgfOPPScxMu1h0I1tGC8tlkLOgM5dSbu0xEyds4LpDDmr8A=w300" alt="Tranquile – 100% offline, always private" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/a-Pl09BJ86P1rDKm9Qv2qYF3XR4Upw241l2MthFtI7jkpMB3gl_Ny5PL9_lfjSMqfqaJoeBW-tKwGMjlbnOQ=w480" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/a-Pl09BJ86P1rDKm9Qv2qYF3XR4Upw241l2MthFtI7jkpMB3gl_Ny5PL9_lfjSMqfqaJoeBW-tKwGMjlbnOQ=w300" alt="Tranquile – save & replay any session" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/83TI73t3F7-UDlhwMpciWkJBHU7Zxdx3QgYbongPrXAoGHhce4J1pK1SxHnzNCkMSToszvPwIbTL7LOm_UcEElo=w480" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/83TI73t3F7-UDlhwMpciWkJBHU7Zxdx3QgYbongPrXAoGHhce4J1pK1SxHnzNCkMSToszvPwIbTL7LOm_UcEElo=w300" alt="Tranquile – follow your journey" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/5NPYMVIlGjULZmB2ZglI-dsZOZOOLu8GX0yPNLN8XquYhF7sthM6fh0SZM5mGFuk7CUGGifa1DjfZB-j683qDw=w480" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/5NPYMVIlGjULZmB2ZglI-dsZOZOOLu8GX0yPNLN8XquYhF7sthM6fh0SZM5mGFuk7CUGGifa1DjfZB-j683qDw=w300" alt="Tranquile – join the community" loading="lazy">
+              </a>
+            </div>
             <div class="app-tags-row">
               <span class="metro-tag">On-Device AI</span>
               <span class="metro-tag">Gemma 3</span>
@@ -1827,6 +2043,27 @@ h2 strong {
             <h3>LibreChat | Run AI Locally!</h3>
             <div class="app-meta-sub">SensiStudio &middot; Productivity &middot; <strong style="color:var(--win-cyan-light)">2K+ Downloads</strong></div>
             <p>100% offline on-device LLM chat powered by Google's Gemma 3. No accounts, no tracking, and chats deleted when app closes. Voice assistance with LibreChat Live Mode. Privacy-first AI on your phone.</p>
+            <div class="case-study-box">
+              <div><strong>Challenge:</strong> Run a multi-billion-parameter LLM entirely on a phone, with usable speed and no cloud calls.</div>
+              <div><strong class="green">Solution:</strong> Integrated Gemma 3 via MediaPipe LLM Inference with on-device decoding and a streaming voice mode, keeping every token on the device.</div>
+            </div>
+            <div class="shots-row">
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/KpOiBPjP7SzB1R5RUpWeeKvNbbaNiFmnXAOMBRwDof1szVc24cAYyg-1QP3Bwsoe83fkBI4ITaWaQL9gJeADjw" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/KpOiBPjP7SzB1R5RUpWeeKvNbbaNiFmnXAOMBRwDof1szVc24cAYyg-1QP3Bwsoe83fkBI4ITaWaQL9gJeADjw=w300" alt="LibreChat – On-Device Chat" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/ibq8KmM5yk_wo80iMubXQl4zVepAeaRZk2sWbOHPnVlNKxp6xf0lSZWL4DYi53QoCoFR9ARZxIV4kC8ycCGbxA" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/ibq8KmM5yk_wo80iMubXQl4zVepAeaRZk2sWbOHPnVlNKxp6xf0lSZWL4DYi53QoCoFR9ARZxIV4kC8ycCGbxA=w300" alt="LibreChat – 100% Offline AI" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/59xZ8OtfdtoDYci3UkKWq1JlbURWp7fYzU6ZKffgw8YC8DGTlxTowUHQIqBf-1bM5W3_F5Ll324xJTEet8waqA" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/59xZ8OtfdtoDYci3UkKWq1JlbURWp7fYzU6ZKffgw8YC8DGTlxTowUHQIqBf-1bM5W3_F5Ll324xJTEet8waqA=w300" alt="LibreChat – Live Mode Voice" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/hc2yALZf1DrQ_lfmfXJxRz7Mf8_dpL3aZ5HEpBaBWJDq4QJqzDj4hmSf59LrNop7bcXF1sOsJnqRQ2doTRAnKQ" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/hc2yALZf1DrQ_lfmfXJxRz7Mf8_dpL3aZ5HEpBaBWJDq4QJqzDj4hmSf59LrNop7bcXF1sOsJnqRQ2doTRAnKQ=w300" alt="LibreChat – GPU Accelerated" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/cl3YNutcYtGIBdJPbBiV7LtcVnDVsM7vuDPiNvnQv_VsvUpVnC4sssEdKNeFuwxJ8olKQSBOQc9-BZPIxi5W6Q" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/cl3YNutcYtGIBdJPbBiV7LtcVnDVsM7vuDPiNvnQv_VsvUpVnC4sssEdKNeFuwxJ8olKQSBOQc9-BZPIxi5W6Q=w300" alt="LibreChat – Privacy Controls" loading="lazy">
+              </a>
+            </div>
             <div class="app-tags-row">
               <span class="metro-tag">On-Device AI</span>
               <span class="metro-tag">Gemma 3</span>
@@ -1835,6 +2072,143 @@ h2 strong {
             </div>
             <div class="app-links-row">
               <a href="https://play.google.com/store/apps/details?id=com.efeates.localllm" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Local AI Benchmark -->
+      <div class="window-frame fluent-acrylic reveal d2">
+        <div class="window-titlebar">
+          <div class="window-title-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            <span>Local AI Benchmark</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-btn">&minus;</div>
+            <div class="window-btn">&square;</div>
+            <div class="window-btn btn-close">&times;</div>
+          </div>
+        </div>
+        <div class="app-card-body">
+          <img class="app-icon-box" src="https://play-lh.googleusercontent.com/LHJm_m7KREXXKpA7j7A2ZL3kRwAwn5h4wEkJ4kqb2BO_lsLSLzhwk6kHD4SLi90IeSD9vw3rv80UWhD_wmb4Cw=w240-h480" alt="Local AI Benchmark app icon" loading="lazy">
+          <div class="app-info-col">
+            <h3>Local AI Benchmark</h3>
+            <div class="app-meta-sub">SensiStudio &middot; Productivity &middot; LLM Performance Profiler</div>
+            <p>Benchmark your device's on-device LLM performance. Measures tokens/sec, CPU clock speed, and RAM usage in real time with dynamic charts. Scoring system ranks devices from Entry-Level to Flagship Class. Built with Kotlin &amp; Jetpack Compose.</p>
+            <div class="shots-row">
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/fr35tyanE2WDTj2ZRINyDOopKVRg2waqPxqkVbWtgqHipic31FbitOj1QkY1cBevQB5QdXuCnHIBZ0HiVIVm7Q" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/fr35tyanE2WDTj2ZRINyDOopKVRg2waqPxqkVbWtgqHipic31FbitOj1QkY1cBevQB5QdXuCnHIBZ0HiVIVm7Q=w300" alt="Local AI Benchmark – Speed Test" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/f9sZTuLsQeXMocTmrrZl61m6i9pUBlXeQN_O3Fvf4L9FA4ucwvm_9ipAHbk2_tWe0dvPLdX-JZl7s620-o_pXw" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/f9sZTuLsQeXMocTmrrZl61m6i9pUBlXeQN_O3Fvf4L9FA4ucwvm_9ipAHbk2_tWe0dvPLdX-JZl7s620-o_pXw=w300" alt="Local AI Benchmark – Real-time Charts" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/Az-GZNAAQXM0ha1TGXvFpjJrO_5FCkHmYlAFIVzLe1ax8SG2QeQ9sHYFKy2egHQvPdO7jBZJrYws76PKF0k2mxE" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/Az-GZNAAQXM0ha1TGXvFpjJrO_5FCkHmYlAFIVzLe1ax8SG2QeQ9sHYFKy2egHQvPdO7jBZJrYws76PKF0k2mxE=w300" alt="Local AI Benchmark – Rank Tier" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/0OXo5scvs8s3F4qnuA5hFGRRDRlnWfFeYRQl0KfVnPrrActFiTvZXVr8gd66-tak88vsb3eWqFt5e-JFxHoJKQ" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/0OXo5scvs8s3F4qnuA5hFGRRDRlnWfFeYRQl0KfVnPrrActFiTvZXVr8gd66-tak88vsb3eWqFt5e-JFxHoJKQ=w300" alt="Local AI Benchmark – Device Specs" loading="lazy">
+              </a>
+            </div>
+            <div class="app-tags-row">
+              <span class="metro-tag">Jetpack Compose</span>
+              <span class="metro-tag">Benchmarking</span>
+              <span class="metro-tag">MediaPipe</span>
+              <span class="metro-tag green">Gemma</span>
+            </div>
+            <div class="app-links-row">
+              <a href="https://play.google.com/store/apps/details?id=com.efea.SLMBenchmark" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
+              <a href="https://github.com/EfeAtesh/LocalAIBenchmark" target="_blank" rel="noopener" class="win-btn btn-acrylic">GitHub Repository &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Nuclear Routines -->
+      <div class="window-frame fluent-acrylic reveal d3">
+        <div class="window-titlebar">
+          <div class="window-title-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Nuclear Routines &middot; Life-Changer</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-btn">&minus;</div>
+            <div class="window-btn">&square;</div>
+            <div class="window-btn btn-close">&times;</div>
+          </div>
+        </div>
+        <div class="app-card-body">
+          <img class="app-icon-box" src="https://play-lh.googleusercontent.com/IS05UTXdKwy0fHYizoetmgjc2mULBbDMkZupv3a4Zh4W0VtZTX0Ac99Jh_dqsv0CF9olv7XsrzcKQROJ9yT69g=w240-h480" alt="Nuclear Routines app icon" loading="lazy">
+          <div class="app-info-col">
+            <h3>Nuclear Routines: Life-Changer</h3>
+            <div class="app-meta-sub">SensiStudio &middot; Productivity &middot; <strong style="color:var(--win-amber-light)">5.0★</strong></div>
+            <p>Habit and routine tracker that helps determine where, when, and how habits occur. Personalized tracking with reminders, achievements, and Turkish language support.</p>
+            <div class="shots-row">
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/mwQMYLdHUdzkgGIaYcOd8bcfGdHv7eQq2b0zYEZOh57U8RQo7ZjkEpIr5yCTdIqc6vlkYzeIeiaoZGFKDn12tw" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/mwQMYLdHUdzkgGIaYcOd8bcfGdHv7eQq2b0zYEZOh57U8RQo7ZjkEpIr5yCTdIqc6vlkYzeIeiaoZGFKDn12tw=w300" alt="Nuclear Routines – Habit Tracking" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/GUIsLddmwC9wtq6v-BJuCO4JgyE2x7zooSdsXHihNV46Zk2bXd7OyLDWihB9lSogrrkW8XVQp_AN8GNQ_BKA" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/GUIsLddmwC9wtq6v-BJuCO4JgyE2x7zooSdsXHihNV46Zk2bXd7OyLDWihB9lSogrrkW8XVQp_AN8GNQ_BKA=w300" alt="Nuclear Routines – Streaks" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/x08K9JXFiEp5_wIMy2wslCyNgbQxdKZYrNceo793Bg7FZnhlHwdVPVmZnBHKISKSWXmPRAP-j0NSSu6oILSZFpk" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/x08K9JXFiEp5_wIMy2wslCyNgbQxdKZYrNceo793Bg7FZnhlHwdVPVmZnBHKISKSWXmPRAP-j0NSSu6oILSZFpk=w300" alt="Nuclear Routines – Calendar View" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/kMwU_Pwb_RsQOzYNWeo2N4oVIrUC_5KdjnX_UYL3ykPAClztiRp7OZsF7-w0njpRl9rzCxvOy3vE_21CZXPh" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/kMwU_Pwb_RsQOzYNWeo2N4oVIrUC_5KdjnX_UYL3ykPAClztiRp7OZsF7-w0njpRl9rzCxvOy3vE_21CZXPh=w300" alt="Nuclear Routines – Statistics" loading="lazy">
+              </a>
+            </div>
+            <div class="app-tags-row">
+              <span class="metro-tag">Habit Tracker</span>
+              <span class="metro-tag">Android</span>
+              <span class="metro-tag green">Productivity</span>
+            </div>
+            <div class="app-links-row">
+              <a href="https://play.google.com/store/apps/details?id=com.efea.nuclearroutines" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. ReadFacile -->
+      <div class="window-frame fluent-acrylic reveal d3">
+        <div class="window-titlebar">
+          <div class="window-title-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span>ReadFacile &middot; Read Easier!</span>
+          </div>
+          <div class="window-controls">
+            <div class="window-btn">&minus;</div>
+            <div class="window-btn">&square;</div>
+            <div class="window-btn btn-close">&times;</div>
+          </div>
+        </div>
+        <div class="app-card-body">
+          <img class="app-icon-box" src="https://play-lh.googleusercontent.com/SJfX84ZxQ1AhlaVYOGfm3RHOw7wd_TSTk4D1BZtMacw_l9iGvrLVP7r9m3yduaoH5CtUvf6KILZ60Y1Ct0De1X8=w240-h480" alt="ReadFacile app icon" loading="lazy">
+          <div class="app-info-col">
+            <h3>ReadFacile: Read Easier!</h3>
+            <div class="app-meta-sub">SensiStudio &middot; Productivity &middot; <strong style="color:var(--win-amber-light)">5.0★</strong></div>
+            <p>Speed reading app based on scientific research: lighter-colored word suffixes let the brain predict and read faster. Export as PDF or DOCX. Designed for people with learning difficulties.</p>
+            <div class="shots-row">
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/9bvdLaqrHo8k2rT0w_FfUxPIOATrOY8eBMfaEh9HAcwsPLgsO5gvfpaMmO0-8yRT5rzZCzF9VgwwVGhS8iT_nQ" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/9bvdLaqrHo8k2rT0w_FfUxPIOATrOY8eBMfaEh9HAcwsPLgsO5gvfpaMmO0-8yRT5rzZCzF9VgwwVGhS8iT_nQ=w300" alt="ReadFacile – Bionic Reading" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/EYncpqCZ4_ZIlWBEef6jVngIjSEPS92qD-4QlGwUtgEIaNcOo8FfElyztW6GTTENLTcw13bwef4NGJHRovKA8Q" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/EYncpqCZ4_ZIlWBEef6jVngIjSEPS92qD-4QlGwUtgEIaNcOo8FfElyztW6GTTENLTcw13bwef4NGJHRovKA8Q=w300" alt="ReadFacile – Speed Options" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/ST8U0g2z4H36jOqv091uZomXfnNkB17JE2gAvj1eAi3Y5IwHy-35_1zAaSsDthwJgyFR-HN3kfvX7Hhlw6PDUw" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/ST8U0g2z4H36jOqv091uZomXfnNkB17JE2gAvj1eAi3Y5IwHy-35_1zAaSsDthwJgyFR-HN3kfvX7Hhlw6PDUw=w300" alt="ReadFacile – PDF Export" loading="lazy">
+              </a>
+              <a class="shot-thumb" href="https://play-lh.googleusercontent.com/45czRX9erxFEOc6qbrwm0pDCG1ZgRM1gO3Tg3MHHeuwbPJ0BT7x66Lh1gQKjff5YaLjr7w9SotXQsjDxFiwV" target="_blank" rel="noopener">
+                <img src="https://play-lh.googleusercontent.com/45czRX9erxFEOc6qbrwm0pDCG1ZgRM1gO3Tg3MHHeuwbPJ0BT7x66Lh1gQKjff5YaLjr7w9SotXQsjDxFiwV=w300" alt="ReadFacile – Accessibility" loading="lazy">
+              </a>
+            </div>
+            <div class="app-tags-row">
+              <span class="metro-tag">Bionic Reading</span>
+              <span class="metro-tag">Accessibility</span>
+              <span class="metro-tag green">PDF Export</span>
+            </div>
+            <div class="app-links-row">
+              <a href="https://play.google.com/store/apps/details?id=com.efea.ReadFacile.ReadFacile" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
             </div>
           </div>
         </div>
@@ -1875,6 +2249,50 @@ h2 strong {
         <svg class="sk-icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
         <h3 style="font-size:1rem; font-weight:700; margin-bottom:6px;">Languages &amp; Tools</h3>
         <p style="font-size:0.8rem; color:var(--text-secondary);">Kotlin, Java, C/C++, Python, JavaScript, SQL, Git, Qt/QML</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK SECTION -->
+<section id="stack">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Technologies</div>
+      <h2>Tech <strong>Stack</strong></h2>
+    </div>
+
+    <div class="window-frame fluent-acrylic reveal d1">
+      <div class="window-titlebar">
+        <div class="window-title-left">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <span>Technologies &middot; Verified Tooling Stack</span>
+        </div>
+        <div class="window-controls">
+          <div class="window-btn">&minus;</div>
+          <div class="window-btn">&square;</div>
+          <div class="window-btn btn-close">&times;</div>
+        </div>
+      </div>
+
+      <div style="padding:32px 40px;">
+        <div class="badge-wrap" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+          <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" loading="lazy">
+          <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" loading="lazy">
+          <img alt="Android" src="https://img.shields.io/badge/Android-34A853?style=for-the-badge&logo=android&logoColor=white" loading="lazy">
+          <img alt="Jetpack Compose" src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white" loading="lazy">
+          <img alt="C/C++" src="https://img.shields.io/badge/C/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" loading="lazy">
+          <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" loading="lazy">
+          <img alt="Qt" src="https://img.shields.io/badge/Qt/QML-41CD52?style=for-the-badge&logo=qt&logoColor=white" loading="lazy">
+          <img alt="MediaPipe" src="https://img.shields.io/badge/MediaPipe-0097A7?style=for-the-badge&logo=mediapipe&logoColor=white" loading="lazy">
+          <img alt="Gemma 3" src="https://img.shields.io/badge/Gemma_3-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" loading="lazy">
+          <img alt="STM32" src="https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white" loading="lazy">
+          <img alt="NFC" src="https://img.shields.io/badge/NFC-002E5F?style=for-the-badge&logo=nfc&logoColor=white" loading="lazy">
+          <img alt="KiCad" src="https://img.shields.io/badge/KiCad-314CB0?style=for-the-badge&logo=kicad&logoColor=white" loading="lazy">
+          <img alt="Fusion 360" src="https://img.shields.io/badge/Fusion_360-FF6600?style=for-the-badge&logo=autodesk&logoColor=white" loading="lazy">
+          <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" loading="lazy">
+          <img alt="Material Design" src="https://img.shields.io/badge/Material_3-757575?style=for-the-badge&logo=materialdesign&logoColor=white" loading="lazy">
+        </div>
       </div>
     </div>
   </div>
@@ -1988,6 +2406,10 @@ h2 strong {
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/></svg>
       <span>Experience</span>
     </a>
+    <a href="#education" class="start-link-tile" onclick="toggleStartMenu()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      <span>Education</span>
+    </a>
     <a href="#apps" class="start-link-tile" onclick="toggleStartMenu()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
       <span>Projects</span>
@@ -1995,6 +2417,10 @@ h2 strong {
     <a href="#skills" class="start-link-tile" onclick="toggleStartMenu()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 8 22 9 17 14 18 21 12 17 6 21 7 14 2 9 9 8 12 2"/></svg>
       <span>Skills</span>
+    </a>
+    <a href="#stack" class="start-link-tile" onclick="toggleStartMenu()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <span>Tech Stack</span>
     </a>
     <a href="#contact" class="start-link-tile" onclick="toggleStartMenu()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg>
@@ -2027,15 +2453,13 @@ h2 strong {
 
     <!-- Pinned Taskbar Apps -->
     <div class="taskbar-pinned">
-      <!-- Sensitify App Shortcut with Vector Logo -->
-      <a href="#apps" class="taskbar-icon-btn" title="Sensitify GO">
-        <svg viewBox="0 0 15 15" width="20" height="20" xmlns="http://www.w3.org/2000/svg" style="border-radius:2px;">
-          <path d="M0.012,0.012h15v15h-15z" fill="#004e81"/>
-          <path d="m11.137,7.537v-6.519h1.429,1.429v6.519,6.519h-1.429,-1.429z" fill="#ffffff"/>
-          <path d="m7.163,7.537v-6.589h0.976,0.976v6.589,6.589h-0.976,-0.976z" fill="#ffffff"/>
-          <path d="m4.304,7.537v-6.589h0.697,0.697v6.589,6.589h-0.697,-0.697z" fill="#ffffff"/>
-          <path d="m2.352,7.537v-6.589h0.453,0.453v6.589,6.589h-0.453,-0.453z" fill="#ffffff"/>
-          <path d="m1.097,7.537v-6.589h0.209,0.209v6.589,6.589h-0.209,-0.209z" fill="#ffffff"/>
+      <!-- Google Play Store (SensiStudio) Shortcut with Official 4-Color Logo -->
+      <a href="https://play.google.com/store/apps/developer?id=SensiStudio" target="_blank" rel="noopener" class="taskbar-icon-btn" title="Google Play Store &middot; SensiStudio">
+        <svg viewBox="0 0 512 512" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#00c0ff" d="M32.5 17.5C28.8 21.2 26.6 27 26.6 34.6v442.8c0 7.6 2.2 13.4 5.9 17.1l1.3 1.3L280.4 249.2V246L33.8 16.2l-1.3 1.3z"/>
+          <path fill="#ff3a44" d="M362.4 331.2l-82-82v-6.4l82-82 1.8 1 97.4 55.4c27.8 15.8 27.8 41.7 0 57.5l-97.4 55.5-1.8 1z"/>
+          <path fill="#00e676" d="M280.4 246L32.5 494.5c9.2 9.7 24.3 10.9 41.4 1.2l246.5-140.2-40-109.5z"/>
+          <path fill="#ffc800" d="M280.4 249.2l40-109.5L73.9 16.2C56.8 6.5 41.7 7.7 32.5 17.4L280.4 249.2z"/>
         </svg>
       </a>
       <!-- Microsoft Foundry RAG with 4-Color Logo -->
@@ -2295,6 +2719,39 @@ const obs = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
 /* --------------------------------------------------------------------------
+   COUNT-UP ANIMATION FOR STAT NUMBERS
+   -------------------------------------------------------------------------- */
+function animateCount(el) {
+  const target = +el.dataset.count;
+  const fmt = el.dataset.format;
+  const suffix = el.dataset.suffix || '';
+  const dur = 1400;
+  const start = performance.now();
+
+  function tick(now) {
+    const p = Math.min((now - start) / dur, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    let val = Math.round(target * eased);
+    let out = (fmt === 'k' && val >= 1000) ? (val / 1000).toFixed(0) + 'K' : val.toLocaleString();
+    if (fmt === 'k' && val < 1000) out = val;
+    el.textContent = out + (p === 1 ? suffix : '');
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCount(entry.target);
+      statObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.num[data-count]').forEach(el => statObs.observe(el));
+
+/* --------------------------------------------------------------------------
    10. CONTACT FORM SUBMISSION HANDLER
    -------------------------------------------------------------------------- */
 function handleContactSubmit(e) {
@@ -2474,6 +2931,30 @@ function togglePortfolioCadAutoRotate() {
 window.addEventListener('DOMContentLoaded', () => {
   initPortfolio3DViewer();
 });
+
+/* --------------------------------------------------------------------------
+   12. SMOOTH CURSOR LIGHT FIELD & BACKGROUND PARALLAX
+   -------------------------------------------------------------------------- */
+const cursorGlow = document.getElementById('cursorBgGlow');
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+let currentX = mouseX;
+let currentY = mouseY;
+
+window.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animateCursorGlow() {
+  if (cursorGlow) {
+    currentX += (mouseX - currentX) * 0.08;
+    currentY += (mouseY - currentY) * 0.08;
+    cursorGlow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+  }
+  requestAnimationFrame(animateCursorGlow);
+}
+animateCursorGlow();
 </script>
 
 </body>
