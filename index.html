@@ -2811,8 +2811,20 @@ function applyTheme(theme) {
   }
 }
 
-const savedTheme = localStorage.getItem('portfolio_theme') || 'dark';
-applyTheme(savedTheme);
+
+const savedTheme = localStorage.getItem('portfolio_theme');
+if (!savedTheme) {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(prefersDark ? 'dark' : 'light');
+} else {
+  applyTheme(savedTheme);
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  if (!localStorage.getItem('portfolio_theme')) {
+    applyTheme(e.matches ? 'dark' : 'light');
+  }
+});
 
 function toggleCurrentTheme() {
   const cur = document.documentElement.getAttribute('data-theme');
