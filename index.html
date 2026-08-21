@@ -1883,7 +1883,7 @@ h2 strong {
           <div class="metro-tag">TÜBİTAK 2209-B Approved</div>
           <div class="metro-tag green" style="display:inline-flex; align-items:center; gap:6px;">
             <svg viewBox="0 0 21 21" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="#F25022"/><rect x="11" y="0" width="10" height="10" fill="#7FBA00"/><rect x="0" y="11" width="10" height="10" fill="#00A4EF"/><rect x="11" y="11" width="10" height="10" fill="#FFB900"/></svg>
-            Microsoft AI Innovators 2026
+            Microsoft AI Innovators 2026 Internship
           </div>
         </div>
 
@@ -2335,7 +2335,6 @@ h2 strong {
 
               <div style="padding:10px 14px; background:var(--titlebar-bg); border-top:1px solid var(--border-acrylic); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
                 <div style="display:flex; gap:6px; flex-wrap:wrap;">
-                  <button type="button" class="cad-mini-btn active" data-mat="obsidian" onclick="setPortfolioCadMaterial('obsidian')">Obsidian Matte</button>
                   <button type="button" class="cad-mini-btn" data-mat="cyan" onclick="setPortfolioCadMaterial('cyan')">Bio Cyan</button>
                   <button type="button" class="cad-mini-btn" data-mat="glass" onclick="setPortfolioCadMaterial('glass')">Frosted Glass</button>
                   <button type="button" class="cad-mini-btn" data-mat="wireframe" onclick="setPortfolioCadMaterial('wireframe')">Wireframe</button>
@@ -2988,8 +2987,20 @@ function applyTheme(theme) {
   }
 }
 
-const savedTheme = localStorage.getItem('portfolio_theme') || 'dark';
-applyTheme(savedTheme);
+
+const savedTheme = localStorage.getItem('portfolio_theme');
+if (!savedTheme) {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(prefersDark ? 'dark' : 'light');
+} else {
+  applyTheme(savedTheme);
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  if (!localStorage.getItem('portfolio_theme')) {
+    applyTheme(e.matches ? 'dark' : 'light');
+  }
+});
 
 function toggleCurrentTheme() {
   const cur = document.documentElement.getAttribute('data-theme');
@@ -3333,7 +3344,7 @@ function initPortfolio3DViewer() {
     geometry.center();
     geometry.computeVertexNormals();
 
-    portCadMesh = new THREE.Mesh(geometry, portCadMaterials.obsidian);
+    portCadMesh = new THREE.Mesh(geometry, portCadMaterials.cyan);
     portCadMesh.rotation.x = -Math.PI / 2;
     portCadMesh.scale.set(0.75, 0.75, 0.75);
     portCadScene.add(portCadMesh);
