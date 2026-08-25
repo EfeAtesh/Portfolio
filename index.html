@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Efe Ateş – Mobile Developer &amp; On-Device AI Engineer</title>
+<title>Efe Ateş - Mobile Developer &amp; On-Device AI Engineer</title>
 <meta name="description" content="Efe Ateş – Android developer specializing in on-device AI, electrochemical sensing apps, and Kotlin/Jetpack Compose. 6 published apps, 2K+ downloads.">
 <meta name="author" content="Efe Ateş">
 <meta name="theme-color" content="#0B0F1A">
@@ -1108,21 +1108,70 @@ h2 strong {
   gap: 12px;
 }
 
+/* ==========================================================================
+   CAREER TIMELINE & EDUCATION
+   ========================================================================== */
+.window-body {
+  padding: 36px 40px;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
 .edu-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-@media (max-width: 640px) {
-  .edu-grid {
-    grid-template-columns: 1fr;
-  }
+  gap: 20px;
 }
 
 .edu-card {
   padding: 28px;
   border-top: 4px solid var(--win-cyan);
+}
+
+.edu-certs-bar {
+  margin-top: 20px;
+  padding: 16px 24px;
+  background: var(--titlebar-bg);
+  border: 1px solid var(--border-acrylic);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.edu-bar-divider {
+  width: 1px;
+  height: 16px;
+  background: var(--border-acrylic);
+}
+
+@media (max-width: 768px) {
+  .window-body {
+    padding: 24px 16px;
+  }
+  .edu-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .edu-certs-bar {
+    gap: 12px;
+    padding: 14px 16px;
+  }
+  .edu-certs-bar .edu-bar-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .stat-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================================================
@@ -1936,7 +1985,7 @@ h2 strong {
           <div class="window-btn btn-close">&times;</div>
         </div>
       </div>
-      <div style="padding:36px 40px">
+      <div class="window-body">
         <div class="section-tag" data-i18n="about_tag">About Me</div>
         <h2 data-i18n-html="about_heading">Straight to the <strong>Solution</strong></h2>
         <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.8; margin-bottom:24px;" data-i18n-html="about_p">
@@ -1954,7 +2003,7 @@ h2 strong {
         </div>
 
         <!-- 3 Stat Counters -->
-        <div class="stat-row" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:24px;">
+        <div class="stat-row">
           <div class="fluent-acrylic" style="padding:20px; text-align:center; border:1px solid var(--border-acrylic);">
             <div class="num" data-count="6" style="font-size:2.2rem; font-weight:800; color:var(--win-cyan-light); line-height:1;">6</div>
             <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--text-tertiary); margin-top:6px; letter-spacing:1px;" data-i18n="stat_apps">Published Apps</div>
@@ -1994,7 +2043,7 @@ h2 strong {
         </div>
       </div>
 
-      <div style="padding:36px 40px">
+      <div class="window-body">
         <div class="timeline-list">
           
           <!-- 1. Microsoft AI Innovators -->
@@ -2168,8 +2217,8 @@ h2 strong {
         </div>
       </div>
 
-      <div style="padding:36px 40px">
-        <div class="edu-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+      <div class="window-body">
+        <div class="edu-grid">
           
           <!-- Degree 1 -->
           <div class="fluent-acrylic" style="padding:24px; border:1px solid var(--border-acrylic);">
@@ -2178,7 +2227,6 @@ h2 strong {
             <div style="font-size:0.85rem; color:var(--win-blue-light); margin-bottom:10px;" data-i18n="about_tag_uni">Ankara University</div>
             <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6;" data-i18n-html="edu1_desc">
               Software engineering, algorithms, data structures, OOP, database systems, deep learning. Selected for Microsoft AI Innovators Summer School 2026 (Edge-AI &amp; On-Device AI), instruction language is 100% English.
-            </p>
             </p>
           </div>
 
@@ -2190,17 +2238,16 @@ h2 strong {
             <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6; margin-bottom:12px;" data-i18n="edu2_desc">
               Biomedical instrumentation, electrochemistry, HCI usability studies, medical device technologies, instruction language is 100% English.
             </p>
-            </p>
             <div class="metro-tag green" style="font-size:0.75rem;" data-i18n="edu2_tag_iso">ISO 13485:2016 Medical Devices QMS (Kiwa)</div>
           </div>
         </div>
 
         <!-- Certifications & Qualifications Bar -->
-        <div style="margin-top:20px; padding:16px 24px; background:var(--titlebar-bg); border:1px solid var(--border-acrylic); display:flex; align-items:center; justify-content:center; gap:20px; flex-wrap:wrap;">
+        <div class="edu-certs-bar">
           <span style="font-size:0.85rem; color:var(--text-secondary);"><span data-i18n="edu_toeic">TOEIC Total:</span> <strong style="color:var(--text-primary)">855/990</strong> (CEFR B2)</span>
-          <span style="width:1px; height:16px; background:var(--border-acrylic);"></span>
+          <span class="edu-bar-divider"></span>
           <span style="font-size:0.85rem; color:var(--text-secondary);">TÜBİTAK 2209-B <strong style="color:var(--win-green)" data-i18n="edu_tubitak_status">Approved</strong></span>
-          <span style="width:1px; height:16px; background:var(--border-acrylic);"></span>
+          <span class="edu-bar-divider"></span>
           <span style="font-size:0.85rem; color:var(--text-secondary); display:inline-flex; align-items:center; gap:6px; cursor:pointer;" onclick="openCertModal()" title="Click to view Microsoft Internship Certificate">
             <svg viewBox="0 0 21 21" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="#F25022"/><rect x="11" y="0" width="10" height="10" fill="#7FBA00"/><rect x="0" y="11" width="10" height="10" fill="#00A4EF"/><rect x="11" y="11" width="10" height="10" fill="#FFB900"/></svg>
             <span data-i18n-html="edu_ms_cert">Microsoft AI Innovators <strong style="color:var(--win-cyan-light)">2026 Certificate</strong> ↗</span>
