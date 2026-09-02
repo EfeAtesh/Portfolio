@@ -1179,43 +1179,141 @@ h2 strong {
    ========================================================================== */
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 640px) {
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .skill-card {
-  padding: 28px 20px;
-  text-align: center;
-  border-top: 4px solid var(--win-blue);
+  padding: 24px 22px;
+  text-align: left;
+  border-top: 3px solid var(--win-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skill-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2px;
 }
 
 .sk-icon {
-  width: 36px;
-  height: 36px;
-  margin: 0 auto 12px;
-  stroke: var(--win-blue-light);
+  width: 28px;
+  height: 28px;
+  stroke: var(--win-cyan-light);
   fill: none;
-  stroke-width: 1.5;
+  stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
+  flex-shrink: 0;
 }
 
-.badge-wrap {
+.skill-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.skill-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Categorized Tech Stack Grid */
+.stack-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .stack-category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stack-group {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--border-acrylic);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+html[data-theme="light"] .stack-group {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.stack-group:hover {
+  border-color: var(--win-blue);
+  box-shadow: 0 8px 24px -8px var(--win-blue-glow);
+}
+
+.stack-group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--win-blue-light);
+  border-bottom: 1px dashed var(--border-acrylic);
+  padding-bottom: 8px;
+}
+
+.stack-chips-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+  gap: 8px;
 }
 
-.badge-wrap img {
-  height: 30px;
-  border-radius: 0px;
-  transition: transform var(--transition-fast);
+.stack-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 11px;
+  background: var(--bg-acrylic);
+  border: 1px solid var(--border-acrylic);
+  font-family: var(--font-fluent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.2px;
+  transition: all var(--transition-fast);
+  user-select: none;
 }
 
-.badge-wrap img:hover {
-  transform: scale(1.1);
+.stack-chip:hover {
+  border-color: var(--win-blue-light);
+  background: rgba(0, 120, 215, 0.18);
+  transform: translateY(-2px);
+  color: #FFFFFF;
 }
+
+.stack-chip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.stack-chip.ai .stack-chip-dot { background: #8E75B2; box-shadow: 0 0 6px rgba(142, 117, 178, 0.6); }
+.stack-chip.mobile .stack-chip-dot { background: #34A853; box-shadow: 0 0 6px rgba(52, 168, 83, 0.6); }
+.stack-chip.hardware .stack-chip-dot { background: #FF8C00; box-shadow: 0 0 6px rgba(255, 140, 0, 0.6); }
+.stack-chip.sys .stack-chip-dot { background: #00A4EF; box-shadow: 0 0 6px rgba(0, 164, 239, 0.6); }
 
 /* ==========================================================================
    CONTACT FORM & NETWORKING
@@ -1779,10 +1877,10 @@ h2 strong {
     <ul class="nav-links">
       <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
       <li><a href="#experience" class="nav-link" data-i18n="nav_experience">Experience</a></li>
-      <li><a href="#education" class="nav-link" data-i18n="nav_education">Education</a></li>
-      <li><a href="#apps" class="nav-link" data-i18n="nav_projects">Projects</a></li>
       <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a></li>
       <li><a href="#stack" class="nav-link" data-i18n="nav_stack">Tech Stack</a></li>
+      <li><a href="#apps" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="#education" class="nav-link" data-i18n="nav_education">Education</a></li>
       <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
     </ul>
 
@@ -1989,7 +2087,7 @@ h2 strong {
         <div class="section-tag" data-i18n="about_tag">About Me</div>
         <h2 data-i18n-html="about_heading">Straight to the <strong>Solution</strong></h2>
         <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.8; margin-bottom:24px;" data-i18n-html="about_p">
-          Fresh graduate in <strong>Computer Engineering Minor &amp; Biomedical Engineering</strong> (Accredited by MÜDEK) at Ankara University. I build Android apps that run AI on-device with zero cloud latency, zero data leaks, and no compromises. My work spans scientific instrumentation (NFC potentiostats), on-device LLM inference (Gemma 3), and productivity tools, all published on Google Play under <strong>SensiStudio</strong>. I care about shipping real products fast and making complex hardware feel natural on a phone.
+          Mobile &amp; On-Device AI Engineer with a strong foundation in <strong>Computer Engineering &amp; Biomedical Engineering</strong> (Accredited by MÜDEK) at Ankara University. I build Android apps that run AI on-device with zero cloud latency, zero data leaks, and no compromises. My work spans scientific instrumentation (NFC potentiostats), on-device LLM inference (Gemma 3), and productivity tools, all published on Google Play under <strong>SensiStudio</strong>. I care about shipping real products fast and making complex hardware feel natural on a phone.
         </p>
 
         <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-bottom:24px;">
@@ -2196,19 +2294,63 @@ h2 strong {
   </div>
 </section>
 
-<!-- ACADEMIC & EDUCATION SECTION -->
-<section id="education">
+<!-- SKILLS SECTION -->
+<section id="skills">
   <div class="container">
     <div class="reveal">
-      <div class="section-tag" data-i18n="edu_tag">Academic</div>
-      <h2 data-i18n-html="edu_heading">Academic <strong>Education</strong></h2>
+      <div class="section-tag" data-i18n="skills_tag">Expertise</div>
+      <h2 data-i18n-html="skills_heading">Core <strong>Skills</strong></h2>
+    </div>
+
+    <div class="skill-grid">
+      <div class="fluent-acrylic skill-card reveal d1">
+        <div class="skill-card-top">
+          <svg class="sk-icon" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 3.37 2.09 6.25 5 7.42V20a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2.58c2.91-1.17 5-4.05 5-7.42a8 8 0 0 0-8-8z"/><line x1="9.5" y1="9" x2="9.5" y2="9.01"/><line x1="14.5" y1="9" x2="14.5" y2="9.01"/><path d="M10 13a4 4 0 0 0 4 0"/></svg>
+          <h3 data-i18n="sk1_title">On-Device AI &amp; Local LLMs</h3>
+        </div>
+        <p data-i18n="sk1_desc">Gemma 3, MediaPipe LLM Inference, Microsoft Foundry, Local RAG, CMSIS-NN, Edge Inference &amp; Quantization</p>
+      </div>
+
+      <div class="fluent-acrylic skill-card reveal d2">
+        <div class="skill-card-top">
+          <svg class="sk-icon" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <h3 data-i18n="sk2_title">Mobile &amp; Hardware Interfacing</h3>
+        </div>
+        <p data-i18n="sk2_desc">Jetpack Compose, Kotlin Coroutines/Flow, USB Host (CDC/FTDI), ST25DV NFC Mailbox, Real-Time Plotting Engine</p>
+      </div>
+
+      <div class="fluent-acrylic skill-card reveal d3">
+        <div class="skill-card-top">
+          <svg class="sk-icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/></svg>
+          <h3 data-i18n="sk3_title">Embedded &amp; Hardware Design</h3>
+        </div>
+        <p data-i18n="sk3_desc">STM32 (ARM Cortex-M), ESP32-C3, 4-Layer PCB Design (KiCad), NFC Energy Harvesting, Fusion 360 CAD</p>
+      </div>
+
+      <div class="fluent-acrylic skill-card reveal d4">
+        <div class="skill-card-top">
+          <svg class="sk-icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+          <h3 data-i18n="sk4_title">Systems &amp; Native Tooling</h3>
+        </div>
+        <p data-i18n="sk4_desc">Modern C/C++ (C++17/20), Python, Qt 6 / QML Desktop, Git CI/CD, Google Play Release Lifecycle</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK SECTION -->
+<section id="stack">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag" data-i18n="stack_tag">Technologies</div>
+      <h2 data-i18n-html="stack_heading">Tech <strong>Stack</strong></h2>
     </div>
 
     <div class="window-frame fluent-acrylic reveal d1">
       <div class="window-titlebar">
         <div class="window-title-left">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          <span data-i18n-html="edu_titlebar">Academic Education &middot; Degrees &amp; Qualifications</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <span data-i18n-html="stack_titlebar">Technologies &middot; Verified Tooling Stack</span>
         </div>
         <div class="window-controls">
           <div class="window-btn">&minus;</div>
@@ -2217,41 +2359,73 @@ h2 strong {
         </div>
       </div>
 
-      <div class="window-body">
-        <div class="edu-grid">
+      <div style="padding:28px 24px;">
+        <div class="stack-category-grid">
           
-          <!-- Degree 1 -->
-          <div class="fluent-acrylic" style="padding:24px; border:1px solid var(--border-acrylic);">
-            <div style="font-size:0.75rem; font-weight:700; color:var(--win-cyan-light); text-transform:uppercase; margin-bottom:4px;">2023 – 2026</div>
-            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;" data-i18n="edu1_degree">B.Sc. Minor in Computer Engineering</h3>
-            <div style="font-size:0.85rem; color:var(--win-blue-light); margin-bottom:10px;" data-i18n="about_tag_uni">Ankara University</div>
-            <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6;" data-i18n-html="edu1_desc">
-              Software engineering, algorithms, data structures, OOP, database systems, deep learning. Selected for Microsoft AI Innovators Summer School 2026 (Edge-AI &amp; On-Device AI), instruction language is 100% English.
-            </p>
+          <!-- Category 1: On-Device AI -->
+          <div class="stack-group">
+            <div class="stack-group-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span data-i18n="stack_cat_ai">On-Device AI &amp; Models</span>
+            </div>
+            <div class="stack-chips-wrap">
+              <span class="stack-chip ai"><span class="stack-chip-dot"></span>Gemma 3 (1B/4B)</span>
+              <span class="stack-chip ai"><span class="stack-chip-dot"></span>MediaPipe LLM</span>
+              <span class="stack-chip ai"><span class="stack-chip-dot"></span>Microsoft Foundry</span>
+              <span class="stack-chip ai"><span class="stack-chip-dot"></span>Local RAG</span>
+              <span class="stack-chip ai"><span class="stack-chip-dot"></span>TensorFlow Lite</span>
+              <span class="stack-chip ai"><span class="stack-chip-dot"></span>CMSIS-NN</span>
+            </div>
           </div>
 
-          <!-- Degree 2 -->
-          <div class="fluent-acrylic" style="padding:24px; border:1px solid var(--border-acrylic);">
-            <div style="font-size:0.75rem; font-weight:700; color:var(--win-green); text-transform:uppercase; margin-bottom:4px;">2022 – 2026</div>
-            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;" data-i18n="edu2_degree">B.Sc. in Biomedical Engineering</h3>
-            <div style="font-size:0.85rem; color:var(--win-blue-light); margin-bottom:10px;">Ankara University (MÜDEK Accredited)</div>
-            <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6; margin-bottom:12px;" data-i18n="edu2_desc">
-              Biomedical instrumentation, electrochemistry, HCI usability studies, medical device technologies, instruction language is 100% English.
-            </p>
-            <div class="metro-tag green" style="font-size:0.75rem;" data-i18n="edu2_tag_iso">ISO 13485:2016 Medical Devices QMS (Kiwa)</div>
+          <!-- Category 2: Mobile & UI -->
+          <div class="stack-group">
+            <div class="stack-group-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              <span data-i18n="stack_cat_mobile">Mobile &amp; Architecture</span>
+            </div>
+            <div class="stack-chips-wrap">
+              <span class="stack-chip mobile"><span class="stack-chip-dot"></span>Kotlin</span>
+              <span class="stack-chip mobile"><span class="stack-chip-dot"></span>Jetpack Compose</span>
+              <span class="stack-chip mobile"><span class="stack-chip-dot"></span>Coroutines &amp; Flow</span>
+              <span class="stack-chip mobile"><span class="stack-chip-dot"></span>USB Host (CDC/FTDI)</span>
+              <span class="stack-chip mobile"><span class="stack-chip-dot"></span>Material 3</span>
+              <span class="stack-chip mobile"><span class="stack-chip-dot"></span>Canvas Plotting Engine</span>
+            </div>
           </div>
-        </div>
 
-        <!-- Certifications & Qualifications Bar -->
-        <div class="edu-certs-bar">
-          <span style="font-size:0.85rem; color:var(--text-secondary);"><span data-i18n="edu_toeic">TOEIC Total:</span> <strong style="color:var(--text-primary)">855/990</strong> (CEFR B2)</span>
-          <span class="edu-bar-divider"></span>
-          <span style="font-size:0.85rem; color:var(--text-secondary);">TÜBİTAK 2209-B <strong style="color:var(--win-green)" data-i18n="edu_tubitak_status">Approved</strong></span>
-          <span class="edu-bar-divider"></span>
-          <span style="font-size:0.85rem; color:var(--text-secondary); display:inline-flex; align-items:center; gap:6px; cursor:pointer;" onclick="openCertModal()" title="Click to view Microsoft Internship Certificate">
-            <svg viewBox="0 0 21 21" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="#F25022"/><rect x="11" y="0" width="10" height="10" fill="#7FBA00"/><rect x="0" y="11" width="10" height="10" fill="#00A4EF"/><rect x="11" y="11" width="10" height="10" fill="#FFB900"/></svg>
-            <span data-i18n-html="edu_ms_cert">Microsoft AI Innovators <strong style="color:var(--win-cyan-light)">2026 Certificate</strong> ↗</span>
-          </span>
+          <!-- Category 3: Embedded & Hardware -->
+          <div class="stack-group">
+            <div class="stack-group-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/></svg>
+              <span data-i18n="stack_cat_hw">Embedded &amp; Hardware</span>
+            </div>
+            <div class="stack-chips-wrap">
+              <span class="stack-chip hardware"><span class="stack-chip-dot"></span>STM32 (Cortex-M)</span>
+              <span class="stack-chip hardware"><span class="stack-chip-dot"></span>ESP32-C3</span>
+              <span class="stack-chip hardware"><span class="stack-chip-dot"></span>ST25DV NFC Mailbox</span>
+              <span class="stack-chip hardware"><span class="stack-chip-dot"></span>NFC Energy Harvesting</span>
+              <span class="stack-chip hardware"><span class="stack-chip-dot"></span>KiCad (4-Layer PCB)</span>
+              <span class="stack-chip hardware"><span class="stack-chip-dot"></span>Fusion 360 (CAD)</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Systems & Tooling -->
+          <div class="stack-group">
+            <div class="stack-group-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+              <span data-i18n="stack_cat_sys">Languages &amp; Systems</span>
+            </div>
+            <div class="stack-chips-wrap">
+              <span class="stack-chip sys"><span class="stack-chip-dot"></span>Modern C/C++ (C++17/20)</span>
+              <span class="stack-chip sys"><span class="stack-chip-dot"></span>Python</span>
+              <span class="stack-chip sys"><span class="stack-chip-dot"></span>Qt 6 / QML</span>
+              <span class="stack-chip sys"><span class="stack-chip-dot"></span>Java (OpenJDK)</span>
+              <span class="stack-chip sys"><span class="stack-chip-dot"></span>Git &amp; CI/CD</span>
+              <span class="stack-chip sys"><span class="stack-chip-dot"></span>Google Play Console</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -2775,55 +2949,19 @@ h2 strong {
   </div>
 </section>
 
-<!-- SKILLS SECTION -->
-<section id="skills">
+<!-- ACADEMIC & EDUCATION SECTION -->
+<section id="education">
   <div class="container">
     <div class="reveal">
-      <div class="section-tag" data-i18n="skills_tag">Expertise</div>
-      <h2 data-i18n-html="skills_heading">Core <strong>Skills</strong></h2>
-    </div>
-
-    <div class="skill-grid">
-      <div class="fluent-acrylic skill-card reveal d1">
-        <svg class="sk-icon" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-        <h3 style="font-size:1rem; font-weight:700; margin-bottom:6px;" data-i18n="sk1_title">Android Development</h3>
-        <p style="font-size:0.8rem; color:var(--text-secondary);" data-i18n="sk1_desc">Kotlin, Java, Jetpack Compose, Fragment Architecture, Material 3</p>
-      </div>
-
-      <div class="fluent-acrylic skill-card reveal d2">
-        <svg class="sk-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        <h3 style="font-size:1rem; font-weight:700; margin-bottom:6px;" data-i18n="sk2_title">On-Device AI</h3>
-        <p style="font-size:0.8rem; color:var(--text-secondary);" data-i18n="sk2_desc">MediaPipe, Gemma 3, TensorFlow Lite, CMSIS-NN, Edge Inference</p>
-      </div>
-
-      <div class="fluent-acrylic skill-card reveal d3">
-        <svg class="sk-icon" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/></svg>
-        <h3 style="font-size:1rem; font-weight:700; margin-bottom:6px;" data-i18n="sk3_title">Embedded Systems</h3>
-        <p style="font-size:0.8rem; color:var(--text-secondary);" data-i18n="sk3_desc">STM32, NFC (ST25DV), PCB Design (KiCad), 3D Printing (Fusion 360)</p>
-      </div>
-
-      <div class="fluent-acrylic skill-card reveal d4">
-        <svg class="sk-icon" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
-        <h3 style="font-size:1rem; font-weight:700; margin-bottom:6px;" data-i18n="sk4_title">Languages &amp; Tools</h3>
-        <p style="font-size:0.8rem; color:var(--text-secondary);" data-i18n="sk4_desc">Kotlin, Java, C/C++, Python, JavaScript, SQL, Git, Qt/QML</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TECH STACK SECTION -->
-<section id="stack">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-tag" data-i18n="stack_tag">Technologies</div>
-      <h2 data-i18n-html="stack_heading">Tech <strong>Stack</strong></h2>
+      <div class="section-tag" data-i18n="edu_tag">Academic</div>
+      <h2 data-i18n-html="edu_heading">Academic <strong>Education</strong></h2>
     </div>
 
     <div class="window-frame fluent-acrylic reveal d1">
       <div class="window-titlebar">
         <div class="window-title-left">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          <span data-i18n-html="stack_titlebar">Technologies &middot; Verified Tooling Stack</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <span data-i18n-html="edu_titlebar">Academic Education &middot; Degrees &amp; Qualifications</span>
         </div>
         <div class="window-controls">
           <div class="window-btn">&minus;</div>
@@ -2832,23 +2970,41 @@ h2 strong {
         </div>
       </div>
 
-      <div style="padding:32px 40px;">
-        <div class="badge-wrap" style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
-          <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" loading="lazy">
-          <img alt="Java" src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" loading="lazy">
-          <img alt="Android" src="https://img.shields.io/badge/Android-34A853?style=for-the-badge&logo=android&logoColor=white" loading="lazy">
-          <img alt="Jetpack Compose" src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white" loading="lazy">
-          <img alt="C/C++" src="https://img.shields.io/badge/C/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" loading="lazy">
-          <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" loading="lazy">
-          <img alt="Qt" src="https://img.shields.io/badge/Qt/QML-41CD52?style=for-the-badge&logo=qt&logoColor=white" loading="lazy">
-          <img alt="MediaPipe" src="https://img.shields.io/badge/MediaPipe-0097A7?style=for-the-badge&logo=mediapipe&logoColor=white" loading="lazy">
-          <img alt="Gemma 3" src="https://img.shields.io/badge/Gemma_3-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" loading="lazy">
-          <img alt="STM32" src="https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white" loading="lazy">
-          <img alt="NFC" src="https://img.shields.io/badge/NFC-002E5F?style=for-the-badge&logo=nfc&logoColor=white" loading="lazy">
-          <img alt="KiCad" src="https://img.shields.io/badge/KiCad-314CB0?style=for-the-badge&logo=kicad&logoColor=white" loading="lazy">
-          <img alt="Fusion 360" src="https://img.shields.io/badge/Fusion_360-FF6600?style=for-the-badge&logo=autodesk&logoColor=white" loading="lazy">
-          <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" loading="lazy">
-          <img alt="Material Design" src="https://img.shields.io/badge/Material_3-757575?style=for-the-badge&logo=materialdesign&logoColor=white" loading="lazy">
+      <div class="window-body">
+        <div class="edu-grid">
+          
+          <!-- Degree 1 -->
+          <div class="fluent-acrylic" style="padding:24px; border:1px solid var(--border-acrylic);">
+            <div style="font-size:0.75rem; font-weight:700; color:var(--win-cyan-light); text-transform:uppercase; margin-bottom:4px;">2023 – 2026</div>
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;" data-i18n="edu1_degree">B.Sc. in Computer Engineering</h3>
+            <div style="font-size:0.85rem; color:var(--win-blue-light); margin-bottom:10px;" data-i18n="about_tag_uni">Ankara University</div>
+            <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6;" data-i18n-html="edu1_desc">
+              Software engineering, algorithms, data structures, OOP, database systems, deep learning. Selected for Microsoft AI Innovators Summer School 2026 (Edge-AI &amp; On-Device AI), instruction language is 100% English.
+            </p>
+          </div>
+
+          <!-- Degree 2 -->
+          <div class="fluent-acrylic" style="padding:24px; border:1px solid var(--border-acrylic);">
+            <div style="font-size:0.75rem; font-weight:700; color:var(--win-green); text-transform:uppercase; margin-bottom:4px;">2022 – 2026</div>
+            <h3 style="font-size:1.15rem; font-weight:700; margin-bottom:4px;" data-i18n="edu2_degree">B.Sc. in Biomedical Engineering</h3>
+            <div style="font-size:0.85rem; color:var(--win-blue-light); margin-bottom:10px;">Ankara University (MÜDEK Accredited)</div>
+            <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6; margin-bottom:12px;" data-i18n="edu2_desc">
+              Biomedical instrumentation, electrochemistry, HCI usability studies, medical device technologies, instruction language is 100% English.
+            </p>
+            <div class="metro-tag green" style="font-size:0.75rem;" data-i18n="edu2_tag_iso">ISO 13485:2016 Medical Devices QMS (Kiwa)</div>
+          </div>
+        </div>
+
+        <!-- Certifications & Qualifications Bar -->
+        <div class="edu-certs-bar">
+          <span style="font-size:0.85rem; color:var(--text-secondary);"><span data-i18n="edu_toeic">TOEIC Total:</span> <strong style="color:var(--text-primary)">855/990</strong> (CEFR B2)</span>
+          <span class="edu-bar-divider"></span>
+          <span style="font-size:0.85rem; color:var(--text-secondary);">TÜBİTAK 2209-B <strong style="color:var(--win-green)" data-i18n="edu_tubitak_status">Approved</strong></span>
+          <span class="edu-bar-divider"></span>
+          <span style="font-size:0.85rem; color:var(--text-secondary); display:inline-flex; align-items:center; gap:6px; cursor:pointer;" onclick="openCertModal()" title="Click to view Microsoft Internship Certificate">
+            <svg viewBox="0 0 21 21" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="#F25022"/><rect x="11" y="0" width="10" height="10" fill="#7FBA00"/><rect x="0" y="11" width="10" height="10" fill="#00A4EF"/><rect x="11" y="11" width="10" height="10" fill="#FFB900"/></svg>
+            <span data-i18n-html="edu_ms_cert">Microsoft AI Innovators <strong style="color:var(--win-cyan-light)">2026 Certificate</strong> ↗</span>
+          </span>
         </div>
       </div>
     </div>
@@ -2963,14 +3119,6 @@ h2 strong {
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/></svg>
       <span data-i18n="nav_experience">Experience</span>
     </a>
-    <a href="#education" class="start-link-tile" onclick="toggleStartMenu()">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-      <span data-i18n="nav_education">Education</span>
-    </a>
-    <a href="#apps" class="start-link-tile" onclick="toggleStartMenu()">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
-      <span data-i18n="nav_projects">Projects</span>
-    </a>
     <a href="#skills" class="start-link-tile" onclick="toggleStartMenu()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 8 22 9 17 14 18 21 12 17 6 21 7 14 2 9 9 8 12 2"/></svg>
       <span data-i18n="nav_skills">Skills</span>
@@ -2978,6 +3126,14 @@ h2 strong {
     <a href="#stack" class="start-link-tile" onclick="toggleStartMenu()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
       <span data-i18n="nav_stack">Tech Stack</span>
+    </a>
+    <a href="#apps" class="start-link-tile" onclick="toggleStartMenu()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
+      <span data-i18n="nav_projects">Projects</span>
+    </a>
+    <a href="#education" class="start-link-tile" onclick="toggleStartMenu()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      <span data-i18n="nav_education">Education</span>
     </a>
     <a href="#contact" class="start-link-tile" onclick="toggleStartMenu()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg>
@@ -3099,7 +3255,7 @@ const translations = {
     about_titlebar: "Engineering Philosophy &middot; About",
     about_tag: "About Me",
     about_heading: "Straight to the <strong>Solution</strong>",
-    about_p: "Fresh graduate in <strong>Computer Engineering Minor &amp; Biomedical Engineering</strong> (Accredited by MÜDEK) at Ankara University. I build Android apps that run AI on-device with zero cloud latency, zero data leaks, and no compromises. My work spans scientific instrumentation (NFC potentiostats), on-device LLM inference (Gemma 3), and productivity tools, all published on Google Play under <strong>SensiStudio</strong>. I care about shipping real products fast and making complex hardware feel natural on a phone.",
+    about_p: "Mobile &amp; On-Device AI Engineer with a strong foundation in <strong>Computer Engineering &amp; Biomedical Engineering</strong> (Accredited by MÜDEK) at Ankara University. I build Android apps that run AI on-device with zero cloud latency, zero data leaks, and no compromises. My work spans scientific instrumentation (NFC potentiostats), on-device LLM inference (Gemma 3), and productivity tools, all published on Google Play under <strong>SensiStudio</strong>. I care about shipping real products fast and making complex hardware feel natural on a phone.",
     about_tag_uni: "Ankara University",
     about_tag_mudek: "MÜDEK Accredited",
     about_tag_tubitak: "TÜBİTAK 2209-B Approved",
@@ -3147,7 +3303,7 @@ const translations = {
     edu_tag: "Academic",
     edu_heading: "Academic <strong>Education</strong>",
     edu_titlebar: "Academic Education &middot; Degrees &amp; Qualifications",
-    edu1_degree: "B.Sc. Minor in Computer Engineering",
+    edu1_degree: "B.Sc. in Computer Engineering",
     edu1_desc: "Software engineering, algorithms, data structures, OOP, database systems, deep learning. Selected for Microsoft AI Innovators Summer School 2026 (Edge-AI &amp; On-Device AI).",
     edu2_degree: "B.Sc. in Biomedical Engineering",
     edu2_desc: "Biomedical instrumentation, electrochemistry, HCI usability studies, medical device technologies.",
@@ -3221,17 +3377,21 @@ const translations = {
     p9_tag_access: "Accessibility",
     skills_tag: "Expertise",
     skills_heading: "Core <strong>Skills</strong>",
-    sk1_title: "Android Development",
-    sk1_desc: "Kotlin, Java, Jetpack Compose, Fragment Architecture, Material 3",
-    sk2_title: "On-Device AI",
-    sk2_desc: "MediaPipe, Gemma 3, TensorFlow Lite, CMSIS-NN, Edge Inference",
-    sk3_title: "Embedded Systems",
-    sk3_desc: "STM32, NFC (ST25DV), PCB Design (KiCad), 3D Printing (Fusion 360)",
-    sk4_title: "Languages &amp; Tools",
-    sk4_desc: "Kotlin, Java, C/C++, Python, JavaScript, SQL, Git, Qt/QML",
+    sk1_title: "On-Device AI & Local LLMs",
+    sk1_desc: "Gemma 3, MediaPipe LLM Inference, Microsoft Foundry, Local RAG, CMSIS-NN, Edge Inference & Quantization",
+    sk2_title: "Mobile & Hardware Interfacing",
+    sk2_desc: "Jetpack Compose, Kotlin Coroutines/Flow, USB Host (CDC/FTDI), ST25DV NFC Mailbox, Real-Time Plotting Engine",
+    sk3_title: "Embedded & Hardware Design",
+    sk3_desc: "STM32 (ARM Cortex-M), ESP32-C3, 4-Layer PCB Design (KiCad), NFC Energy Harvesting, Fusion 360 CAD",
+    sk4_title: "Systems & Native Tooling",
+    sk4_desc: "Modern C/C++ (C++17/20), Python, Qt 6 / QML Desktop, Git CI/CD, Google Play Release Lifecycle",
     stack_tag: "Technologies",
     stack_heading: "Tech <strong>Stack</strong>",
     stack_titlebar: "Technologies &middot; Verified Tooling Stack",
+    stack_cat_ai: "On-Device AI & Models",
+    stack_cat_mobile: "Mobile & Architecture",
+    stack_cat_hw: "Embedded & Hardware",
+    stack_cat_sys: "Languages & Systems",
     contact_tag: "Networking",
     contact_heading: "Get In <strong>Touch</strong>",
     contact_titlebar: "Send Message &middot; Mail Client",
@@ -3293,7 +3453,7 @@ const translations = {
     about_titlebar: "Mühendislik Felsefesi &middot; Hakkımda",
     about_tag: "Hakkımda",
     about_heading: "Doğrudan <strong>Çözüme</strong> Odaklı",
-    about_p: "Ankara Üniversitesi <strong>Bilgisayar Mühendisliği Yan Dal ve Biyomedikal Mühendisliği</strong> (MÜDEK Akreditasyonlu) mezunuyum. Sıfır bulut gecikmesi, sıfır veri sızıntısı ve tavizsiz performansla doğrudan cihaz üzerinde çalışan (on-device) yapay zeka Android uygulamaları geliştiriyorum. Çalışmalarım; bilimsel enstrümantasyon (NFC potansiyostatlar), cihaz üstü LLM çıkarımı (Gemma 3) ve üretkenlik araçlarına uzanmakta olup tümü Google Play'de <strong>SensiStudio</strong> çatısı altında yayınlanmıştır. Gerçek ürünleri hızla geliştirmeyi ve karmaşık donanımları cep telefonunda akıcı bir deneyime dönüştürmeyi önemsiyorum.",
+    about_p: "Ankara Üniversitesi <strong>Bilgisayar Mühendisliği ve Biyomedikal Mühendisliği</strong> (MÜDEK Akreditasyonlu) altyapısına sahip bir mobil ve cihaz üstü yapay zeka mühendisiyim. Sıfır bulut gecikmesi, sıfır veri sızıntısı ve tavizsiz performansla doğrudan cihaz üzerinde çalışan (on-device) yapay zeka Android uygulamaları geliştiriyorum. Çalışmalarım; bilimsel enstrümantasyon (NFC potansiyostatlar), cihaz üstü LLM çıkarımı (Gemma 3) ve üretkenlik araçlarına uzanmakta olup tümü Google Play'de <strong>SensiStudio</strong> çatısı altında yayınlanmıştır. Gerçek ürünleri hızla geliştirmeyi ve karmaşık donanımları cep telefonunda akıcı bir deneyime dönüştürmeyi önemsiyorum.",
     about_tag_uni: "Ankara Üniversitesi",
     about_tag_mudek: "MÜDEK Akreditasyonlu",
     about_tag_tubitak: "TÜBİTAK 2209-B Onaylı",
@@ -3341,7 +3501,7 @@ const translations = {
     edu_tag: "Akademik",
     edu_heading: "Akademik <strong>Eğitim</strong>",
     edu_titlebar: "Akademik Eğitim &middot; Dereceler ve Nitelikler",
-    edu1_degree: "Bilgisayar Mühendisliği Yan Dal Lisansı",
+    edu1_degree: "Bilgisayar Mühendisliği Lisansı",
     edu1_desc: "Yazılım mühendisliği, algoritmalar, veri yapıları, nesne yönelimli programlama, veritabanı sistemleri, derin öğrenme. Microsoft AI Innovators 2026 Yaz Okulu (Uçta Yapay Zeka & Cihaz Üstü YZ) seçimi.",
     edu2_degree: "Biyomedikal Mühendisliği Lisansı",
     edu2_desc: "Biyomedikal enstrümantasyon, elektrokimya, İBY (HCI) kullanılabilirlik çalışmaları, tıbbi cihaz teknolojileri.",
@@ -3371,7 +3531,7 @@ const translations = {
     p3_badge: "NFC Potansiyostat &middot; Bitirme Tezi",
     p3_title: "NFC Potansiyostat &ndash; Pilsiz Elektrokimyasal Platform",
     p3_sub: "BME4496 &middot; Donanım + Gömülü Yazılım + Android + Cihaz Üstü YZ",
-    p3_desc: "Akıllı telefondan sağlanan NFC enerji hasadı (energy harvesting) ile tamamen <strong>pilsiz ve kablosuz</strong> çalışan potansiyostat. Özel 4 katmanlı PCB (STM32U545 + ST25DV), 3D baskı manyetik kasa, CNC ile işlenmiş 13.56 MHz antenler, gerçek zamanlı grafik çizimi ve sesli analiz için cihaz üstü Gemma 3 1B AI ajanı içeren Android uygulaması. TÜBİTAK 2209-B onaylı.",
+    p3_desc: "Akıllı telefondan sağlanan NFC energy hasadı (energy harvesting) ile tamamen <strong>pilsiz ve kablosuz</strong> çalışan potansiyostat. Özel 4 katmanlı PCB (STM32U545 + ST25DV), 3D baskı manyetik kasa, CNC ile işlenmiş 13.56 MHz antenler, gerçek zamanlı grafik çizimi ve sesli analiz için cihaz üstü Gemma 3 1B AI ajanı içeren Android uygulaması. TÜBİTAK 2209-B onaylı.",
     p3_ch_desc: "Masaüstü potansiyostatların hantal, pahalı ve kablolu güce bağımlı olması, onları taşınabilir hasta başı tanı testleri (point-of-care) için kullanışsız kılar.",
     p3_so_desc: "Tüm sistemi uçtan uca tasarlayarak (analog AFE, ST25DV mailbox protokolü üzerinden gömülü yazılım, Android uygulaması ve ince ayarlı yerel yapay zeka), laboratuvar cihazlarına kıyasla maliyeti %90'ın üzerinde düşürdüm ve %98.5 ölçüm doğruluğu elde ettim.",
     p3_shots_cap: "NanoBiosens Lab: eşlik eden Android uygulamasında gerçek zamanlı döngüsel voltametri ve 10 adımlı kalibrasyon",
@@ -3415,17 +3575,21 @@ const translations = {
     p9_tag_access: "Erişilebilirlik",
     skills_tag: "Uzmanlık",
     skills_heading: "Temel <strong>Yetenekler</strong>",
-    sk1_title: "Android Geliştirme",
-    sk1_desc: "Kotlin, Java, Jetpack Compose, Fragment Mimarisi, Material 3",
-    sk2_title: "Cihaz Üstü Yapay Zeka",
-    sk2_desc: "MediaPipe, Gemma 3, TensorFlow Lite, CMSIS-NN, Uçta Çıkarım (Edge AI)",
-    sk3_title: "Gömülü Sistemler",
-    sk3_desc: "STM32, NFC (ST25DV), PCB Tasarımı (KiCad), 3D Baskı (Fusion 360)",
-    sk4_title: "Diller &amp; Araçlar",
-    sk4_desc: "Kotlin, Java, C/C++, Python, JavaScript, SQL, Git, Qt/QML",
+    sk1_title: "Cihaz Üstü YZ & Yerel LLM'ler",
+    sk1_desc: "Gemma 3, MediaPipe LLM Çıkarımı, Microsoft Foundry, Yerel RAG, CMSIS-NN, Uçta Çıkarım & Kuantizasyon",
+    sk2_title: "Mobil & Donanım Entegrasyonu",
+    sk2_desc: "Jetpack Compose, Kotlin Coroutines/Flow, USB Host (CDC/FTDI), ST25DV NFC Mailbox, Gerçek Zamanlı Çizim Motoru",
+    sk3_title: "Gömülü Sistemler & Donanım Tasarımı",
+    sk3_desc: "STM32 (ARM Cortex-M), ESP32-C3, 4 Katmanlı PCB Tasarımı (KiCad), NFC Enerji Hasadı, Fusion 360 CAD",
+    sk4_title: "Sistem Dilleri & Geliştirme Araçları",
+    sk4_desc: "Modern C/C++ (C++17/20), Python, Qt 6 / QML Masaüstü, Git CI/CD, Google Play Canlı Dağıtım Döngüsü",
     stack_tag: "Teknolojiler",
     stack_heading: "Teknoloji <strong>Yığını</strong>",
     stack_titlebar: "Teknolojiler &middot; Doğrulanmış Araç Seti",
+    stack_cat_ai: "Cihaz Üstü YZ & Modeller",
+    stack_cat_mobile: "Mobil & Mimari",
+    stack_cat_hw: "Gömülü Sistemler & Donanım",
+    stack_cat_sys: "Diller & Sistem Araçları",
     contact_tag: "İletişim & Ağ",
     contact_heading: "İletişime <strong>Geçin</strong>",
     contact_titlebar: "Mesaj Gönder &middot; E-Posta İstemcisi",
