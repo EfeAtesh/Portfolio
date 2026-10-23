@@ -3,28 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Efe Ateş - Mobile Developer &amp; On-Device AI Engineer</title>
-<meta name="description" content="Efe Ateş – Android developer specializing in on-device AI, electrochemical sensing apps, and Kotlin/Jetpack Compose. 6 published apps, 2K+ downloads.">
-<meta name="author" content="Efe Ateş">
+<title id="metaTitle">Efe Ateş - Mobile Developer &amp; On-Device AI Engineer</title>
+<meta id="metaDescription" name="description" content="Efe Ateş – Android developer specializing in on-device AI, electrochemical sensing apps, and Kotlin/Jetpack Compose. 6 published apps, 2K+ downloads.">
+<meta id="metaAuthor" name="author" content="Efe Ateş">
 <meta name="theme-color" content="#0B0F1A">
 <link rel="canonical" href="https://efeates.dev/">
 
 <!-- Open Graph / Social Previews -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Efe Ateş – Mobile Developer &amp; On-Device AI Engineer">
-<meta property="og:description" content="Privacy-first Android apps powered by on-device AI. 6 published apps, 2K+ downloads. Open to opportunities.">
+<meta id="metaOgTitle" property="og:title" content="Efe Ateş – Mobile Developer &amp; On-Device AI Engineer">
+<meta id="metaOgDescription" property="og:description" content="Privacy-first Android apps powered by on-device AI. 6 published apps, 2K+ downloads. Open to opportunities.">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/156576779?v=4">
 <meta property="og:url" content="https://efeates.dev/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Efe Ateş – Mobile Developer &amp; On-Device AI Engineer">
-<meta name="twitter:description" content="Privacy-first Android apps powered by on-device AI. Open to opportunities.">
+<meta id="metaTwitterTitle" name="twitter:title" content="Efe Ateş – Mobile Developer &amp; On-Device AI Engineer">
+<meta id="metaTwitterDescription" name="twitter:description" content="Privacy-first Android apps powered by on-device AI. Open to opportunities.">
 <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/156576779?v=4">
 
 <!-- Favicon -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='46' height='46' fill='%230078D7'/%3E%3Crect x='54' width='46' height='46' fill='%230078D7'/%3E%3Crect y='54' width='46' height='46' fill='%230078D7'/%3E%3Crect x='54' y='54' width='46' height='46' fill='%230078D7'/%3E%3C/svg%3E">
 
 <!-- Structured Data -->
-<script type="application/ld+json">
+<script id="personSchema" type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -1868,8 +1868,8 @@ html[data-theme="light"] .stack-group {
 
 <!-- FLOATING GLASS DOCK TOP SECTION BAR -->
 <div class="glass-nav-wrapper">
-  <nav class="glass-nav" aria-label="Main Navigation">
-    <a href="#" class="nav-brand" title="Scroll to Top">
+  <nav class="glass-nav" aria-label="Main Navigation" data-i18n-aria-label="nav_main_aria">
+    <a href="#" class="nav-brand" title="Scroll to Top" data-i18n-title="nav_scroll_top_title">
       <span class="nav-brand-dot"></span>
       <span>Efe Ateş</span>
     </a>
@@ -1885,16 +1885,16 @@ html[data-theme="light"] .stack-group {
     </ul>
 
     <div class="nav-actions">
-      <a href="EfeAtes_CV.pdf" download class="nav-cv-btn" title="Download CV (PDF)" id="navCvBtn">
+      <a href="EfeAtes_CV.pdf" download class="nav-cv-btn" title="Download CV (PDF)" id="navCvBtn" data-i18n-title="nav_cv_title">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16l-5-5h3V4h4v7h3l-5 5z"/></svg>
         <span data-i18n="nav_cv">CV</span>
       </a>
-      <button type="button" class="nav-lang-btn" id="topLangToggleBtn" title="Dili Değiştir / Switch Language" aria-label="Switch Language">
+      <button type="button" class="nav-lang-btn" id="topLangToggleBtn" title="Dili Değiştir / Switch Language" aria-label="Switch Language" data-i18n-title="nav_lang_title" data-i18n-aria-label="nav_lang_aria">
         <span class="nav-lang-pill active" id="pillEn">EN</span>
         <span class="nav-lang-divider">/</span>
         <span class="nav-lang-pill" id="pillTr">TR</span>
       </button>
-      <button type="button" class="nav-theme-btn" id="topThemeToggleBtn" title="Toggle Theme" aria-label="Toggle Theme">
+      <button type="button" class="nav-theme-btn" id="topThemeToggleBtn" title="Toggle Theme" aria-label="Toggle Theme" data-i18n-title="nav_theme_title" data-i18n-aria-label="nav_theme_aria">
         <svg class="top-nav-icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="top-nav-icon-sun" viewBox="0 0 24 24" style="display:none;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
       </button>
@@ -1911,16 +1911,16 @@ html[data-theme="light"] .stack-group {
 <header class="hero">
   <div class="container">
     <div class="hero-inner reveal">
-      <img class="hero-avatar" src="https://avatars.githubusercontent.com/u/156576779?v=4" alt="Portrait of Efe Ateş">
-      <div class="avail-pill" data-i18n-html="hero_avail"><span class="avail-dot"></span>Open to opportunities &middot; Ankara / Remote</div>
+      <img class="hero-avatar" src="https://avatars.githubusercontent.com/u/156576779?v=4" alt="Portrait of Efe Ateş" data-i18n-alt="hero_avatar_alt">
+      <div class="avail-pill" data-i18n-html="hero_avail"><span class="avail-dot"></span>Open to opportunities &middot; Ankara, TR &middot; Open to relocation</div>
       
       <h1>Efe <strong>Ateş</strong></h1>
-      <div class="hero-role" aria-label="Mobile Developer and On-Device AI Engineer">
+      <div class="hero-role" aria-label="Mobile Developer and On-Device AI Engineer" data-i18n-aria-label="hero_role_aria">
         <span id="roleText"></span><span class="cursor"></span>
       </div>
 
       <p class="hero-sub" data-i18n="hero_sub">
-        Building privacy-first Android apps that run AI on-device with zero cloud dependency and zero data leaks. 6 published apps on Google Play &middot; 2K+ downloads.
+        Building privacy-first Android apps that run AI on-device with zero cloud dependency while data stays on the device. 6 published apps on Google Play &middot; 2K+ downloads.
       </p>
 
       <div class="hero-btn-row">
@@ -1930,15 +1930,15 @@ html[data-theme="light"] .stack-group {
         </a>
         <a href="https://play.google.com/store/apps/developer?id=SensiStudio" target="_blank" rel="noopener" class="win-btn btn-blue">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302L8.364 18.143l8.635-8.635zM14.5 12l-2.302-2.302 8.635-8.635L14.5 12z"/></svg>
-          Google Play Store
+          <span data-i18n="btn_google_play_store">Google Play Store</span>
         </a>
         <a href="https://github.com/EfeAtesh" target="_blank" rel="noopener" class="win-btn btn-acrylic">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.81 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.21.69.82.57A12 12 0 0 0 12 .3"/></svg>
-          GitHub
+          <span data-i18n="btn_github">GitHub</span>
         </a>
         <a href="https://www.linkedin.com/in/efeates/" target="_blank" rel="noopener" class="win-btn btn-acrylic">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-          LinkedIn
+          <span data-i18n="btn_linkedin">LinkedIn</span>
         </a>
       </div>
 
@@ -1986,7 +1986,7 @@ html[data-theme="light"] .stack-group {
         </div>
 
         <!-- Live Tile 2: NFC Potentiostat Hardware (Medium 1x1 Tile) -->
-        <div class="fluent-acrylic live-tile spatial-tile tile-w1-h1 tile-accent-cyan" onclick="window.open('https://efeatesh.github.io/NFCPotentiostatQuickGlance/', '_blank')">
+        <div class="fluent-acrylic live-tile spatial-tile tile-w1-h1 tile-accent-cyan" onclick="window.open('https://efeates.dev/NFCPotentiostatQuickGlance/', '_blank')">
           <div class="spatial-content-elevated">
             <div class="tile-icon-hero">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
@@ -2035,7 +2035,7 @@ html[data-theme="light"] .stack-group {
           </div>
           <canvas id="miniPotCanvas"></canvas>
           <div class="tile-badge-bottom" style="margin-top:6px; color:var(--text-tertiary)">
-            <span>Google Play Store ↗</span>
+            <span data-i18n-html="tile4_badge">Google Play Store ↗</span>
           </div>
         </div>
 
@@ -2054,10 +2054,10 @@ html[data-theme="light"] .stack-group {
         <div class="fluent-acrylic live-tile spatial-tile tile-w1-h1 tile-accent-purple" onclick="location.href='#apps'">
           <div class="spatial-content-elevated">
             <div style="font-size:2.4rem; font-weight:300; line-height:1; font-family:var(--font-fluent);">2K+</div>
-            <div style="font-size:0.85rem; font-weight:700; text-transform:uppercase; margin-top:4px;" data-i18n="tile6_sub">Active Downloads</div>
+            <div style="font-size:0.85rem; font-weight:700; text-transform:uppercase; margin-top:4px;" data-i18n="tile6_sub">2K+ downloads</div>
           </div>
           <div class="tile-badge-bottom">
-            <span>Gemma 3 &middot; LibreChat</span>
+            <span data-i18n-html="tile6_badge">Gemma 3 &middot; LibreChat</span>
           </div>
         </div>
 
@@ -2087,7 +2087,7 @@ html[data-theme="light"] .stack-group {
         <div class="section-tag" data-i18n="about_tag">About Me</div>
         <h2 data-i18n-html="about_heading">Straight to the <strong>Solution</strong></h2>
         <p style="color:var(--text-secondary); font-size:0.95rem; line-height:1.8; margin-bottom:24px;" data-i18n-html="about_p">
-          Mobile &amp; On-Device AI Engineer with a strong foundation in <strong>Computer Engineering &amp; Biomedical Engineering</strong> (Accredited by MÜDEK) at Ankara University. I build Android apps that run AI on-device with zero cloud latency, zero data leaks, and no compromises. My work spans scientific instrumentation (NFC potentiostats), on-device LLM inference (Gemma 3), and productivity tools, all published on Google Play under <strong>SensiStudio</strong>. I care about shipping real products fast and making complex hardware feel natural on a phone.
+          Mobile &amp; On-Device AI Engineer with a strong foundation in <strong>Computer Engineering &amp; Biomedical Engineering</strong> (Accredited by MÜDEK) at Ankara University. I build Android apps that run AI on-device with zero cloud latency, data staying on-device, and no compromises. My work spans scientific instrumentation (NFC potentiostats), on-device LLM inference (Gemma 3), and productivity tools, all published on Google Play under <strong>SensiStudio</strong>. I care about shipping real products fast and making complex hardware feel natural on a phone.
         </p>
 
         <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-bottom:24px;">
@@ -2147,7 +2147,7 @@ html[data-theme="light"] .stack-group {
           <!-- 1. Microsoft AI Innovators -->
           <div class="tl-item">
             <div class="tl-date" data-i18n-html="exp1_date">Jun 2026 – Aug 2026 &middot; Completed</div>
-            <h3 data-i18n="exp1_title">AI Intern (Microsoft AI Innovators SummerSchool 2026 Program)</h3>
+            <h3 data-i18n="exp1_title">Microsoft Türkiye AI Innovators Internship Program</h3>
             <div class="tl-place">
               <!-- Microsoft 4-Color Logo SVG -->
               <svg viewBox="0 0 21 21" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
@@ -2160,9 +2160,9 @@ html[data-theme="light"] .stack-group {
             </div>
             <p data-i18n="exp1_p">Selected for the Microsoft AI Innovators program to independently engineer a high-performance, privacy-first AI solution.</p>
             <ul>
-              <li data-i18n="exp1_li1">Architecting a secure, enterprise-grade AI system using Foundry, specifically designed to operate 100% local and offline.</li>
-              <li data-i18n="exp1_li2">Responsible for handling the entire development lifecycle and optimizing local model deployment for zero-connectivity environments.</li>
-              <li data-i18n="exp1_li3">Refining the architecture through weekly engineering iterations and benchmark evaluations.</li>
+              <li data-i18n="exp1_li1">Architected a secure, enterprise-grade AI system using Foundry, specifically designed to operate 100% local and offline.</li>
+              <li data-i18n="exp1_li2">Built and managed the full development lifecycle, optimizing local model deployment for zero-connectivity environments.</li>
+              <li data-i18n="exp1_li3">Optimized the architecture through weekly engineering iterations and benchmark evaluations.</li>
             </ul>
             <div class="app-tags-row">
               <span class="metro-tag" style="display:inline-flex; align-items:center; gap:6px;">
@@ -2266,7 +2266,7 @@ html[data-theme="light"] .stack-group {
             </div>
             <p data-i18n="exp3_p">Improved the Sensitify Studio desktop app and the company's official web presence.</p>
             <ul>
-              <li data-i18n-html="exp3_li1">Rebuilt UI components in <strong>C++ / Qt &amp; QML</strong> for a smoother instrument-control experience.</li>
+              <li data-i18n-html="exp3_li1">Rebuilt desktop UI modules in <strong>C++ / Qt &amp; QML</strong> for smoother instrument setup, live signal monitoring, and operator workflows.</li>
               <li data-i18n="exp3_li2">Designed and developed the company's official website, strengthening brand identity.</li>
             </ul>
             <div class="app-tags-row">
@@ -2438,6 +2438,12 @@ html[data-theme="light"] .stack-group {
     <div class="reveal">
       <div class="section-tag" data-i18n="proj_tag">Portfolio</div>
       <h2 data-i18n-html="proj_heading">Projects &amp; <strong>Published Apps</strong></h2>
+      <p style="margin-top:10px; color:var(--text-secondary); font-size:0.9rem;" data-i18n="proj_open_source_note">Play Store apps are published binaries (closed-source); public source repositories are linked when available.</p>
+      <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:10px;">
+        <a href="https://github.com/EfeAtesh/NFCPotentiostatQuickGlance" target="_blank" rel="noopener" class="metro-tag green" style="text-decoration:none;" data-i18n-html="proj_repo_1">GitHub · NFCPotentiostatQuickGlance ↗</a>
+        <a href="https://github.com/EfeAtesh/AI-Voice-Assistant" target="_blank" rel="noopener" class="metro-tag green" style="text-decoration:none;" data-i18n-html="proj_repo_2">GitHub · AI-Voice-Assistant ↗</a>
+        <a href="https://github.com/EfeAtesh/RaspberryPiZero-Casting-FullGuide" target="_blank" rel="noopener" class="metro-tag green" style="text-decoration:none;" data-i18n-html="proj_repo_3">GitHub · RaspberryPiZero-Casting-FullGuide ↗</a>
+      </div>
     </div>
 
     <div class="app-grid">
@@ -2452,7 +2458,7 @@ html[data-theme="light"] .stack-group {
               <rect x="0" y="11" width="10" height="10" fill="#00A4EF"/>
               <rect x="11" y="11" width="10" height="10" fill="#FFB900"/>
             </svg>
-            <span>Microsoft Foundry Local RAG</span>
+            <span data-i18n="p1_window_title">Microsoft Foundry Local RAG</span>
           </div>
           <div class="window-controls">
             <div class="window-btn">&minus;</div>
@@ -2472,15 +2478,15 @@ html[data-theme="light"] .stack-group {
           <div class="app-info-col">
             <div style="font-size:0.75rem; font-weight:700; color:var(--win-cyan-light); text-transform:uppercase; margin-bottom:4px;" data-i18n-html="p1_badge">Microsoft AI Innovators Program &middot; Enterprise AI</div>
             <h3 data-i18n-html="p1_title">Foundry Local RAG &ndash; Privacy-First Offline AI</h3>
-            <div class="app-meta-sub" data-i18n-html="p1_sub">Microsoft &middot; On-Device AI &middot; Local RAG &middot; Open Source</div>
-            <p data-i18n="p1_desc">Selected for the Microsoft AI Innovators program to independently engineer a high-performance, privacy-first AI solution. Architecting a secure, enterprise-grade AI system using Foundry, specifically designed to operate 100% local and offline with zero cloud dependency.</p>
+            <div class="app-meta-sub" data-i18n-html="p1_sub">Microsoft &middot; Python &middot; On-Device AI &middot; Local RAG &middot; Open Source</div>
+            <p data-i18n="p1_desc">Selected for the Microsoft Türkiye AI Innovators Internship Program to independently engineer a high-performance, privacy-first AI solution. Architected a secure Python-based local RAG system using Foundry, designed to run 100% local and offline with zero cloud dependency.</p>
             <div class="case-study-box">
               <div><strong data-i18n="p1_ch_title">Challenge:</strong> <span data-i18n="p1_ch_desc">Enterprise AI solutions often require cloud APIs, compromising privacy and requiring active internet connectivity.</span></div>
               <div><strong class="green" data-i18n="p1_so_title">Solution:</strong> <span data-i18n="p1_so_desc">Built a fully offline local RAG architecture, optimizing model deployment for zero-connectivity environments with weekly engineering iterations.</span></div>
             </div>
             <div class="shots-row" style="margin-top:14px; margin-bottom:4px;">
-              <a class="shot-thumb" href="javascript:void(0)" onclick="openCertModal()" title="View Microsoft AI Innovators Certificate of Completion" style="width:170px;">
-                <img src="./microsoft_internship_certificate.jpg" alt="Microsoft AI Innovators Certificate of Completion" loading="lazy">
+              <a class="shot-thumb" href="javascript:void(0)" onclick="openCertModal()" title="View Microsoft AI Innovators Certificate of Completion" data-i18n-title="cert_thumb_title" style="width:170px;">
+                <img src="./microsoft_internship_certificate.jpg" alt="Microsoft AI Innovators Certificate of Completion" data-i18n-alt="cert_thumb_alt" loading="lazy">
               </a>
             </div>
             <div class="app-tags-row">
@@ -2493,7 +2499,7 @@ html[data-theme="light"] .stack-group {
               <span class="metro-tag green" data-i18n="p1_tag_offline">100% Offline</span>
             </div>
             <div class="app-links-row">
-              <a href="https://github.com/EfeAtesh/Foundry-Local-Rag" target="_blank" rel="noopener" class="win-btn btn-blue">GitHub (Foundry-Local-Rag) &rarr;</a>
+              <a href="https://github.com/EfeAtesh/Foundry-Local-Rag" target="_blank" rel="noopener" class="win-btn btn-blue" data-i18n-html="btn_foundry_repo">GitHub (Foundry-Local-Rag) &rarr;</a>
               <button type="button" onclick="openCertModal()" class="win-btn btn-acrylic" style="cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 <span data-i18n="p1_btn_cert">View Certificate</span>
@@ -2562,7 +2568,7 @@ html[data-theme="light"] .stack-group {
               <span class="metro-tag green" data-i18n="p2_tag_prof">Professional Tool</span>
             </div>
             <div class="app-links-row">
-              <a href="https://play.google.com/store/apps/details?id=com.sensitify.sensitifygo" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
+              <a href="https://play.google.com/store/apps/details?id=com.sensitify.sensitifygo" target="_blank" rel="noopener" class="win-btn btn-blue" data-i18n-html="btn_play_store_arrow">Google Play Store &rarr;</a>
             </div>
           </div>
         </div>
@@ -2582,7 +2588,7 @@ html[data-theme="light"] .stack-group {
           </div>
         </div>
         <div class="app-card-body">
-          <img class="app-icon-box" src="https://efeatesh.github.io/NFCPotentiostatQuickGlance/1000083839.jpg" alt="NFC Potentiostat assembled device" loading="lazy">
+          <img class="app-icon-box" src="https://efeates.dev/NFCPotentiostatQuickGlance/1000083839.jpg" alt="NFC Potentiostat assembled device" loading="lazy">
           <div class="app-info-col">
             <div style="font-size:0.75rem; font-weight:700; color:var(--win-blue-light); text-transform:uppercase; margin-bottom:4px;" data-i18n-html="p3_badge">Featured Project &middot; Graduation Thesis</div>
             <h3 data-i18n-html="p3_title">NFC Potentiostat &ndash; Battery-Free Electrochemical Platform</h3>
@@ -2590,11 +2596,11 @@ html[data-theme="light"] .stack-group {
             <p data-i18n-html="p3_desc">A fully wireless, <strong>battery-free</strong> potentiostat powered entirely by NFC energy harvesting from a smartphone. Custom 4-layer PCB (STM32U545 + ST25DV), 3D-printed magnetic enclosure, CNC-milled 13.56 MHz antennas, and a companion Android app with real-time plotting and an on-device Gemma 3 1B AI agent for voice-controlled analysis. TÜBİTAK 2209-B approved.</p>
             <div class="case-study-box">
               <div><strong data-i18n="p1_ch_title">Challenge:</strong> <span data-i18n="p3_ch_desc">Benchtop potentiostats are bulky, expensive, and need wired power, making them unusable for portable point-of-care diagnostics.</span></div>
-              <div><strong class="green" data-i18n="p1_so_title">Solution:</strong> <span data-i18n-html="p3_so_desc">Designed the full stack end-to-end (analog AFE, embedded firmware over an ST25DV mailbox protocol, Android app, fine-tuned on-device AI), cutting cost &gt;90% vs. lab equipment with 98.5% measured accuracy.</span></div>
+              <div><strong class="green" data-i18n="p1_so_title">Solution:</strong> <span data-i18n-html="p3_so_desc">Designed the full stack end-to-end (analog AFE, embedded firmware over an ST25DV mailbox protocol, Android app, fine-tuned on-device AI). In a 10-run NanoBiosens Lab calibration against a benchtop reference, the prototype reached up to 98.5% agreement while estimated BOM cost remained over 90% lower than typical lab systems.</span></div>
             </div>
             <div class="shots-row">
-              <a class="shot-thumb" href="https://efeatesh.github.io/Portfolio/Screenshot_20260621-165224_SensitifyGoNE.png" target="_blank" rel="noopener">
-                <img src="https://efeatesh.github.io/Portfolio/Screenshot_20260621-165224_SensitifyGoNE.png" alt="NanoBiosens Lab app – Cyclic Voltammetry measurement" loading="lazy">
+              <a class="shot-thumb" href="https://efeates.dev/Screenshot_20260621-165224_SensitifyGoNE.png" target="_blank" rel="noopener">
+                <img src="https://efeates.dev/Screenshot_20260621-165224_SensitifyGoNE.png" alt="NanoBiosens Lab app – Cyclic Voltammetry measurement" loading="lazy">
               </a>
               <div class="shots-cap" data-i18n-html="p3_shots_cap">NanoBiosens Lab: real-time cyclic voltammetry &amp; 10-run calibration in the companion app</div>
             </div>
@@ -2638,7 +2644,7 @@ html[data-theme="light"] .stack-group {
               <span class="metro-tag green" data-i18n="p3_tag_tubitak">TÜBİTAK Approved</span>
             </div>
             <div class="app-links-row">
-              <a href="https://efeatesh.github.io/NFCPotentiostatQuickGlance/" target="_blank" rel="noopener" class="win-btn btn-cyan" data-i18n-html="p3_btn_case">View Interactive Case Study &rarr;</a>
+              <a href="https://efeates.dev/NFCPotentiostatQuickGlance/" target="_blank" rel="noopener" class="win-btn btn-cyan" data-i18n-html="p3_btn_case">View Interactive Case Study &rarr;</a>
             </div>
           </div>
         </div>
@@ -2662,7 +2668,7 @@ html[data-theme="light"] .stack-group {
           <div class="app-info-col">
             <h3 data-i18n="p4_title">Clinical No-Contact IR Thermometer</h3>
             <div class="app-meta-sub" data-i18n-html="p4_sub">BME425 / BME4496 &middot; Embedded Systems &middot; Open Source</div>
-            <p data-i18n-html="p4_desc">DIY clinical-grade non-contact infrared thermometer designed according to international <strong>EN ISO 80601-2-56:2017</strong> medical standards. Features custom PCB hardware (ESP32-C3 Mini, MLX90614 IR sensor, TP4056 USB-C Li-Po charging, SSD1306 OLED display, active buzzer), Clean Code C++ firmware, ergonomic 3D-printed enclosure, and complete laboratory verification documentation.</p>
+            <p data-i18n-html="p4_desc">DIY clinical-grade non-contact infrared thermometer designed with reference to international <strong>EN ISO 80601-2-56:2017</strong> guidance. Features custom PCB hardware (ESP32-C3 Mini, MLX90614 IR sensor, TP4056 USB-C Li-Po charging, SSD1306 OLED display, active buzzer), Clean Code C++ firmware, ergonomic 3D-printed enclosure, and complete laboratory verification documentation.</p>
 
             <!-- Interactive 3D CAD Thermometer Enclosure Model Showcase -->
             <div class="cad-preview-box" id="thermoCadBox" style="margin-top:20px; border-radius:0px; overflow:hidden; border:1px solid var(--border-acrylic); background:radial-gradient(circle at 50% 50%, rgba(0, 171, 169, 0.12) 0%, rgba(10, 15, 26, 0.95) 100%); position:relative;">
@@ -2755,7 +2761,7 @@ html[data-theme="light"] .stack-group {
               <span class="metro-tag green" data-i18n="p5_tag_privacy">Privacy-First</span>
             </div>
             <div class="app-links-row">
-              <a href="https://play.google.com/store/apps/details?id=com.calmi.app" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
+              <a href="https://play.google.com/store/apps/details?id=com.calmi.app" target="_blank" rel="noopener" class="win-btn btn-blue" data-i18n-html="btn_play_store_arrow">Google Play Store &rarr;</a>
             </div>
           </div>
         </div>
@@ -2778,7 +2784,7 @@ html[data-theme="light"] .stack-group {
           <img class="app-icon-box" src="https://play-lh.googleusercontent.com/XbPKlHsxUCoKVq6wF8AiQ-dlqr_S6_0oGn5PM_Absi3P-rjkEJf4GmkXYXhcJczd9_TShak-BkyvM7QEVt9t=w240-h480" alt="LibreChat app icon" loading="lazy">
           <div class="app-info-col">
             <h3 data-i18n="p6_title">LibreChat | Run AI Locally!</h3>
-            <div class="app-meta-sub" data-i18n-html="p6_sub">SensiStudio &middot; Productivity &middot; <strong style="color:var(--win-cyan-light)">2K+ Downloads</strong></div>
+            <div class="app-meta-sub" data-i18n-html="p6_sub">SensiStudio &middot; Productivity &middot; <strong style="color:var(--win-cyan-light)">2K+ downloads</strong></div>
             <p data-i18n="p6_desc">100% offline on-device LLM chat powered by Google's Gemma 3. No accounts, no tracking, and chats deleted when app closes. Voice assistance with LibreChat Live Mode. Privacy-first AI on your phone.</p>
             <div class="case-study-box">
               <div><strong data-i18n="p1_ch_title">Challenge:</strong> <span data-i18n="p6_ch_desc">Run a multi-billion-parameter LLM entirely on a phone, with usable speed and no cloud calls.</span></div>
@@ -2805,7 +2811,7 @@ html[data-theme="light"] .stack-group {
               <span class="metro-tag green" data-i18n="p5_tag_privacy">Privacy-First</span>
             </div>
             <div class="app-links-row">
-              <a href="https://play.google.com/store/apps/details?id=com.efeates.localllm" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
+              <a href="https://play.google.com/store/apps/details?id=com.efeates.localllm" target="_blank" rel="noopener" class="win-btn btn-blue" data-i18n-html="btn_play_store_arrow">Google Play Store &rarr;</a>
             </div>
           </div>
         </div>
@@ -2851,7 +2857,7 @@ html[data-theme="light"] .stack-group {
               <span class="metro-tag green">Gemma</span>
             </div>
             <div class="app-links-row">
-              <a href="https://play.google.com/store/apps/details?id=com.efea.SLMBenchmark" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
+              <a href="https://play.google.com/store/apps/details?id=com.efea.SLMBenchmark" target="_blank" rel="noopener" class="win-btn btn-blue" data-i18n-html="btn_play_store_arrow">Google Play Store &rarr;</a>
               <a href="https://github.com/EfeAtesh/LocalAIBenchmark" target="_blank" rel="noopener" class="win-btn btn-acrylic" data-i18n-html="p4_btn_gh">GitHub Repository &rarr;</a>
             </div>
           </div>
@@ -2897,7 +2903,7 @@ html[data-theme="light"] .stack-group {
               <span class="metro-tag green" data-i18n="p8_tag_prod">Productivity</span>
             </div>
             <div class="app-links-row">
-              <a href="https://play.google.com/store/apps/details?id=com.efea.nuclearroutines" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
+              <a href="https://play.google.com/store/apps/details?id=com.efea.nuclearroutines" target="_blank" rel="noopener" class="win-btn btn-blue" data-i18n-html="btn_play_store_arrow">Google Play Store &rarr;</a>
             </div>
           </div>
         </div>
@@ -2921,7 +2927,7 @@ html[data-theme="light"] .stack-group {
           <div class="app-info-col">
             <h3 data-i18n="p9_title">ReadFacile: Read Easier!</h3>
             <div class="app-meta-sub" data-i18n-html="p9_sub">SensiStudio &middot; Productivity &middot; <strong style="color:var(--win-amber-light)">5.0★</strong></div>
-            <p data-i18n="p9_desc">Speed reading app based on scientific research: lighter-colored word suffixes let the brain predict and read faster. Export as PDF or DOCX. Designed for people with learning difficulties.</p>
+            <p data-i18n="p9_desc">Speed reading app informed by evidence-based reading techniques: lighter-colored word suffixes help the brain predict and read faster. Export as PDF or DOCX. Designed for people with learning difficulties.</p>
             <div class="shots-row">
               <a class="shot-thumb" href="https://play-lh.googleusercontent.com/9bvdLaqrHo8k2rT0w_FfUxPIOATrOY8eBMfaEh9HAcwsPLgsO5gvfpaMmO0-8yRT5rzZCzF9VgwwVGhS8iT_nQ" target="_blank" rel="noopener">
                 <img src="https://play-lh.googleusercontent.com/9bvdLaqrHo8k2rT0w_FfUxPIOATrOY8eBMfaEh9HAcwsPLgsO5gvfpaMmO0-8yRT5rzZCzF9VgwwVGhS8iT_nQ=w300" alt="ReadFacile – Bionic Reading" loading="lazy">
@@ -2939,7 +2945,7 @@ html[data-theme="light"] .stack-group {
               <span class="metro-tag green">PDF Export</span>
             </div>
             <div class="app-links-row">
-              <a href="https://play.google.com/store/apps/details?id=com.efea.ReadFacile.ReadFacile" target="_blank" rel="noopener" class="win-btn btn-blue">Google Play Store &rarr;</a>
+              <a href="https://play.google.com/store/apps/details?id=com.efea.ReadFacile.ReadFacile" target="_blank" rel="noopener" class="win-btn btn-blue" data-i18n-html="btn_play_store_arrow">Google Play Store &rarr;</a>
             </div>
           </div>
         </div>
@@ -2997,15 +3003,16 @@ html[data-theme="light"] .stack-group {
 
         <!-- Certifications & Qualifications Bar -->
         <div class="edu-certs-bar">
-          <span style="font-size:0.85rem; color:var(--text-secondary);"><span data-i18n="edu_toeic">TOEIC Total:</span> <strong style="color:var(--text-primary)">855/990</strong> (CEFR B2)</span>
+          <span style="font-size:0.85rem; color:var(--text-secondary);"><span data-i18n="edu_toeic">TOEIC 855:</span> <strong style="color:var(--text-primary)">855/990</strong> (CEFR B2)</span>
           <span class="edu-bar-divider"></span>
           <span style="font-size:0.85rem; color:var(--text-secondary);">TÜBİTAK 2209-B <strong style="color:var(--win-green)" data-i18n="edu_tubitak_status">Approved</strong></span>
           <span class="edu-bar-divider"></span>
-          <span style="font-size:0.85rem; color:var(--text-secondary); display:inline-flex; align-items:center; gap:6px; cursor:pointer;" onclick="openCertModal()" title="Click to view Microsoft Internship Certificate">
+          <span style="font-size:0.85rem; color:var(--text-secondary); display:inline-flex; align-items:center; gap:6px; cursor:pointer;" onclick="openCertModal()" title="Click to view Microsoft Internship Certificate" data-i18n-title="edu_ms_cert_title">
             <svg viewBox="0 0 21 21" width="12" height="12" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="10" height="10" fill="#F25022"/><rect x="11" y="0" width="10" height="10" fill="#7FBA00"/><rect x="0" y="11" width="10" height="10" fill="#00A4EF"/><rect x="11" y="11" width="10" height="10" fill="#FFB900"/></svg>
             <span data-i18n-html="edu_ms_cert">Microsoft AI Innovators <strong style="color:var(--win-cyan-light)">2026 Certificate</strong> ↗</span>
           </span>
         </div>
+        <p style="margin-top:8px; font-size:0.8rem; color:var(--text-tertiary);" data-i18n="edu_toeic_note">Note: Some Germany master's programs may require IELTS, TOEFL, or another accepted exam.</p>
       </div>
     </div>
   </div>
@@ -3171,7 +3178,7 @@ html[data-theme="light"] .stack-group {
     <!-- Pinned Taskbar Apps -->
     <div class="taskbar-pinned">
       <!-- Google Play Store (SensiStudio) Shortcut with Official 4-Color Logo -->
-      <a href="https://play.google.com/store/apps/developer?id=SensiStudio" target="_blank" rel="noopener" class="taskbar-icon-btn" title="Google Play Store &middot; SensiStudio">
+      <a href="https://play.google.com/store/apps/developer?id=SensiStudio" target="_blank" rel="noopener" class="taskbar-icon-btn" title="Google Play Store &middot; SensiStudio" data-i18n-title="taskbar_play_title">
         <svg viewBox="0 0 512 512" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
           <path fill="#00c0ff" d="M32.5 17.5C28.8 21.2 26.6 27 26.6 34.6v442.8c0 7.6 2.2 13.4 5.9 17.1l1.3 1.3L280.4 249.2V246L33.8 16.2l-1.3 1.3z"/>
           <path fill="#ff3a44" d="M362.4 331.2l-82-82v-6.4l82-82 1.8 1 97.4 55.4c27.8 15.8 27.8 41.7 0 57.5l-97.4 55.5-1.8 1z"/>
@@ -3180,7 +3187,7 @@ html[data-theme="light"] .stack-group {
         </svg>
       </a>
       <!-- Microsoft Foundry RAG with 4-Color Logo -->
-      <a href="https://github.com/EfeAtesh/Foundry-Local-Rag" target="_blank" rel="noopener" class="taskbar-icon-btn" title="Microsoft Foundry RAG">
+      <a href="https://github.com/EfeAtesh/Foundry-Local-Rag" target="_blank" rel="noopener" class="taskbar-icon-btn" title="Microsoft Foundry RAG" data-i18n-title="taskbar_foundry_title">
         <svg viewBox="0 0 21 21" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
           <rect x="0" y="0" width="10" height="10" fill="#F25022"/>
           <rect x="11" y="0" width="10" height="10" fill="#7FBA00"/>
@@ -3188,7 +3195,7 @@ html[data-theme="light"] .stack-group {
           <rect x="11" y="11" width="10" height="10" fill="#FFB900"/>
         </svg>
       </a>
-      <a href="https://github.com/EfeAtesh" target="_blank" rel="noopener" class="taskbar-icon-btn" title="GitHub Profile">
+      <a href="https://github.com/EfeAtesh" target="_blank" rel="noopener" class="taskbar-icon-btn" title="GitHub Profile" data-i18n-title="taskbar_github_title">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.81 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.21.69.82.57A12 12 0 0 0 12 .3"/></svg>
       </a>
     </div>
@@ -3196,7 +3203,7 @@ html[data-theme="light"] .stack-group {
 
   <div class="taskbar-right">
     <!-- Taskbar Language Switcher (Windows-style ENG / TUR) -->
-    <div class="taskbar-lang-btn" id="taskbarLangBtn" onclick="toggleLanguage()" title="Switch Language / Dili Değiştir">
+    <div class="taskbar-lang-btn" id="taskbarLangBtn" onclick="toggleLanguage()" title="Switch Language / Dili Değiştir" data-i18n-title="nav_lang_title">
       <span id="taskbarLangText">ENG</span>
     </div>
 
@@ -3221,436 +3228,117 @@ html[data-theme="light"] .stack-group {
 /* --------------------------------------------------------------------------
    0. INTERNATIONALIZATION (i18n) ENGINE & AUTO-DETECTION
    -------------------------------------------------------------------------- */
-const translations = {
-  en: {
-    page_title: "Efe Ateş | Mobile & On-Device AI Engineer | Microsoft AI Innovators 2026",
-    nav_about: "About",
-    nav_experience: "Experience",
-    nav_education: "Education",
-    nav_projects: "Projects",
-    nav_skills: "Skills",
-    nav_stack: "Tech Stack",
-    nav_contact: "Contact",
-    nav_cv: "Resume / CV",
-    nav_theme_title: "Toggle Light/Dark Theme",
-    nav_lang_title: "Switch Language / Dili Değiştir",
-    hero_avail: '<span class="avail-dot"></span> Available for Opportunities &middot; Ankara, TR',
-    hero_sub: "Building on-device AI apps and embedded instrumentation with zero compromises on performance and privacy.",
-    hero_btn_cv: "Download Resume / CV &darr;",
-    tile_ms_kicker: "INTERNSHIP COMPLETED",
-    tile_ms_title: "Microsoft AI Innovators 2026",
-    tile_ms_desc: "Selected &middot; Local RAG &middot; Foundry &middot; Summer 2026",
-    tile_ms_back_kicker: "OFFICIAL CERTIFICATE",
-    tile_ms_back_title: "Certificate of Completion",
-    tile_ms_back_desc: "Signed by Barbaros Günay (CSA Manager)",
-    tile_pot_badge: "Graduation Thesis",
-    tile_pot_title: "NFC Potentiostat",
-    tile_pot_desc: "Battery-Free &middot; On-Device AI",
-    tile_clock_tz: "UTC+3 &middot; Ankara, TR",
-    tile_sens_badge: "Google Play",
-    tile_sens_title: "Sensitify GO",
-    tile_sens_desc: "Mobile Potentiostat Control",
-    tile_apps_label: "Published Apps",
-    tile_dls_label: "Active Downloads",
-    about_titlebar: "Engineering Philosophy &middot; About",
-    about_tag: "About Me",
-    about_heading: "Straight to the <strong>Solution</strong>",
-    about_p: "Mobile &amp; On-Device AI Engineer with a strong foundation in <strong>Computer Engineering &amp; Biomedical Engineering</strong> (Accredited by MÜDEK) at Ankara University. I build Android apps that run AI on-device with zero cloud latency, zero data leaks, and no compromises. My work spans scientific instrumentation (NFC potentiostats), on-device LLM inference (Gemma 3), and productivity tools, all published on Google Play under <strong>SensiStudio</strong>. I care about shipping real products fast and making complex hardware feel natural on a phone.",
-    about_tag_uni: "Ankara University",
-    about_tag_mudek: "MÜDEK Accredited",
-    about_tag_tubitak: "TÜBİTAK 2209-B Approved",
-    about_tag_ms: "Microsoft AI Innovators 2026 Internship",
-    stat_apps: "Published Apps",
-    stat_repos: "GitHub Public Repos",
-    stat_dls: "Downloads",
-    exp_tag: "Career",
-    exp_heading: "Work <strong>Experience</strong>",
-    exp_titlebar: "Career Experience Timeline",
-    exp1_date: "Jun 2026 – Aug 2026 &middot; Completed",
-    exp1_title: "AI Intern (Microsoft AI Innovators SummerSchool 2026 Program)",
-    exp1_p: "Selected for the Microsoft AI Innovators program to independently engineer a high-performance, privacy-first AI solution.",
-    exp1_li1: "Architecting a secure, enterprise-grade AI system using Foundry, specifically designed to operate 100% local and offline.",
-    exp1_li2: "Responsible for handling the entire development lifecycle and optimizing local model deployment for zero-connectivity environments.",
-    exp1_li3: "Refining the architecture through weekly engineering iterations and benchmark evaluations.",
-    tag_local_rag: "Local RAG",
-    cert_enlarge: "Enlarge",
-    cert_official: "Official Certificate",
-    cert_issued: "Issued: August 17, 2026",
-    cert_title: "Certificate of Completion &middot; Microsoft Turkey",
-    cert_desc: "Awarded to <strong>Efe ATEŞ</strong> for successfully completing the <strong>AI Innovators Internship Program</strong> during Summer 2026. Verified &amp; signed by <em>Barbaros Günay (CSA Manager)</em>.",
-    cert_btn_view: "View Certificate",
-    cert_btn_dl: "Download High-Res",
-    exp2_date: "Dec 2024 – Jun 2026",
-    exp2_title: "R&amp;D Software Developer (Working Student)",
-    exp2_p: "Owned the full development lifecycle of the Sensitify Go Android app, from architecture to Google Play Store release.",
-    exp2_li1: "Shipped a mobile potentiostat-control app supporting <strong>9 electrochemical techniques</strong> (CV, DPV, SWV, EIS, CA, LSV, NPV, OCP, Potentiometry) with real-time plotting.",
-    exp2_li2: "Built USB-host device communication for ECA/MCA hardware and data export to <strong>.xlsx / .m</strong> formats.",
-    exp2_li3: "Fine-tuned an on-device LLM for <strong>voice-controlled</strong> electrochemistry guidance, fully offline, zero data collection.",
-    exp2_tag_rd: "Sensitify R&amp;D",
-    exp2_tag_rel: "Play Store Release ↗",
-    exp3_date: "Mar 2024 – Dec 2024",
-    exp3_title: "Engineering Intern",
-    exp3_p: "Improved the Sensitify Studio desktop app and the company's official web presence.",
-    exp3_li1: "Rebuilt UI components in <strong>C++ / Qt &amp; QML</strong> for a smoother instrument-control experience.",
-    exp3_li2: "Designed and developed the company's official website, strengthening brand identity.",
-    exp3_tag_web: "Web Design",
-    exp4_date: "Jan 2024 – Feb 2024",
-    exp4_title: "Engineering Intern",
-    exp4_place: "İbn-i Sina Hospital",
-    exp4_p: "Maintained, repaired, and calibrated medical devices across multiple hospital departments as a mandatory Biomedical Engineering clinical internship.",
-    exp4_tag_med: "Medical Devices",
-    exp4_tag_cal: "Calibration",
-    edu_tag: "Academic",
-    edu_heading: "Academic <strong>Education</strong>",
-    edu_titlebar: "Academic Education &middot; Degrees &amp; Qualifications",
-    edu1_degree: "B.Sc. in Computer Engineering",
-    edu1_desc: "Software engineering, algorithms, data structures, OOP, database systems, deep learning. Selected for Microsoft AI Innovators Summer School 2026 (Edge-AI &amp; On-Device AI).",
-    edu2_degree: "B.Sc. in Biomedical Engineering",
-    edu2_desc: "Biomedical instrumentation, electrochemistry, HCI usability studies, medical device technologies.",
-    edu2_tag_iso: "ISO 13485:2016 Medical Devices QMS (Kiwa)",
-    edu_toeic: "TOEIC Total:",
-    edu_tubitak_status: "Approved",
-    edu_ms_cert: "Microsoft AI Innovators <strong style=\"color:var(--win-cyan-light)\">2026 Certificate</strong> ↗",
-    proj_tag: "Portfolio",
-    proj_heading: "Projects &amp; <strong>Published Apps</strong>",
-    p1_badge: "Microsoft AI Innovators Program &middot; Enterprise AI",
-    p1_title: "Foundry Local RAG &ndash; Privacy-First Offline AI",
-    p1_sub: "Microsoft &middot; On-Device AI &middot; Local RAG &middot; Open Source",
-    p1_desc: "Selected for the Microsoft AI Innovators program to independently engineer a high-performance, privacy-first AI solution. Architecting a secure, enterprise-grade AI system using Foundry, specifically designed to operate 100% local and offline with zero cloud dependency.",
-    p1_ch_title: "Challenge:",
-    p1_ch_desc: "Enterprise AI solutions often require cloud APIs, compromising privacy and requiring active internet connectivity.",
-    p1_so_title: "Solution:",
-    p1_so_desc: "Built a fully offline local RAG architecture, optimizing model deployment for zero-connectivity environments with weekly engineering iterations.",
-    p1_tag_offline: "100% Offline",
-    p1_btn_cert: "View Certificate",
-    p2_title: "Sensitify GO &ndash; EIS On The Go",
-    p2_sub: "Sensitify &middot; Tools &middot; Mobile Electrochemistry",
-    p2_desc: "Professional electrochemical analysis app for MCA devices. Controls potentiostat hardware via USB, supports 9 measurement techniques, real-time plotting, and data export in .xlsx and .m formats. Zero data collection, fully offline.",
-    p2_ch_desc: "Bring lab-grade potentiostat control, normally a desktop-only workflow, onto a phone, talking to custom hardware over USB in real time.",
-    p2_so_desc: "Built a USB-host communication layer and a high-throughput real-time plotting engine, exposing all 9 techniques in a touch-first UI with one-tap data export.",
-    p2_tag_plot: "Real-time Plotting",
-    p2_tag_prof: "Professional Tool",
-    p3_badge: "NFC Potentiostat &middot; Graduation Thesis",
-    p3_title: "NFC Potentiostat &ndash; Battery-Free Electrochemical Platform",
-    p3_sub: "BME4496 &middot; Hardware + Firmware + Android + On-Device AI",
-    p3_desc: "A fully wireless, <strong>battery-free</strong> potentiostat powered entirely by NFC energy harvesting from a smartphone. Custom 4-layer PCB (STM32U545 + ST25DV), 3D-printed magnetic enclosure, CNC-milled 13.56 MHz antennas, and a companion Android app with real-time plotting and an on-device Gemma 3 1B AI agent for voice-controlled analysis. TÜBİTAK 2209-B approved.",
-    p3_ch_desc: "Benchtop potentiostats are bulky, expensive, and need wired power, making them unusable for portable point-of-care diagnostics.",
-    p3_so_desc: "Designed the full stack end-to-end (analog AFE, embedded firmware over an ST25DV mailbox protocol, Android app, fine-tuned on-device AI), cutting cost &gt;90% vs. lab equipment with 98.5% measured accuracy.",
-    p3_shots_cap: "NanoBiosens Lab: real-time cyclic voltammetry &amp; 10-run calibration in the companion app",
-    p3_tag_nfc: "NFC Energy Harvesting",
-    p3_tag_ai: "On-Device AI",
-    p3_tag_tubitak: "TÜBİTAK Approved",
-    p3_btn_case: "View Interactive Case Study &rarr;",
-    cad_title: "Interactive 3D Enclosure Model (CAD)",
-    cad_loading: "Loading 3D Enclosure Mesh...",
-    cad_thermo_loading: "Loading 3D Thermometer Mesh...",
-    cad_hint: "Drag to Rotate &bull; Scroll to Zoom",
-    p4_title: "Clinical No-Contact IR Thermometer",
-    p4_sub: "BME425 / BME4496 &middot; Embedded Systems &middot; Open Source",
-    p4_desc: "DIY clinical-grade non-contact infrared thermometer designed according to international <strong>EN ISO 80601-2-56:2017</strong> medical standards. Features custom PCB hardware (ESP32-C3 Mini, MLX90614 IR sensor, TP4056 USB-C Li-Po charging, SSD1306 OLED display, active buzzer), Clean Code C++ firmware, ergonomic 3D-printed enclosure, and complete laboratory verification documentation.",
-    tag_cpp: "Embedded C++",
-    p4_btn_gh: "GitHub Repository &rarr;",
-    p5_title: "Tranquile &ndash; Meditations by Local AI",
-    p5_sub: "SensiStudio &middot; Health &amp; Fitness",
-    p5_desc: "Generates personalized guided meditations entirely on-device with Gemma 3, 100% offline, no account, nothing leaves the phone. Describe what's on your mind and the AI writes a unique session in seconds with 5 narrator voices (TTS), real-time sentence highlighting, save &amp; replay, and streak tracking.",
-    p5_shots_cap: "On-device AI meditation generation, offline privacy, saved sessions, progress tracking &amp; community",
-    tag_tts: "TTS Engine",
-    p5_tag_privacy: "Privacy-First",
-    p6_title: "LibreChat | Run AI Locally!",
-    p6_sub: "SensiStudio &middot; Productivity &middot; <strong style=\"color:var(--win-cyan-light)\">2K+ Downloads</strong>",
-    p6_desc: "100% offline on-device LLM chat powered by Google's Gemma 3. No accounts, no tracking, and chats deleted when app closes. Voice assistance with LibreChat Live Mode. Privacy-first AI on your phone.",
-    p6_ch_desc: "Run a multi-billion-parameter LLM entirely on a phone, with usable speed and no cloud calls.",
-    p6_so_desc: "Integrated Gemma 3 via MediaPipe LLM Inference with on-device decoding and a streaming voice mode, keeping every token on the device.",
-    p7_title: "Local AI Benchmark",
-    p7_sub: "SensiStudio &middot; Productivity &middot; LLM Performance Profiler",
-    p7_desc: "Benchmark your device's on-device LLM performance. Measures tokens/sec, CPU clock speed, and RAM usage in real time with dynamic charts. Scoring system ranks devices from Entry-Level to Flagship Class. Built with Kotlin &amp; Jetpack Compose.",
-    p7_tag_bench: "Benchmarking",
-    p8_title: "Nuclear Routines: Life-Changer",
-    p8_sub: "SensiStudio &middot; Productivity &middot; <strong style=\"color:var(--win-amber-light)\">5.0★</strong>",
-    p8_desc: "Habit and routine tracker that helps determine where, when, and how habits occur. Personalized tracking with reminders, achievements, and Turkish language support.",
-    p8_tag_habit: "Habit Tracker",
-    p8_tag_prod: "Productivity",
-    p9_title: "ReadFacile: Read Easier!",
-    p9_sub: "SensiStudio &middot; Productivity &middot; <strong style=\"color:var(--win-amber-light)\">5.0★</strong>",
-    p9_desc: "Speed reading app based on scientific research: lighter-colored word suffixes let the brain predict and read faster. Export as PDF or DOCX. Designed for people with learning difficulties.",
-    p9_tag_bionic: "Bionic Reading",
-    p9_tag_access: "Accessibility",
-    skills_tag: "Expertise",
-    skills_heading: "Core <strong>Skills</strong>",
-    sk1_title: "On-Device AI & Local LLMs",
-    sk1_desc: "Gemma 3, MediaPipe LLM Inference, Microsoft Foundry, Local RAG, CMSIS-NN, Edge Inference & Quantization",
-    sk2_title: "Mobile & Hardware Interfacing",
-    sk2_desc: "Jetpack Compose, Kotlin Coroutines/Flow, USB Host (CDC/FTDI), ST25DV NFC Mailbox, Real-Time Plotting Engine",
-    sk3_title: "Embedded & Hardware Design",
-    sk3_desc: "STM32 (ARM Cortex-M), ESP32-C3, 4-Layer PCB Design (KiCad), NFC Energy Harvesting, Fusion 360 CAD",
-    sk4_title: "Systems & Native Tooling",
-    sk4_desc: "Modern C/C++ (C++17/20), Python, Qt 6 / QML Desktop, Git CI/CD, Google Play Release Lifecycle",
-    stack_tag: "Technologies",
-    stack_heading: "Tech <strong>Stack</strong>",
-    stack_titlebar: "Technologies &middot; Verified Tooling Stack",
-    stack_cat_ai: "On-Device AI & Models",
-    stack_cat_mobile: "Mobile & Architecture",
-    stack_cat_hw: "Embedded & Hardware",
-    stack_cat_sys: "Languages & Systems",
-    contact_tag: "Networking",
-    contact_heading: "Get In <strong>Touch</strong>",
-    contact_titlebar: "Send Message &middot; Mail Client",
-    c_fname_lbl: "First Name",
-    c_fname_ph: "First Name",
-    c_lname_lbl: "Last Name",
-    c_lname_ph: "Last Name",
-    c_email_lbl: "Your Email",
-    c_email_ph: "email@example.com",
-    c_subject_lbl: "Subject",
-    c_subject_ph: "Project or Opportunity",
-    c_msg_lbl: "Message Details",
-    c_msg_ph: "How can we collaborate?",
-    c_btn_send: "Send Message",
-    start_role: "Mobile &amp; On-Device AI Engineer",
-    start_nav_heading: "Quick Navigation",
-    start_cv: "Download CV",
-    start_lang_text: "Dil: Türkçe / EN",
-    taskbar_search_ph: "Type here to search...",
-    taskbar_start_title: "Start",
-    taskbar_theme_title: "Toggle Light/Dark Theme",
-    cert_modal_title: "Microsoft AI Innovators – Certificate of Completion.jpg",
-    cert_modal_verified: "Verified · Microsoft Turkey",
-    cert_modal_sig: "AI Innovators Summer 2026 · Barbaros Günay (CSA Manager)",
-    cert_modal_close: "Close",
-    form_status_opening: "Opening default mail client...",
-    form_status_done: "Mail client triggered successfully. Thank you!"
-  },
-  tr: {
-    page_title: "Efe Ateş | Mobil & Cihaz Üstü Yapay Zeka Mühendisi | Microsoft AI Innovators 2026",
-    nav_about: "Hakkımda",
-    nav_experience: "Deneyim",
-    nav_education: "Eğitim",
-    nav_projects: "Projeler",
-    nav_skills: "Yetenekler",
-    nav_stack: "Teknolojiler",
-    nav_contact: "İletişim",
-    nav_cv: "Özgeçmiş / CV",
-    nav_theme_title: "Açık/Koyu Temayı Değiştir",
-    nav_lang_title: "Dili Değiştir / Switch Language",
-    hero_avail: '<span class="avail-dot"></span> Yeni Fırsatlara Açık &middot; Ankara, TR',
-    hero_sub: "Performans ve gizlilikten ödün vermeden cihaz üstü yapay zeka (On-Device AI) uygulamaları ve gömülü enstrümantasyon geliştiriyorum.",
-    hero_btn_cv: "Özgeçmişi İndir (CV) &darr;",
-    tile_ms_kicker: "STAJ TAMAMLANDI",
-    tile_ms_title: "Microsoft AI Innovators 2026",
-    tile_ms_desc: "Seçildi &middot; Yerel RAG &middot; Foundry &middot; Yaz 2026",
-    tile_ms_back_kicker: "RESMİ SERTİFİKA",
-    tile_ms_back_title: "Başarı & Bitirme Sertifikası",
-    tile_ms_back_desc: "Barbaros Günay (CSA Manager) onaylı",
-    tile_pot_badge: "Bitirme Tezi",
-    tile_pot_title: "NFC Potansiyostat",
-    tile_pot_desc: "Pilsiz &middot; Cihaz Üstü YZ",
-    tile_clock_tz: "UTC+3 &middot; Ankara, TR",
-    tile_sens_badge: "Google Play",
-    tile_sens_title: "Sensitify GO",
-    tile_sens_desc: "Mobil Potansiyostat Kontrolü",
-    tile_apps_label: "Yayınlanan Uygulama",
-    tile_dls_label: "Aktif İndirme",
-    about_titlebar: "Mühendislik Felsefesi &middot; Hakkımda",
-    about_tag: "Hakkımda",
-    about_heading: "Doğrudan <strong>Çözüme</strong> Odaklı",
-    about_p: "Ankara Üniversitesi <strong>Bilgisayar Mühendisliği ve Biyomedikal Mühendisliği</strong> (MÜDEK Akreditasyonlu) altyapısına sahip bir mobil ve cihaz üstü yapay zeka mühendisiyim. Sıfır bulut gecikmesi, sıfır veri sızıntısı ve tavizsiz performansla doğrudan cihaz üzerinde çalışan (on-device) yapay zeka Android uygulamaları geliştiriyorum. Çalışmalarım; bilimsel enstrümantasyon (NFC potansiyostatlar), cihaz üstü LLM çıkarımı (Gemma 3) ve üretkenlik araçlarına uzanmakta olup tümü Google Play'de <strong>SensiStudio</strong> çatısı altında yayınlanmıştır. Gerçek ürünleri hızla geliştirmeyi ve karmaşık donanımları cep telefonunda akıcı bir deneyime dönüştürmeyi önemsiyorum.",
-    about_tag_uni: "Ankara Üniversitesi",
-    about_tag_mudek: "MÜDEK Akreditasyonlu",
-    about_tag_tubitak: "TÜBİTAK 2209-B Onaylı",
-    about_tag_ms: "Microsoft AI Innovators 2026 Stajı",
-    stat_apps: "Yayınlanan Uygulama",
-    stat_repos: "GitHub Açık Repo",
-    stat_dls: "İndirme",
-    exp_tag: "Kariyer",
-    exp_heading: "İş <strong>Deneyimi</strong>",
-    exp_titlebar: "Kariyer ve Deneyim Zaman Çizelgesi",
-    exp1_date: "Haz 2026 – Ağu 2026 &middot; Tamamlandı",
-    exp1_title: "Yapay Zeka Stajyeri (Microsoft AI Innovators SummerSchool 2026 Programı)",
-    exp1_p: "Microsoft AI Innovators programına seçilerek yüksek performanslı ve gizlilik öncelikli bir yapay zeka çözümünü bağımsız olarak geliştirdim.",
-    exp1_li1: "Foundry kullanarak %100 yerel ve çevrimdışı çalışacak şekilde tasarlanmış güvenli, kurumsal düzeyde bir yapay zeka sistemi mimarisi kurdum.",
-    exp1_li2: "Tüm geliştirme yaşam döngüsünü yöneterek sıfır bağlantılı ortamlarda yerel model dağıtımını optimize ettim.",
-    exp1_li3: "Haftalık mühendislik iterasyonları ve benchmark değerlendirmeleriyle mimariyi mükemmelleştirdim.",
-    tag_local_rag: "Yerel RAG",
-    cert_enlarge: "Büyüt",
-    cert_official: "Resmi Sertifika",
-    cert_issued: "Veriliş Tarihi: 17 Ağustos 2026",
-    cert_title: "Başarı ve Bitirme Sertifikası &middot; Microsoft Türkiye",
-    cert_desc: "2026 Yaz döneminde <strong>AI Innovators Staj Programı</strong>'nı başarıyla tamamlayan <strong>Efe ATEŞ</strong>'e takdim edilmiştir. <em>Barbaros Günay (CSA Manager)</em> tarafından doğrulanmış ve imzalanmıştır.",
-    cert_btn_view: "Sertifikayı İncele",
-    cert_btn_dl: "Yüksek Çözünürlüklü İndir",
-    exp2_date: "Ara 2024 – Haz 2026",
-    exp2_title: "Ar-Ge Yazılım Geliştirici (Aday Mühendis)",
-    exp2_p: "Sensitify Go Android uygulamasının mimarisinden Google Play Store yayınına kadar tüm geliştirme sürecini üstlendim.",
-    exp2_li1: "Gerçek zamanlı grafik çizimi ile <strong>9 elektrokimyasal tekniği</strong> (CV, DPV, SWV, EIS, CA, LSV, NPV, OCP, Potansiyometri) destekleyen mobil potansiyostat kontrol uygulamasını canlıya aldım.",
-    exp2_li2: "ECA/MCA donanımları için USB-host iletişim katmanı ve <strong>.xlsx / .m</strong> formatlarında tek dokunuşla veri dışa aktarımı geliştirdim.",
-    exp2_li3: "Tamamen çevrimdışı ve sıfır veri toplamayla çalışan, <strong>sesle kontrol edilen</strong> elektrokimya rehberliği için cihaz üstü LLM ince ayarı (fine-tuning) yaptım.",
-    exp2_tag_rd: "Sensitify Ar-Ge",
-    exp2_tag_rel: "Play Store Yayını ↗",
-    exp3_date: "Mar 2024 – Ara 2024",
-    exp3_title: "Mühendislik Stajyeri",
-    exp3_p: "Sensitify Studio masaüstü uygulamasını ve şirketin resmi kurumsal web varlığını geliştirdim.",
-    exp3_li1: "Daha akıcı bir cihaz kontrol deneyimi için UI bileşenlerini <strong>C++ / Qt &amp; QML</strong> ile yeniden inşa ettim.",
-    exp3_li2: "Şirketin resmi web sitesini tasarlayıp geliştirerek marka kimliğini güçlendirdim.",
-    exp3_tag_web: "Web Tasarım",
-    exp4_date: "Oca 2024 – Şub 2024",
-    exp4_title: "Mühendislik Stajyeri",
-    exp4_place: "İbn-i Sina Hastanesi",
-    exp4_p: "Zorunlu Biyomedikal Mühendisliği klinik stajı kapsamında çeşitli hastane birimlerinde tıbbi cihazların bakım, onarım ve kalibrasyon işlemlerini yürüttüm.",
-    exp4_tag_med: "Tıbbi Cihazlar",
-    exp4_tag_cal: "Kalibrasyon",
-    edu_tag: "Akademik",
-    edu_heading: "Akademik <strong>Eğitim</strong>",
-    edu_titlebar: "Akademik Eğitim &middot; Dereceler ve Nitelikler",
-    edu1_degree: "Bilgisayar Mühendisliği Lisansı",
-    edu1_desc: "Yazılım mühendisliği, algoritmalar, veri yapıları, nesne yönelimli programlama, veritabanı sistemleri, derin öğrenme. Microsoft AI Innovators 2026 Yaz Okulu (Uçta Yapay Zeka & Cihaz Üstü YZ) seçimi.",
-    edu2_degree: "Biyomedikal Mühendisliği Lisansı",
-    edu2_desc: "Biyomedikal enstrümantasyon, elektrokimya, İBY (HCI) kullanılabilirlik çalışmaları, tıbbi cihaz teknolojileri.",
-    edu2_tag_iso: "ISO 13485:2016 Tıbbi Cihazlar KYS (Kiwa)",
-    edu_toeic: "TOEIC Toplam:",
-    edu_tubitak_status: "Onaylandı",
-    edu_ms_cert: "Microsoft AI Innovators <strong style=\"color:var(--win-cyan-light)\">2026 Sertifikası</strong> ↗",
-    proj_tag: "Portfolyo",
-    proj_heading: "Projeler &amp; <strong>Yayınlanan Uygulamalar</strong>",
-    p1_badge: "Microsoft AI Innovators Programı &middot; Kurumsal Yapay Zeka",
-    p1_title: "Foundry Local RAG &ndash; Gizlilik Odaklı Çevrimdışı Yapay Zeka",
-    p1_sub: "Microsoft &middot; Cihaz Üstü YZ &middot; Yerel RAG &middot; Açık Kaynak",
-    p1_desc: "Microsoft AI Innovators programına seçilerek yüksek performanslı ve gizlilik öncelikli bir yapay zeka çözümünü bağımsız olarak tasarladım. Foundry kullanarak sıfır bulut bağımlılığıyla %100 yerel ve çevrimdışı çalışan güvenli bir kurumsal AI sistemi geliştirdim.",
-    p1_ch_title: "Zorluk:",
-    p1_ch_desc: "Kurumsal yapay zeka çözümleri çoğunlukla bulut API'lerine ihtiyaç duyarak veri gizliliğini riske atar ve sürekli internet bağlantısı gerektirir.",
-    p1_so_title: "Çözüm:",
-    p1_so_desc: "Haftalık mühendislik iterasyonlarıyla sıfır bağlantılı ortamlarda model dağıtımını optimize eden tamamen çevrimdışı bir yerel RAG mimarisi kurdum.",
-    p1_tag_offline: "%100 Çevrimdışı",
-    p1_btn_cert: "Sertifikayı İncele",
-    p2_title: "Sensitify GO &ndash; Taşınabilir EIS",
-    p2_sub: "Sensitify &middot; Araçlar &middot; Mobil Elektrokimya",
-    p2_desc: "MCA cihazları için profesyonel elektrokimyasal analiz uygulaması. USB üzerinden potansiyostat donanımını kontrol eder, 9 ölçüm tekniğini, gerçek zamanlı grafik çizimini ve .xlsx/.m formatlarında veri aktarımını destekler. Sıfır veri toplama, tamamen çevrimdışı.",
-    p2_ch_desc: "Normalde yalnızca masaüstü bilgisayarlarda bulunan laboratuvar düzeyindeki potansiyostat kontrolünü, USB üzerinden özel donanımla anlık haberleşerek akıllı telefona taşımak.",
-    p2_so_desc: "Dokunmatik arayüzde 9 tekniğin tamamını ve tek dokunuşla dışa aktarımı sunan yüksek verimli gerçek zamanlı grafik motoru ve USB-host iletişim katmanı inşa ettim.",
-    p2_tag_plot: "Gerçek Zamanlı Çizim",
-    p2_tag_prof: "Profesyonel Araç",
-    p3_badge: "NFC Potansiyostat &middot; Bitirme Tezi",
-    p3_title: "NFC Potansiyostat &ndash; Pilsiz Elektrokimyasal Platform",
-    p3_sub: "BME4496 &middot; Donanım + Gömülü Yazılım + Android + Cihaz Üstü YZ",
-    p3_desc: "Akıllı telefondan sağlanan NFC energy hasadı (energy harvesting) ile tamamen <strong>pilsiz ve kablosuz</strong> çalışan potansiyostat. Özel 4 katmanlı PCB (STM32U545 + ST25DV), 3D baskı manyetik kasa, CNC ile işlenmiş 13.56 MHz antenler, gerçek zamanlı grafik çizimi ve sesli analiz için cihaz üstü Gemma 3 1B AI ajanı içeren Android uygulaması. TÜBİTAK 2209-B onaylı.",
-    p3_ch_desc: "Masaüstü potansiyostatların hantal, pahalı ve kablolu güce bağımlı olması, onları taşınabilir hasta başı tanı testleri (point-of-care) için kullanışsız kılar.",
-    p3_so_desc: "Tüm sistemi uçtan uca tasarlayarak (analog AFE, ST25DV mailbox protokolü üzerinden gömülü yazılım, Android uygulaması ve ince ayarlı yerel yapay zeka), laboratuvar cihazlarına kıyasla maliyeti %90'ın üzerinde düşürdüm ve %98.5 ölçüm doğruluğu elde ettim.",
-    p3_shots_cap: "NanoBiosens Lab: eşlik eden Android uygulamasında gerçek zamanlı döngüsel voltametri ve 10 adımlı kalibrasyon",
-    p3_tag_nfc: "NFC Enerji Hasadı",
-    p3_tag_ai: "Cihaz Üstü YZ",
-    p3_tag_tubitak: "TÜBİTAK Onaylı",
-    p3_btn_case: "İnteraktif Vaka Analizini Gör &rarr;",
-    cad_title: "İnteraktif 3D Kasa Modeli (CAD)",
-    cad_loading: "3D Kasa Modeli Yükleniyor...",
-    cad_thermo_loading: "3D Termometre Modeli Yükleniyor...",
-    cad_hint: "Döndürmek için Sürükle &bull; Yakınlaştırmak için Kaydır",
-    p4_title: "Klinik Temassız Kızılötesi Termometre",
-    p4_sub: "BME425 / BME4496 &middot; Gömülü Sistemler &middot; Açık Kaynak",
-    p4_desc: "Uluslararası <strong>EN ISO 80601-2-56:2017</strong> tıbbi standartlarına uygun olarak tasarlanmış klinik düzeyde kendin-yap temassız kızılötesi termometre. Özel PCB donanımı (ESP32-C3 Mini, MLX90614 IR sensör, TP4056 USB-C Li-Po şarj, SSD1306 OLED ekran, aktif buzzer), Temiz Kod prensiplerine uygun C++ yazılımı, ergonomik 3D baskı kasa ve eksiksiz laboratuvar doğrulama belgeleri içerir.",
-    tag_cpp: "Gömülü C++",
-    p4_btn_gh: "GitHub Deposu &rarr;",
-    p5_title: "Tranquile &ndash; Yerel YZ Destekli Meditasyon",
-    p5_sub: "SensiStudio &middot; Sağlık ve Fitness",
-    p5_desc: "Gemma 3 ile tamamen cihaz üzerinde kişiselleştirilmiş rehberli meditasyonlar üretir; %100 çevrimdışı, hesap gerekmez, hiçbir veri telefonu terk etmez. Aklınızdakileri anlatın, yapay zeka saniyeler içinde 5 anlatıcı sesi (TTS), gerçek zamanlı cümle vurgulama, kaydetme & tekrar dinleme ve serilik takibiyle benzersiz bir seans oluştursun.",
-    p5_shots_cap: "Cihaz üstü YZ meditasyon üretimi, çevrimdışı gizlilik, kayıtlı seanslar, ilerleme takibi ve topluluk",
-    tag_tts: "Ses Sentezleyici (TTS)",
-    p5_tag_privacy: "Gizlilik Öncelikli",
-    p6_title: "LibreChat | Yapay Zekayı Yerel Çalıştır!",
-    p6_sub: "SensiStudio &middot; Üretkenlik &middot; <strong style=\"color:var(--win-cyan-light)\">2B+ İndirme</strong>",
-    p6_desc: "Google'ın Gemma 3 modeliyle güçlendirilmiş, %100 çevrimdışı çalışan cihaz üstü LLM sohbet uygulaması. Hesap veya takip yok; uygulama kapandığında sohbetler silinir. LibreChat Live Modu ile sesli asistan deneyimi.",
-    p6_ch_desc: "Milyarlarca parametreli bir büyük dil modelini (LLM) bulut çağrısı olmadan, akıcı bir hızda doğrudan akıllı telefonda çalıştırmak.",
-    p6_so_desc: "Cihaz içi kod çözme ve akışkan ses moduyla MediaPipe LLM Inference üzerinden Gemma 3'ü entegre ederek her bir token'ın cihazda kalmasını sağladım.",
-    p7_title: "Yerel Yapay Zeka Benchmark",
-    p7_sub: "SensiStudio &middot; Üretkenlik &middot; LLM Performans Profilleyici",
-    p7_desc: "Cihazınızın yerel LLM performansını test edin. Dinamik grafiklerle anlık token/sn, CPU saat hızı ve RAM kullanımını ölçer. Puanlama sistemi cihazları Giriş Seviyesinden Amiral Gemisi Sınıfına kadar sıralar. Kotlin ve Jetpack Compose ile geliştirilmiştir.",
-    p7_tag_bench: "Performans Testi",
-    p8_title: "Nuclear Routines: Alışkanlık Takibi",
-    p8_sub: "SensiStudio &middot; Üretkenlik &middot; <strong style=\"color:var(--win-amber-light)\">5.0★</strong>",
-    p8_desc: "Alışkanlıkların nerede, ne zaman ve nasıl gerçekleştiğini belirlemeye yardımcı olan alışkanlık ve rutin takipçisi. Hatırlatıcılar, başarımlar ve Türkçe dil desteğiyle kişiselleştirilmiş takip.",
-    p8_tag_habit: "Alışkanlık Takipçisi",
-    p8_tag_prod: "Üretkenlik",
-    p9_title: "ReadFacile: Daha Kolay Oku!",
-    p9_sub: "SensiStudio &middot; Üretkenlik &middot; <strong style=\"color:var(--win-amber-light)\">5.0★</strong>",
-    p9_desc: "Bilimsel araştırmalara dayanan hızlı okuma uygulaması: açık renkli kelime ekleri beynin tahmin yürütmesini ve daha hızlı okumasını sağlar. PDF veya DOCX olarak dışa aktarım. Öğrenme güçlüğü çekenler için erişilebilir tasarım.",
-    p9_tag_bionic: "Biyonik Okuma",
-    p9_tag_access: "Erişilebilirlik",
-    skills_tag: "Uzmanlık",
-    skills_heading: "Temel <strong>Yetenekler</strong>",
-    sk1_title: "Cihaz Üstü YZ & Yerel LLM'ler",
-    sk1_desc: "Gemma 3, MediaPipe LLM Çıkarımı, Microsoft Foundry, Yerel RAG, CMSIS-NN, Uçta Çıkarım & Kuantizasyon",
-    sk2_title: "Mobil & Donanım Entegrasyonu",
-    sk2_desc: "Jetpack Compose, Kotlin Coroutines/Flow, USB Host (CDC/FTDI), ST25DV NFC Mailbox, Gerçek Zamanlı Çizim Motoru",
-    sk3_title: "Gömülü Sistemler & Donanım Tasarımı",
-    sk3_desc: "STM32 (ARM Cortex-M), ESP32-C3, 4 Katmanlı PCB Tasarımı (KiCad), NFC Enerji Hasadı, Fusion 360 CAD",
-    sk4_title: "Sistem Dilleri & Geliştirme Araçları",
-    sk4_desc: "Modern C/C++ (C++17/20), Python, Qt 6 / QML Masaüstü, Git CI/CD, Google Play Canlı Dağıtım Döngüsü",
-    stack_tag: "Teknolojiler",
-    stack_heading: "Teknoloji <strong>Yığını</strong>",
-    stack_titlebar: "Teknolojiler &middot; Doğrulanmış Araç Seti",
-    stack_cat_ai: "Cihaz Üstü YZ & Modeller",
-    stack_cat_mobile: "Mobil & Mimari",
-    stack_cat_hw: "Gömülü Sistemler & Donanım",
-    stack_cat_sys: "Diller & Sistem Araçları",
-    contact_tag: "İletişim & Ağ",
-    contact_heading: "İletişime <strong>Geçin</strong>",
-    contact_titlebar: "Mesaj Gönder &middot; E-Posta İstemcisi",
-    c_fname_lbl: "Adınız",
-    c_fname_ph: "Adınız",
-    c_lname_lbl: "Soyadınız",
-    c_lname_ph: "Soyadınız",
-    c_email_lbl: "E-Posta Adresiniz",
-    c_email_ph: "ornek@eposta.com",
-    c_subject_lbl: "Konu",
-    c_subject_ph: "Proje veya İş Fırsatı",
-    c_msg_lbl: "Mesaj Detayı",
-    c_msg_ph: "Nasıl bir iş birliği yapabiliriz?",
-    c_btn_send: "Mesajı Gönder",
-    start_role: "Mobil &amp; Cihaz Üstü Yapay Zeka Mühendisi",
-    start_nav_heading: "Hızlı Gezinme",
-    start_cv: "Özgeçmişi İndir (CV)",
-    start_lang_text: "Language: English / TR",
-    taskbar_search_ph: "Aramak için buraya yazın...",
-    taskbar_start_title: "Başlat",
-    taskbar_theme_title: "Açık/Koyu Temayı Değiştir",
-    cert_modal_title: "Microsoft AI Innovators – Başarı ve Bitirme Sertifikası.jpg",
-    cert_modal_verified: "Doğrulandı · Microsoft Türkiye",
-    cert_modal_sig: "AI Innovators Yaz 2026 · Barbaros Günay (CSA Manager)",
-    cert_modal_close: "Kapat",
-    form_status_opening: "Varsayılan e-posta istemcisi açılıyor...",
-    form_status_done: "E-posta istemcisi başarıyla tetiklendi. Teşekkürler!"
-  }
-};
-
+const translations = { en: {}, tr: {} };
+let stringsLoaded = false;
 let currentLang = 'en';
 
-const typewriterRoles = {
-  en: [
-    'Mobile Developer',
-    'On-Device AI Engineer',
-    'Microsoft AI Innovators 2026',
-    'Kotlin & Jetpack Compose',
-    'Edge-AI & Local RAG Specialist'
-  ],
-  tr: [
-    'Mobil Uygulama Geliştirici',
-    'Cihaz Üstü YZ Mühendisi',
-    'Microsoft AI Innovators 2026',
-    'Kotlin & Jetpack Compose',
-    'Uçta YZ & Yerel RAG Uzmanı'
-  ]
-};
+function readFallbackFromDom() {
+  const fallbackEn = {
+    page_title: document.title,
+    meta_description: document.getElementById('metaDescription')?.getAttribute('content') || '',
+    meta_author: document.getElementById('metaAuthor')?.getAttribute('content') || '',
+    meta_og_title: document.getElementById('metaOgTitle')?.getAttribute('content') || '',
+    meta_og_description: document.getElementById('metaOgDescription')?.getAttribute('content') || '',
+    meta_twitter_title: document.getElementById('metaTwitterTitle')?.getAttribute('content') || '',
+    meta_twitter_description: document.getElementById('metaTwitterDescription')?.getAttribute('content') || '',
+    typewriter_role_1: 'Mobile Developer',
+    typewriter_role_2: 'On-Device AI Engineer',
+    typewriter_role_3: 'Microsoft AI Innovators 2026',
+    typewriter_role_4: 'Kotlin & Jetpack Compose',
+    typewriter_role_5: 'Edge-AI & Local RAG Specialist',
+    form_status_opening: 'Opening default mail client...',
+    form_status_done: 'Mail client triggered successfully. Thank you!'
+  };
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (key && !fallbackEn[key]) fallbackEn[key] = el.textContent.trim();
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (key && !fallbackEn[key]) fallbackEn[key] = el.innerHTML.trim();
+  });
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const key = el.getAttribute('data-i18n-title');
+    if (key && !fallbackEn[key]) fallbackEn[key] = el.getAttribute('title') || '';
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (key && !fallbackEn[key]) fallbackEn[key] = el.getAttribute('placeholder') || '';
+  });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    const key = el.getAttribute('data-i18n-alt');
+    if (key && !fallbackEn[key]) fallbackEn[key] = el.getAttribute('alt') || '';
+  });
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const key = el.getAttribute('data-i18n-aria-label');
+    if (key && !fallbackEn[key]) fallbackEn[key] = el.getAttribute('aria-label') || '';
+  });
+
+  translations.en = fallbackEn;
+}
+
+function parseStringsXml(xmlText) {
+  const xml = new DOMParser().parseFromString(xmlText, 'application/xml');
+  if (xml.querySelector('parsererror')) throw new Error('Invalid strings.xml');
+
+  xml.querySelectorAll('locale').forEach(localeNode => {
+    const code = localeNode.getAttribute('code');
+    if (!code) return;
+    const map = {};
+    localeNode.querySelectorAll('string').forEach(strNode => {
+      const name = strNode.getAttribute('name');
+      if (!name) return;
+      map[name] = strNode.textContent || '';
+    });
+    translations[code] = { ...(translations[code] || {}), ...map };
+  });
+}
+
+async function loadStringsResource() {
+  readFallbackFromDom();
+  try {
+    const res = await fetch('./strings.xml', { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const xmlText = await res.text();
+    parseStringsXml(xmlText);
+    stringsLoaded = true;
+  } catch (err) {
+    console.warn('strings.xml could not be loaded, using inline fallback text.', err);
+  }
+}
+
+function getTypewriterRoles(lang) {
+  const dict = translations[lang] || translations.en || {};
+  const fallback = translations.en || {};
+  return [
+    dict.typewriter_role_1 || fallback.typewriter_role_1 || 'Mobile Developer',
+    dict.typewriter_role_2 || fallback.typewriter_role_2 || 'On-Device AI Engineer',
+    dict.typewriter_role_3 || fallback.typewriter_role_3 || 'Microsoft AI Innovators 2026',
+    dict.typewriter_role_4 || fallback.typewriter_role_4 || 'Kotlin & Jetpack Compose',
+    dict.typewriter_role_5 || fallback.typewriter_role_5 || 'Edge-AI & Local RAG Specialist'
+  ];
+}
 
 function setLanguage(lang) {
+
   if (!translations[lang]) lang = 'en';
   currentLang = lang;
   document.documentElement.lang = lang;
   localStorage.setItem('portfolio_lang', lang);
 
-  const dict = translations[lang];
+  const dict = { ...(translations.en || {}), ...(translations[lang] || {}) };
 
   // Update page document title
   if (dict.page_title) {
     document.title = dict.page_title;
   }
+  if (dict.meta_description) document.getElementById('metaDescription')?.setAttribute('content', dict.meta_description);
+  if (dict.meta_author) document.getElementById('metaAuthor')?.setAttribute('content', dict.meta_author);
+  if (dict.meta_og_title) document.getElementById('metaOgTitle')?.setAttribute('content', dict.meta_og_title);
+  if (dict.meta_og_description) document.getElementById('metaOgDescription')?.setAttribute('content', dict.meta_og_description);
+  if (dict.meta_twitter_title) document.getElementById('metaTwitterTitle')?.setAttribute('content', dict.meta_twitter_title);
+  if (dict.meta_twitter_description) document.getElementById('metaTwitterDescription')?.setAttribute('content', dict.meta_twitter_description);
 
   // Update elements with data-i18n (text only)
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -3683,6 +3371,30 @@ function setLanguage(lang) {
       el.setAttribute('title', dict[key]);
     }
   });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    const key = el.getAttribute('data-i18n-alt');
+    if (dict[key] !== undefined) {
+      el.setAttribute('alt', dict[key]);
+    }
+  });
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const key = el.getAttribute('data-i18n-aria-label');
+    if (dict[key] !== undefined) {
+      el.setAttribute('aria-label', dict[key]);
+    }
+  });
+
+  const personSchema = document.getElementById('personSchema');
+  if (personSchema) {
+    try {
+      const schemaObj = JSON.parse(personSchema.textContent || '{}');
+      if (dict.schema_job_title) schemaObj.jobTitle = dict.schema_job_title;
+      if (dict.schema_knows_about) schemaObj.knowsAbout = dict.schema_knows_about.split('|').map(x => x.trim()).filter(Boolean);
+      personSchema.textContent = JSON.stringify(schemaObj, null, 2);
+    } catch (e) {
+      console.warn('Schema update skipped.', e);
+    }
+  }
 
   // Update top nav language pills
   const pillEn = document.getElementById('pillEn');
